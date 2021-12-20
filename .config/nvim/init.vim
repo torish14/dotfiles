@@ -123,5 +123,8 @@ Plug 'andymass/vim-matchup'
 Plug 'preservim/nerdcommenter'
 "" テーマ
 Plug 'haishanh/night-owl.vim'
+"" fzf であいまい検索
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
