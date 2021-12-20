@@ -86,5 +86,7 @@ Plug 'ervandew/supertab'
 Plug 'hail2u/vim-css3-syntax'
 Plug 'gorodinskiy/vim-coloresque'
 Plug 'mattn/emmet-vim'
+"" javascript
+Plug 'jelera/vim-javascript-syntax'
 
 call plug#end()
