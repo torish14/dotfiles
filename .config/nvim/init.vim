@@ -175,4 +175,7 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+"" github copilot
+Plug 'github/copilot.vim'
+
 call plug#end()
