@@ -130,5 +130,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'glepnir/dashboard-nvim'
 "" wakatime
 Plug 'wakatime/vim-wakatime'
+"" ビジュアルモードでの選択箇所を増やす
+Plug 'terryma/vim-expand-region'
 
 call plug#end()
