@@ -71,3 +71,7 @@ Plug 'preservim/nerdtree' |
       \ Plug 'Xuyuanp/nerdtree-git-plugin'
 "" nerdtree に シンタックスハイライト
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+"" コードの整列
+Plug 'junegunn/vim-easy-align'
+
+call plug#end()
