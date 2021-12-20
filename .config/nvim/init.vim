@@ -115,5 +115,7 @@ Plug 'rhysd/clever-f.vim'
 Plug 'unblevable/quick-scope'
 "" grep の使用
 Plug 'mhinz/vim-grepper'
+"" 括弧に色付け
+Plug 'luochen1990/rainbow'
 
 call plug#end()
