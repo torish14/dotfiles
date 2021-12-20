@@ -156,5 +156,7 @@ Plug 'MattesGroeger/vim-bookmarks'
 Plug 'AndrewRadev/splitjoin.vim'
 "" タブの表示
 Plug 'romgrk/barbar.nvim'
+"" 縦方向のスキップ移動
+Plug 'tyru/columnskip.vim'
 
 call plug#end()
