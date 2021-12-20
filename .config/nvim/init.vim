@@ -105,5 +105,7 @@ Plug 'machakann/vim-sandwich'
 Plug 'thinca/vim-visualstar'
 "" ヤンクしている内容で置換
 Plug 'vim-scripts/ReplaceWithRegister'
+"" モーション移動の拡張
+Plug 'haya14busa/vim-asterisk'
 
 call plug#end()
