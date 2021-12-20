@@ -99,5 +99,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'vim-jp/vimdoc-ja'
 "" 高速なカーソル移動
 Plug 'easymotion/vim-easymotion'
+"" 文字列を括弧などで囲む
+Plug 'machakann/vim-sandwich'
 
 call plug#end()
