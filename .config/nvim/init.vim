@@ -95,5 +95,7 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'alvan/vim-closetag'
 "" ヤンクした箇所をハイライト
 Plug 'machakann/vim-highlightedyank'
+"" vim-doc を日本語化
+Plug 'vim-jp/vimdoc-ja'
 
 call plug#end()
