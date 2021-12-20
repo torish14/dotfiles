@@ -121,5 +121,7 @@ Plug 'luochen1990/rainbow'
 Plug 'andymass/vim-matchup'
 "" コメントアウトをラクに
 Plug 'preservim/nerdcommenter'
+"" テーマ
+Plug 'haishanh/night-owl.vim'
 
 call plug#end()
