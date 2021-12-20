@@ -140,5 +140,7 @@ Plug 'tpope/vim-repeat'
 Plug 'editorconfig/editorconfig-vim'
 "" git を使う
 Plug 'tpope/vim-fugitive'
+"" fugitive の拡張
+Plug 'tpope/vim-rhubarb'
 
 call plug#end()
