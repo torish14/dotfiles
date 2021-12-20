@@ -55,3 +55,7 @@ if !filereadable(expand('~/.vim/autoload/plug.vim'))
   let g:not_finish_vimplug = "yes"
   autocmd VimEnter * PlugInstall
 endif
+
+" プラグイン
+call plug#begin('~/.vim/plugged')
+call plug#end()
