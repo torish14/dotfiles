@@ -93,5 +93,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 "" 自動で閉じタグを補完
 Plug 'alvan/vim-closetag'
+"" ヤンクした箇所をハイライト
+Plug 'machakann/vim-highlightedyank'
 
 call plug#end()
