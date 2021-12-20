@@ -61,5 +61,6 @@ call plug#begin('~/.vim/plugged')
 
 "" 強力な補完機能
 Plug 'neoclide/coc.nvim'
-
+"" コードのハイライトを高度に
+Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
