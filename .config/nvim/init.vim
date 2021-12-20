@@ -69,3 +69,5 @@ Plug 'jistr/vim-nerdtree-tabs'
 "" nerdtree に git の状態を表示
 Plug 'preservim/nerdtree' |
       \ Plug 'Xuyuanp/nerdtree-git-plugin'
+"" nerdtree に シンタックスハイライト
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
