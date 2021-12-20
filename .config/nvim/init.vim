@@ -162,5 +162,7 @@ Plug 'tyru/columnskip.vim'
 Plug 'brooth/far.vim'
 "" カーソル下の単語を移動するたびにハイライト
 Plug 'osyo-manga/vim-brightest'
+"" ペーストした際に自動でインデント
+Plug 'sickill/vim-pasta'
 
 call plug#end()
