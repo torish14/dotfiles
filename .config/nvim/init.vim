@@ -80,5 +80,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'Chiel92/vim-autoformat'
 "" エラー検知
 Plug 'w0rp/ale'
+"" タブの拡張
+Plug 'ervandew/supertab'
 
 call plug#end()
