@@ -59,8 +59,9 @@ endif
 " プラグイン
 call plug#begin('~/.vim/plugged')
 
-"" 強力な補完機能
-Plug 'neoclide/coc.nvim'
+"" 見た目
+"" テーマ
+Plug 'haishanh/night-owl.vim'
 "" コードのハイライトを高度に
 Plug 'nvim-treesitter/nvim-treesitter'
 "" エクスプローラーを表示
@@ -78,94 +79,45 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "" オートフォーマット
 Plug 'Chiel92/vim-autoformat'
-"" エラー検知
-Plug 'w0rp/ale'
-"" タブの拡張
-Plug 'ervandew/supertab'
-"" html
-Plug 'hail2u/vim-css3-syntax'
-Plug 'gorodinskiy/vim-coloresque'
-Plug 'mattn/emmet-vim'
-"" javascript
-Plug 'jelera/vim-javascript-syntax'
 "" nerdtree のアイコンを表示
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
-"" 自動で閉じタグを補完
-Plug 'alvan/vim-closetag'
 "" ヤンクした箇所をハイライト
 Plug 'machakann/vim-highlightedyank'
-"" vim-doc を日本語化
-Plug 'vim-jp/vimdoc-ja'
-"" 高速なカーソル移動
-Plug 'easymotion/vim-easymotion'
-"" 文字列を括弧などで囲む
-Plug 'machakann/vim-sandwich'
-"" カーソル位置の単語で検索
-Plug 'thinca/vim-visualstar'
-"" ヤンクしている内容で置換
-Plug 'vim-scripts/ReplaceWithRegister'
-"" モーション移動の拡張
-Plug 'haya14busa/vim-asterisk'
-"" テキストオブジェクト拡張
-Plug 'wellle/targets.vim'
-"" fキーの拡張
-Plug 'rhysd/clever-f.vim'
-"" クイックスコープ
-Plug 'unblevable/quick-scope'
-"" grep の使用
-Plug 'mhinz/vim-grepper'
 "" 括弧に色付け
 Plug 'luochen1990/rainbow'
-"" 括弧の移動を高度に
-Plug 'andymass/vim-matchup'
-"" コメントアウトをラクに
-Plug 'preservim/nerdcommenter'
-"" テーマ
-Plug 'haishanh/night-owl.vim'
-"" fzf であいまい検索
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-"" nvim 起動時に管理画面を表示
-Plug 'glepnir/dashboard-nvim'
-"" wakatime
-Plug 'wakatime/vim-wakatime'
-"" ビジュアルモードでの選択箇所を増やす
-Plug 'terryma/vim-expand-region'
-"" . でのリピート機能の拡張
-Plug 'tpope/vim-repeat'
-"" 異なるエディタ間で設定を共有
-Plug 'editorconfig/editorconfig-vim'
-"" git を使う
-Plug 'tpope/vim-fugitive'
-"" fugitive の拡張
-Plug 'tpope/vim-rhubarb'
 "" git の差分表示
 Plug 'airblade/vim-gitgutter'
 "" git下の隠しファイルの表示
 Plug 'rhysd/git-messenger.vim'
 "" markdown のプレビュー
 Plug 'shime/vim-livedown'
-"" 括弧を自動的に閉じる
-Plug 'cohama/lexima.vim'
 "" 相対番号と絶対番号の入れ替え
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-"" ブックマーク
-Plug 'MattesGroeger/vim-bookmarks'
-"" 一行のコードと複数行のコードの入れ替え
-Plug 'AndrewRadev/splitjoin.vim'
 "" タブの表示
 Plug 'romgrk/barbar.nvim'
-"" 縦方向のスキップ移動
-Plug 'tyru/columnskip.vim'
-"" 指定ファイルでの文字列の置き換え
-Plug 'brooth/far.vim'
+"" ブックマーク
+Plug 'MattesGroeger/vim-bookmarks'
 "" カーソル下の単語を移動するたびにハイライト
 Plug 'osyo-manga/vim-brightest'
+
+"" 言語
+"" html
+Plug 'hail2u/vim-css3-syntax'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'mattn/emmet-vim'
+"" javascript
+Plug 'jelera/vim-javascript-syntax'
+
+"" 補完機能
+"" 強力な補完機能
+Plug 'neoclide/coc.nvim'
+"" 自動で閉じタグを補完
+Plug 'alvan/vim-closetag'
+"" 括弧を自動的に閉じる
+Plug 'cohama/lexima.vim'
 "" ペーストした際に自動でインデント
 Plug 'sickill/vim-pasta'
-"" 文字列を切り取って編集
-Plug 'matze/vim-move'
 "" ワイルドメニュー
 if has('nvim')
   Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -176,5 +128,62 @@ else
 endif
 "" github copilot
 Plug 'github/copilot.vim'
+
+"" モーション移動
+"" 高速なカーソル移動
+Plug 'easymotion/vim-easymotion'
+"" カーソル位置の単語で検索
+Plug 'thinca/vim-visualstar'
+"" モーション移動の拡張
+Plug 'haya14busa/vim-asterisk'
+"" テキストオブジェクト拡張
+Plug 'wellle/targets.vim'
+"" fキーの拡張
+Plug 'rhysd/clever-f.vim'
+"" クイックスコープ
+Plug 'unblevable/quick-scope'
+"" grep の使用
+Plug 'mhinz/vim-grepper'
+"" 括弧の移動を高度に
+Plug 'andymass/vim-matchup'
+"" fzf であいまい検索
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+"" 縦方向のスキップ移動
+Plug 'tyru/columnskip.vim'
+
+"" 編集機能
+"" タブの拡張
+Plug 'ervandew/supertab'
+"" 文字列を括弧などで囲む
+Plug 'machakann/vim-sandwich'
+"" ヤンクしている内容で置換
+Plug 'vim-scripts/ReplaceWithRegister'
+"" 指定ファイルでの文字列の置換
+Plug 'brooth/far.vim'
+"" コメントアウトをラクに
+Plug 'preservim/nerdcommenter'
+"" ビジュアルモードでの選択箇所を増やす
+Plug 'terryma/vim-expand-region'
+"" . でのリピート機能の拡張
+Plug 'tpope/vim-repeat'
+"" git を使う
+Plug 'tpope/vim-fugitive'
+"" fugitive の拡張
+Plug 'tpope/vim-rhubarb'
+"" 一行のコードと複数行のコードの入れ替え
+Plug 'AndrewRadev/splitjoin.vim'
+
+"" それ以外
+"" エラー検知
+Plug 'w0rp/ale'
+"" vim-doc を日本語化
+Plug 'vim-jp/vimdoc-ja'
+"" nvim 起動時に管理画面を表示
+Plug 'glepnir/dashboard-nvim'
+"" wakatime
+Plug 'wakatime/vim-wakatime'
+"" 異なるエディタ間で設定を共有
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
