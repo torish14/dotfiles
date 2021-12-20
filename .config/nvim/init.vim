@@ -63,4 +63,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim'
 "" コードのハイライトを高度に
 Plug 'nvim-treesitter/nvim-treesitter'
+"" エクスプローラーを表示
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 call plug#end()
