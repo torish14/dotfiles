@@ -134,5 +134,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'terryma/vim-expand-region'
 "" 自動で対応する括弧を補完
 Plug 'jiangmiao/auto-pairs'
+"" . でのリピート機能の拡張
+Plug 'tpope/vim-repeat'
 
 call plug#end()
