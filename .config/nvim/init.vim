@@ -126,7 +126,7 @@ Plug 'haishanh/night-owl.vim'
 "" fzf であいまい検索
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-"" vim 起動時に管理画面を表示
+"" nvim 起動時に管理画面を表示
 Plug 'glepnir/dashboard-nvim'
 
 call plug#end()
