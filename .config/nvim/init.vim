@@ -173,6 +173,8 @@ Plug 'tpope/vim-fugitive', { 'on': [] }
 Plug 'tpope/vim-rhubarb', { 'on': [] }
 "" 一行のコードと複数行のコードの入れ替え
 Plug 'AndrewRadev/splitjoin.vim', { 'on': [] }
+"" 行移動
+Plug 'matze/vim-move'
 
 "" それ以外
 "" エラー検知
