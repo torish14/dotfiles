@@ -73,10 +73,10 @@ Plug 'preservim/nerdtree' |
 "" nerdtree に シンタックスハイライト
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': [] }
 "" コードの整列
-Plug 'junegunn/vim-easy-align', { 'on': [] }
+Plug 'junegunn/vim-easy-align'
 "" オプションバーの表示
 Plug 'vim-airline/vim-airline', { 'on': [] }
-Plug 'vim-airline/vim-airline-themes', { 'on': [] }
+Plug 'vim-airline/vim-airline-themes'
 "" オートフォーマット
 Plug 'Chiel92/vim-autoformat', { 'on': [] }
 "" nerdtree のアイコンを表示
@@ -219,7 +219,6 @@ call timer_start(100, function("s:lazyLoadPlugs"))
 augroup load_us_insert
   autocmd!
   autocmd InsertEnter * call plug#load(
-        \ 'vim-easy-align',
         \ 'supertab',
         \ 'vim-css3-syntax',
         \ 'vim-coloresque',
