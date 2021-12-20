@@ -144,5 +144,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 "" git の差分表示
 Plug 'airblade/vim-gitgutter'
+"" git下の隠しファイルの表示
+Plug 'rhysd/git-messenger.vim'
 
 call plug#end()
