@@ -138,5 +138,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-repeat'
 "" 異なるエディタ間で設定を共有
 Plug 'editorconfig/editorconfig-vim'
+"" git を使う
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
