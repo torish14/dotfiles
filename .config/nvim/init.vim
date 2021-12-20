@@ -164,5 +164,7 @@ Plug 'brooth/far.vim'
 Plug 'osyo-manga/vim-brightest'
 "" ペーストした際に自動でインデント
 Plug 'sickill/vim-pasta'
+"" 文字列を切り取って編集
+Plug 'matze/vim-move'
 
 call plug#end()
