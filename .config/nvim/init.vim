@@ -187,3 +187,29 @@ Plug 'wakatime/vim-wakatime'
 Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
+
+" プラグインをタイマーで遅延読み込み
+function! s:lazyLoadPlugs(timer)
+  call plug#load (
+        \ 'coc.nvim',
+        \ 'nerdtree',
+        \ 'vim-nerdtree-tabs',
+        \ 'nerdtree-git-plugin',
+        \ 'vim-airline',
+        \ 'vim-autoformat',
+        \ 'ale',
+        \ 'vim-easymotion',
+        \ 'vim-sandwich',
+        \ 'clever-f.vim',
+        \ 'quick-scope',
+        \ 'vim-nerdtree-syntax-highlight',
+        \ 'vim-matchup',
+        \ 'fzf',
+        \ 'splitjoin.vim',
+        \ 'barbar.nvim',
+        \ 'vim-fugitive',
+        \ 'vim-rhubarb',
+        \ 'vim-brightest',
+        \ )
+endfunction
+
