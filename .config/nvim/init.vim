@@ -166,5 +166,13 @@ Plug 'osyo-manga/vim-brightest'
 Plug 'sickill/vim-pasta'
 "" 文字列を切り取って編集
 Plug 'matze/vim-move'
+"" ワイルドメニュー
+if has('nvim')
+  Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'gelguy/wilder.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 call plug#end()
