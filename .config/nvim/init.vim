@@ -153,7 +153,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tyru/columnskip.vim'
 
 "" 編集機能
-"" タブの拡張
+"" タブキーの拡張
 Plug 'ervandew/supertab', { 'on': [] }
 "" 文字列を括弧などで囲む
 Plug 'machakann/vim-sandwich', { 'on': [] }
