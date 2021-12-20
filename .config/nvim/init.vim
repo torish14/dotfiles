@@ -66,4 +66,6 @@ Plug 'nvim-treesitter/nvim-treesitter'
 "" エクスプローラーを表示
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
-call plug#end()
+"" nerdtree に git の状態を表示
+Plug 'preservim/nerdtree' |
+      \ Plug 'Xuyuanp/nerdtree-git-plugin'
