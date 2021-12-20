@@ -213,3 +213,4 @@ function! s:lazyLoadPlugs(timer)
         \ )
 endfunction
 
+call timer_start(100, function("s:lazyLoadPlugs"))
