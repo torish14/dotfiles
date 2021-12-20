@@ -152,5 +152,7 @@ Plug 'cohama/lexima.vim'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 "" ブックマーク
 Plug 'MattesGroeger/vim-bookmarks'
+"" 一行のコードと複数行のコードの入れ替え
+Plug 'AndrewRadev/splitjoin.vim'
 
 call plug#end()
