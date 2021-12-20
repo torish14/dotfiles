@@ -132,8 +132,6 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'wakatime/vim-wakatime'
 "" ビジュアルモードでの選択箇所を増やす
 Plug 'terryma/vim-expand-region'
-"" 自動で対応する括弧を補完
-Plug 'jiangmiao/auto-pairs'
 "" . でのリピート機能の拡張
 Plug 'tpope/vim-repeat'
 "" 異なるエディタ間で設定を共有
