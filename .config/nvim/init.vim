@@ -111,7 +111,7 @@ Plug 'jelera/vim-javascript-syntax'
 
 "" 補完機能
 "" 強力な補完機能
-Plug 'neoclide/coc.nvim'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 "" 自動で閉じタグを補完
 Plug 'alvan/vim-closetag'
 "" 括弧を自動的に閉じる
