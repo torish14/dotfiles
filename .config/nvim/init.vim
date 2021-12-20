@@ -214,3 +214,18 @@ function! s:lazyLoadPlugs(timer)
 endfunction
 
 call timer_start(100, function("s:lazyLoadPlugs"))
+
+" プラグインをインサートモードで遅延読み込み
+augroup load_us_insert
+  autocmd!
+  autocmd InsertEnter * call plug#load(
+        \ 'vim-easy-align',
+        \ 'supertab',
+        \ 'vim-css3-syntax',
+        \ 'vim-coloresque',
+        \ 'emmet-vim',
+        \ 'vim-javascript-syntax',
+        \ 'live-preview',
+        \ )| autocmd! load_us_insert
+augroup END
+
