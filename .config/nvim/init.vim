@@ -113,5 +113,7 @@ Plug 'wellle/targets.vim'
 Plug 'rhysd/clever-f.vim'
 "" クイックスコープ
 Plug 'unblevable/quick-scope'
+"" grep の使用
+Plug 'mhinz/vim-grepper'
 
 call plug#end()
