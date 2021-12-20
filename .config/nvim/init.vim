@@ -109,5 +109,7 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'haya14busa/vim-asterisk'
 "" テキストオブジェクト拡張
 Plug 'wellle/targets.vim'
+"" fキーの拡張
+Plug 'rhysd/clever-f.vim'
 
 call plug#end()
