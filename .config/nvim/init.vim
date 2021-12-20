@@ -65,20 +65,20 @@ Plug 'haishanh/night-owl.vim'
 "" コードのハイライトを高度に
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 "" エクスプローラーを表示
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
+Plug 'scrooloose/nerdtree', { 'on': [] }
+Plug 'jistr/vim-nerdtree-tabs', { 'on': [] }
 "" nerdtree に git の状態を表示
 Plug 'preservim/nerdtree' |
-      \ Plug 'Xuyuanp/nerdtree-git-plugin'
+      \ Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': [] }
 "" nerdtree に シンタックスハイライト
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': [] }
 "" コードの整列
-Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-easy-align', { 'on': [] }
 "" オプションバーの表示
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline', { 'on': [] }
+Plug 'vim-airline/vim-airline-themes', { 'on': [] }
 "" オートフォーマット
-Plug 'Chiel92/vim-autoformat'
+Plug 'Chiel92/vim-autoformat', { 'on': [] }
 "" nerdtree のアイコンを表示
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
@@ -91,27 +91,27 @@ Plug 'airblade/vim-gitgutter'
 "" git下の隠しファイルの表示
 Plug 'rhysd/git-messenger.vim'
 "" markdown のプレビュー
-Plug 'shime/vim-livedown'
+Plug 'shime/vim-livedown', { 'on': [] }
 "" 相対番号と絶対番号の入れ替え
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 "" タブの表示
-Plug 'romgrk/barbar.nvim'
+Plug 'romgrk/barbar.nvim', { 'on': [] }
 "" ブックマーク
 Plug 'MattesGroeger/vim-bookmarks'
 "" カーソル下の単語を移動するたびにハイライト
-Plug 'osyo-manga/vim-brightest'
+Plug 'osyo-manga/vim-brightest', { 'on': [] }
 
 "" 言語
 "" html
-Plug 'hail2u/vim-css3-syntax'
-Plug 'gorodinskiy/vim-coloresque'
-Plug 'mattn/emmet-vim'
+Plug 'hail2u/vim-css3-syntax', { 'on': [] }
+Plug 'gorodinskiy/vim-coloresque', { 'on': [] }
+Plug 'mattn/emmet-vim', { 'on': [] }
 "" javascript
-Plug 'jelera/vim-javascript-syntax'
+Plug 'jelera/vim-javascript-syntax', { 'on': [] }
 
 "" 補完機能
 "" 強力な補完機能
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'neoclide/coc.nvim', { 'on': [], 'branch': 'release' }
 "" 自動で閉じタグを補完
 Plug 'alvan/vim-closetag'
 "" 括弧を自動的に閉じる
@@ -131,7 +131,7 @@ Plug 'github/copilot.vim'
 
 "" モーション移動
 "" 高速なカーソル移動
-Plug 'easymotion/vim-easymotion'
+Plug 'easymotion/vim-easymotion', { 'on': [] }
 "" カーソル位置の単語で検索
 Plug 'thinca/vim-visualstar'
 "" モーション移動の拡張
@@ -139,24 +139,24 @@ Plug 'haya14busa/vim-asterisk'
 "" テキストオブジェクト拡張
 Plug 'wellle/targets.vim'
 "" fキーの拡張
-Plug 'rhysd/clever-f.vim'
+Plug 'rhysd/clever-f.vim', { 'on': [] }
 "" クイックスコープ
-Plug 'unblevable/quick-scope'
+Plug 'unblevable/quick-scope', { 'on': [] }
 "" grep の使用
 Plug 'mhinz/vim-grepper'
 "" 括弧の移動を高度に
-Plug 'andymass/vim-matchup'
+Plug 'andymass/vim-matchup', { 'on': [] }
 "" fzf であいまい検索
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', { 'on': [], 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 "" 縦方向のスキップ移動
 Plug 'tyru/columnskip.vim'
 
 "" 編集機能
 "" タブの拡張
-Plug 'ervandew/supertab'
+Plug 'ervandew/supertab', { 'on': [] }
 "" 文字列を括弧などで囲む
-Plug 'machakann/vim-sandwich'
+Plug 'machakann/vim-sandwich', { 'on': [] }
 "" ヤンクしている内容で置換
 Plug 'vim-scripts/ReplaceWithRegister'
 "" 指定ファイルでの文字列の置換
@@ -166,17 +166,17 @@ Plug 'preservim/nerdcommenter'
 "" ビジュアルモードでの選択箇所を増やす
 Plug 'terryma/vim-expand-region'
 "" . でのリピート機能の拡張
-Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat', { 'on': [] }
 "" git を使う
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive', { 'on': [] }
 "" fugitive の拡張
-Plug 'tpope/vim-rhubarb'
+Plug 'tpope/vim-rhubarb', { 'on': [] }
 "" 一行のコードと複数行のコードの入れ替え
-Plug 'AndrewRadev/splitjoin.vim'
+Plug 'AndrewRadev/splitjoin.vim', { 'on': [] }
 
 "" それ以外
 "" エラー検知
-Plug 'w0rp/ale'
+Plug 'w0rp/ale', { 'on': [] }
 "" vim-doc を日本語化
 Plug 'vim-jp/vimdoc-ja'
 "" nvim 起動時に管理画面を表示
