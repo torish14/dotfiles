@@ -150,5 +150,7 @@ Plug 'shime/vim-livedown'
 Plug 'cohama/lexima.vim'
 "" 相対番号と絶対番号の入れ替え
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+"" ブックマーク
+Plug 'MattesGroeger/vim-bookmarks'
 
 call plug#end()
