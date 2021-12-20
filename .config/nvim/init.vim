@@ -128,5 +128,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 "" nvim 起動時に管理画面を表示
 Plug 'glepnir/dashboard-nvim'
+"" wakatime
+Plug 'wakatime/vim-wakatime'
 
 call plug#end()
