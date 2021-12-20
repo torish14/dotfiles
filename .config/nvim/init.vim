@@ -103,5 +103,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'machakann/vim-sandwich'
 "" カーソル位置の単語で検索
 Plug 'thinca/vim-visualstar'
+"" ヤンクしている内容で置換
+Plug 'vim-scripts/ReplaceWithRegister'
 
 call plug#end()
