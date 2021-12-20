@@ -146,5 +146,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/git-messenger.vim'
 "" markdown のプレビュー
 Plug 'shime/vim-livedown'
+"" 括弧を自動的に閉じる
+Plug 'cohama/lexima.vim'
 
 call plug#end()
