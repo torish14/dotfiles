@@ -101,5 +101,7 @@ Plug 'vim-jp/vimdoc-ja'
 Plug 'easymotion/vim-easymotion'
 "" 文字列を括弧などで囲む
 Plug 'machakann/vim-sandwich'
+"" カーソル位置の単語で検索
+Plug 'thinca/vim-visualstar'
 
 call plug#end()
