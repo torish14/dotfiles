@@ -82,5 +82,9 @@ Plug 'Chiel92/vim-autoformat'
 Plug 'w0rp/ale'
 "" タブの拡張
 Plug 'ervandew/supertab'
+"" html
+Plug 'hail2u/vim-css3-syntax'
+Plug 'gorodinskiy/vim-coloresque'
+Plug 'mattn/emmet-vim'
 
 call plug#end()
