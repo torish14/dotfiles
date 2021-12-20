@@ -78,5 +78,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "" オートフォーマット
 Plug 'Chiel92/vim-autoformat'
+"" エラー検知
+Plug 'w0rp/ale'
 
 call plug#end()
