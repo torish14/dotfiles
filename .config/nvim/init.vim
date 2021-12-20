@@ -136,5 +136,7 @@ Plug 'terryma/vim-expand-region'
 Plug 'jiangmiao/auto-pairs'
 "" . でのリピート機能の拡張
 Plug 'tpope/vim-repeat'
+"" 異なるエディタ間で設定を共有
+Plug 'editorconfig/editorconfig-vim'
 
 call plug#end()
