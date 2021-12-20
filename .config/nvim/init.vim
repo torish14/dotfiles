@@ -88,5 +88,8 @@ Plug 'gorodinskiy/vim-coloresque'
 Plug 'mattn/emmet-vim'
 "" javascript
 Plug 'jelera/vim-javascript-syntax'
+"" devicons
+Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 
 call plug#end()
