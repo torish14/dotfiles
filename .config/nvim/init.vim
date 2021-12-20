@@ -119,5 +119,7 @@ Plug 'mhinz/vim-grepper'
 Plug 'luochen1990/rainbow'
 "" 括弧の移動を高度に
 Plug 'andymass/vim-matchup'
+"" コメントアウトをラクに
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
