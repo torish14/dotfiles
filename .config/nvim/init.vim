@@ -76,5 +76,7 @@ Plug 'junegunn/vim-easy-align'
 "" オプションバーの表示
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+"" オートフォーマット
+Plug 'Chiel92/vim-autoformat'
 
 call plug#end()
