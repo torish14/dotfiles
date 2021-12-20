@@ -36,3 +36,9 @@ augroup vimrc-auto-cursorline
     endif
   endfunction
 augroup END
+
+" カーソル位置の記憶
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+        \ exe "normal g`\"" | endif
+augroup END
