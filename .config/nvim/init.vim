@@ -91,5 +91,7 @@ Plug 'jelera/vim-javascript-syntax'
 "" devicons
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
+"" 自動で閉じタグを補完
+Plug 'alvan/vim-closetag'
 
 call plug#end()
