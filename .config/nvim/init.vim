@@ -58,4 +58,8 @@ endif
 
 " プラグイン
 call plug#begin('~/.vim/plugged')
+
+"" 強力な補完機能
+Plug 'neoclide/coc.nvim'
+
 call plug#end()
