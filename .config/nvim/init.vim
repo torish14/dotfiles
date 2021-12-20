@@ -148,5 +148,7 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'shime/vim-livedown'
 "" 括弧を自動的に閉じる
 Plug 'cohama/lexima.vim'
+"" 相対番号と絶対番号の入れ替え
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 call plug#end()
