@@ -117,5 +117,7 @@ Plug 'unblevable/quick-scope'
 Plug 'mhinz/vim-grepper'
 "" 括弧に色付け
 Plug 'luochen1990/rainbow'
+"" 括弧の移動を高度に
+Plug 'andymass/vim-matchup'
 
 call plug#end()
