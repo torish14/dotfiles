@@ -154,5 +154,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'MattesGroeger/vim-bookmarks'
 "" 一行のコードと複数行のコードの入れ替え
 Plug 'AndrewRadev/splitjoin.vim'
+"" タブの表示
+Plug 'romgrk/barbar.nvim'
 
 call plug#end()
