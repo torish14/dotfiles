@@ -111,5 +111,7 @@ Plug 'haya14busa/vim-asterisk'
 Plug 'wellle/targets.vim'
 "" fキーの拡張
 Plug 'rhysd/clever-f.vim'
+"" クイックスコープ
+Plug 'unblevable/quick-scope'
 
 call plug#end()
