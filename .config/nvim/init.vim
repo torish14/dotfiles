@@ -73,5 +73,8 @@ Plug 'preservim/nerdtree' |
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 "" コードの整列
 Plug 'junegunn/vim-easy-align'
+"" オプションバーの表示
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
