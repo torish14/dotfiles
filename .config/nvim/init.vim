@@ -146,5 +146,7 @@ Plug 'tpope/vim-rhubarb'
 Plug 'airblade/vim-gitgutter'
 "" git下の隠しファイルの表示
 Plug 'rhysd/git-messenger.vim'
+"" markdown のプレビュー
+Plug 'shime/vim-livedown'
 
 call plug#end()
