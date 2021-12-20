@@ -97,5 +97,7 @@ Plug 'alvan/vim-closetag'
 Plug 'machakann/vim-highlightedyank'
 "" vim-doc を日本語化
 Plug 'vim-jp/vimdoc-ja'
+"" 高速なカーソル移動
+Plug 'easymotion/vim-easymotion'
 
 call plug#end()
