@@ -88,7 +88,7 @@ Plug 'gorodinskiy/vim-coloresque'
 Plug 'mattn/emmet-vim'
 "" javascript
 Plug 'jelera/vim-javascript-syntax'
-"" devicons
+"" nerdtree のアイコンを表示
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 "" 自動で閉じタグを補完
