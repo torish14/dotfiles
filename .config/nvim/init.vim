@@ -142,5 +142,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'tpope/vim-fugitive'
 "" fugitive の拡張
 Plug 'tpope/vim-rhubarb'
+"" git の差分表示
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
