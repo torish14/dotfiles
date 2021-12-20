@@ -160,5 +160,7 @@ Plug 'romgrk/barbar.nvim'
 Plug 'tyru/columnskip.vim'
 "" 指定ファイルでの文字列の置き換え
 Plug 'brooth/far.vim'
+"" カーソル下の単語を移動するたびにハイライト
+Plug 'osyo-manga/vim-brightest'
 
 call plug#end()
