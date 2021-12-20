@@ -158,5 +158,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'romgrk/barbar.nvim'
 "" 縦方向のスキップ移動
 Plug 'tyru/columnskip.vim'
+"" 指定ファイルでの文字列の置き換え
+Plug 'brooth/far.vim'
 
 call plug#end()
