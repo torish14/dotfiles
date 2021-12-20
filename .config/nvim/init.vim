@@ -132,5 +132,7 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'wakatime/vim-wakatime'
 "" ビジュアルモードでの選択箇所を増やす
 Plug 'terryma/vim-expand-region'
+"" 自動で対応する括弧を補完
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
