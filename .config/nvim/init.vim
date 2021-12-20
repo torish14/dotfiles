@@ -107,5 +107,7 @@ Plug 'thinca/vim-visualstar'
 Plug 'vim-scripts/ReplaceWithRegister'
 "" モーション移動の拡張
 Plug 'haya14busa/vim-asterisk'
+"" テキストオブジェクト拡張
+Plug 'wellle/targets.vim'
 
 call plug#end()
