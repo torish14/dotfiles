@@ -63,7 +63,7 @@ call plug#begin('~/.vim/plugged')
 "" テーマ
 Plug 'haishanh/night-owl.vim'
 "" コードのハイライトを高度に
-Plug 'nvim-treesitter/nvim-treesitter'
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 "" エクスプローラーを表示
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
