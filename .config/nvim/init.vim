@@ -282,4 +282,7 @@ set termguicolors
 syntax enable
 "" テーマ
 colorscheme night-owl
+"" 検索ハイライトの色を変更
+autocmd ColorScheme * hi Search guibg=#a277ff guifg=#15141b
+autocmd ColorScheme * hi incSearch guibg=#a277ff guifg=#15141b
 
