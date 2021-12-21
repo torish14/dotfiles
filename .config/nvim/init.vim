@@ -304,3 +304,30 @@ set softtabstop=2
 "" 行頭でのTab文字の表示幅
 set shiftwidth=2
 
+"" 検索系
+"" 履歴
+set history=5000
+"" 検索文字列が小文字の場合は大文字小文字を区別なく検索する
+set ignorecase
+"" 検索文字列に大文字が含まれている場合は区別して検索する
+set smartcase
+"" 検索語をハイライト表示
+set hlsearch
+"" 検索文字列入力時に順次対象文字列にヒットさせる
+set incsearch
+"" 検索時に最後まで行ったら最初に戻る
+set wrapscan
+"" ESC 連打でハイライト解除
+nmap <ESC><Esc> :nohlsearch<CR><Esc>
+set backspace=indent,eol,start
+"" help を日本語化
+set helplang=ja
+"" 行数の相対表示
+set relativenumber
+"" 新しい行のインデントを現在行と同じにする
+set autoindent
+"" 背景色に合わせて色を修正
+set background=dark
+"" 遅延読み込み
+set updatetime=100
+
