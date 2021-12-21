@@ -148,8 +148,6 @@ Plug 'neoclide/coc.nvim', { 'on': [], 'branch': 'release' }
 Plug 'alvan/vim-closetag'
 "" 括弧を自動的に閉じる
 Plug 'cohama/lexima.vim'
-"" ペーストした際に自動でインデント
-Plug 'sickill/vim-pasta'
 "" ワイルドメニュー
 if has('nvim')
   Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
