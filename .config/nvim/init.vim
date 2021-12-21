@@ -404,3 +404,29 @@ nnoremap <Leader>, :vertical new ~/.config/nvim/init.vim<CR>
 "" ノーマルモードで Enter を押すと改行
 nnoremap <CR> i<Return><Esc>^k
 
+"" インサートモード
+"" Emacs のキーバインド使用
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-d> <Del>
+inoremap <C-h> <BS>
+inoremap <C-k> <C-r>=<SID>kill()<CR>
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
+"" ctrlキーで行頭、行末にインサートモード
+inoremap <C-e> <Esc>$a
+inoremap <C-a> <Esc>^i
+"" インサートモードで ctrl + k でカーソル位置から行末まで削除
+inoremap <C-K> <C-O>D
+"" jキーを二度押しで ESCキー
+inoremap <silent> jj <Esc>
+inoremap <silent> っｊ <ESC>
+"" 補完表示時の Enter で改行しない
+inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
+"" 補完表示時に ctrl + Enter で確定
+inoremap <C-CR> <C-y>
+
