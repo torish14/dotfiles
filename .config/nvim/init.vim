@@ -335,6 +335,11 @@ au BufWrite * :Autoformat
 
 "" rainbow
 let g:rainbow_active = 1
+
+"" vim-livedown
+let g:livedown_autorun = 0
+let g:livedown_port = 0803
+let g:livedown_browser = "vivaldi"
 " 設定
 
 "" 基本設定
