@@ -281,7 +281,7 @@ set autoread
 "" バッファが編集中でもその他のファイルを開けるように
 set hidden
 
-"" 見た目系
+"" 見た目
 "" 行番号を表示
 set number
 set ruler
@@ -325,7 +325,7 @@ autocmd ColorScheme * hi PmenuThumb guibg=#15141b guifg=#edecee
 "" ワイルドメニューの色を変更
 autocmd ColorScheme * hi Wildmenu guibg=#a277ff guifg=#15141b
 
-"" Tab系
+"" Tab
 "" 不可視文字を可視化(タブが「▸-」と表示される)
 set list listchars=tab:\▸\-
 "" Tab文字を半角スペースにする
@@ -336,7 +336,7 @@ set softtabstop=2
 "" 行頭でのTab文字の表示幅
 set shiftwidth=2
 
-"" 検索系
+"" 検索
 "" 履歴
 set history=5000
 "" 検索文字列が小文字の場合は大文字小文字を区別なく検索する
