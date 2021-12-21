@@ -353,6 +353,13 @@ let g:bookmark_highlight_lines = 1
 "" ma :BookmarkShowAll
 "" mc :BookmarkClear
 "" mx :BookmarkClearAll
+
+"" 言語
+"" syntax
+augroup vimrc-sync-fromstart
+  autocmd!
+  autocmd BufEnter * :syntax sync maxlines=200
+augroup END
 " 設定
 
 "" 基本設定
