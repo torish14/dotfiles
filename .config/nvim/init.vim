@@ -329,6 +329,9 @@ let g:airline_right_sep = '⮂'
 let g:airline_right_alt_sep = '⮃'
 let g:airline#extensions#ale#open_lnum_symbol = '('
 let g:airline#extensions#ale#close_lnum_symbol = ')'
+
+"" vim-autoformat
+au BufWrite * :Autoformat
 " 設定
 
 "" 基本設定
