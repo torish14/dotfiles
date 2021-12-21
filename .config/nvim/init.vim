@@ -49,6 +49,7 @@ augroup vimrcEx
   au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
         \ exe "normal g`\"" | endif
 augroup END
+
 " スムーズスクロール
 let s:stop_time = 10
 nnoremap <silent> <C-u> <cmd>call <SID>smooth_scroll('up')<CR>
