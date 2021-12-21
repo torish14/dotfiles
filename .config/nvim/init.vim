@@ -379,6 +379,9 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <silent> <space>rn <Plug>(coc-rename)
 "" space + fm で Format
 nmap <silent> <space>fm <Plug>(coc-format)
+
+"" vim-closetag
+let g:closetag_filenames = '*.html, *.xhtml, *.phthml, *.vue'
 " 設定
 
 "" 基本設定
