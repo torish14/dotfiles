@@ -331,3 +331,6 @@ set background=dark
 "" 遅延読み込み
 set updatetime=100
 
+" 意図しない挙動を防ぐ
+filetype on
+filetype plugin indent on
