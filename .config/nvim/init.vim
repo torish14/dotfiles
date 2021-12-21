@@ -433,6 +433,13 @@ let g:EasyMotion_smartcase = 1
 let g:clever_f_ignore_case = 1
 let g:clever_f_use_migemo = 1
 
+" quick-scope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+" 遅延読み込み
+let g:qs_lazy_highlight = 1
+highlight QuickScofePrimary guifg='#afff5f' gui=underline
+highlight QuickScopeSecondary guifg='#5fffff' gui=underline
+
 "" 編集機能
 
 "" その他
