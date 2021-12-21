@@ -429,6 +429,10 @@ call wilder#set_option('renderer', wilder#renderer_mux({
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1
 
+" clever-f.vim
+let g:clever_f_ignore_case = 1
+let g:clever_f_use_migemo = 1
+
 "" 編集機能
 
 "" その他
