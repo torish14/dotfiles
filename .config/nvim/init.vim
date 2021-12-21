@@ -389,6 +389,9 @@ nnoremap <C-e> <Esc>$a
 nnoremap <C-a> <Esc>^i
 "" gr で前のタブに移動
 nnoremap gr :tabprevious
+"" インデントに合わせてペースト
+nnoremap p ]p
+nnoremap P ]P
 "" Y で行末までヤンク
 nnoremap Y y$
 "" + で数値 up
