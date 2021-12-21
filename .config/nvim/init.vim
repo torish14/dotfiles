@@ -127,7 +127,7 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 "" github copilot
-Plug 'github/copilot.vim', { 'on': [] }
+Plug 'github/copilot.vim'
 
 "" モーション移動
 "" 高速なカーソル移動
@@ -227,7 +227,6 @@ augroup load_us_insert
         \ 'emmet-vim',
         \ 'vim-javascript-syntax',
         \ 'live-preview',
-        \ 'copilot.vim',
         \ )| autocmd! load_us_insert
 augroup END
 
