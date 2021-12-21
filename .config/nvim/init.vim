@@ -367,7 +367,7 @@ set updatetime=100
 filetype on
 filetype plugin indent on
 
-"" leader をスペースキーに
+" leader をスペースキーに
 let mapleader="\<Space>"
 
 " キーマップ
