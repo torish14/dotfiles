@@ -602,6 +602,11 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Leader>h <Plug>(easymotion-linebackward)
 
+"" fzf
+xmap <leader><tab> <plug>(fzf-maps-x)
+nmap <leader><tab> <plug>(fzf-maps-n)
+omap <leader><tab> <plug>(fzf-maps-o)
+
 "" インサートモード
 "" Emacs のキーバインド使用
 inoremap <C-p> <Up>
@@ -627,4 +632,12 @@ inoremap <silent> っｊ <ESC>
 inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
 "" 補完表示時に ctrl + Enter で確定
 inoremap <C-CR> <C-y>
+
+"" fzf
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-l> <plug>(fzf-complete-line)
+inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
+inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
+inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }})
 
