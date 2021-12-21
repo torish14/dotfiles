@@ -402,7 +402,7 @@ nnoremap - <C-x>
 nnoremap <Leader>re :%s;\<<C-R><C-W>\>;g<Left><Left>;
 "" space + , で .init.vim を開く
 nnoremap <Leader>, :vertical new ~/.config/nvim/init.vim<CR>
-"" ノーマルモードで Enter を押すと改行
+"" Enter を押すと改行
 nnoremap <CR> i<Return><Esc>^k
 
 "" インサートモード
@@ -418,10 +418,10 @@ let &t_ti.="\e[1 q"
 let &t_SI.="\e[5 q"
 let &t_EI.="\e[1 q"
 let &t_te.="\e[0 q"
-"" ctrlキーで行頭、行末にインサートモード
+"" ctrlキーで行頭、行末に移動
 inoremap <C-e> <Esc>$a
 inoremap <C-a> <Esc>^i
-"" インサートモードで ctrl + k でカーソル位置から行末まで削除
+"" ctrl + k でカーソル位置から行末まで削除
 inoremap <C-K> <C-O>D
 "" jキーを二度押しで ESCキー
 inoremap <silent> jj <Esc>
