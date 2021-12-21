@@ -405,6 +405,11 @@ nnoremap <Leader>, :vertical new ~/.config/nvim/init.vim<CR>
 "" Enter を押すと改行
 nnoremap <CR> i<Return><Esc>^k
 
+"" nerdtree
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
+
 "" インサートモード
 "" Emacs のキーバインド使用
 inoremap <C-p> <Up>
