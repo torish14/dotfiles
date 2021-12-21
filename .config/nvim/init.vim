@@ -583,6 +583,14 @@ nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
+"" vim-easymotion
+nmap <Leader>m <Plug>(easymotion-overwin-f)
+nmap <Leader>m <Plug>(easymotion-overwin-f2)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+
 "" インサートモード
 "" Emacs のキーバインド使用
 inoremap <C-p> <Up>
