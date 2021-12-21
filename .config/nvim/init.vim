@@ -104,8 +104,11 @@ Plug 'jistr/vim-nerdtree-tabs', { 'on': [] }
 "" nerdtree に git の状態を表示
 Plug 'preservim/nerdtree' |
       \ Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': [] }
-"" nerdtree に シンタックスハイライト
+"" nerdtree にシンタックスハイライト
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': [] }
+"" nerdtree のアイコンを表示
+Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 "" コードの整列
 Plug 'junegunn/vim-easy-align'
 "" オプションバーの表示
@@ -113,9 +116,6 @@ Plug 'vim-airline/vim-airline', { 'on': [] }
 Plug 'vim-airline/vim-airline-themes'
 "" オートフォーマット
 Plug 'Chiel92/vim-autoformat', { 'on': [] }
-"" nerdtree のアイコンを表示
-Plug 'ryanoasis/vim-devicons'
-Plug 'kyazdani42/nvim-web-devicons'
 "" ヤンクした箇所をハイライト
 Plug 'machakann/vim-highlightedyank'
 "" 括弧に色付け
