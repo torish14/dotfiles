@@ -386,6 +386,9 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up> gk
+"" 行頭、行末に移動
+nnoremap <C-e> <Esc>$a
+nnoremap <C-a> <Esc>^i
 "" gr で前のタブに移動
 nnoremap gr :tabprevious
 "" Y で行末までヤンク
