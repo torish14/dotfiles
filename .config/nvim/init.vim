@@ -285,4 +285,8 @@ colorscheme night-owl
 "" 検索ハイライトの色を変更
 autocmd ColorScheme * hi Search guibg=#a277ff guifg=#15141b
 autocmd ColorScheme * hi incSearch guibg=#a277ff guifg=#15141b
-
+"" 補完のポップアップの色を変更
+autocmd ColorScheme * hi menu guibg=#15141b guifg=#edecee
+autocmd ColorScheme * hi PmenuSel guibg=#a277ff guifg=#15141b
+autocmd ColorScheme * hi PmenuSbar guibg=#15141b guifg=#edecee
+autocmd ColorScheme * hi PmenuThumb guibg=#15141b guifg=#edecee
