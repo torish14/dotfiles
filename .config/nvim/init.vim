@@ -328,9 +328,9 @@ autocmd ColorScheme * hi Wildmenu guibg=#a277ff guifg=#15141b
 "" Tab
 "" 不可視文字を可視化(タブが「▸-」と表示される)
 set list listchars=tab:\▸\-
-"" Tab文字を半角スペースにする
+"" Tab文字を半角space にする
 set expandtab
-"" 行頭以外のTab文字の表示幅（スペースいくつ分）
+"" 行頭以外のTab文字の表示幅（space いくつ分）
 set tabstop=2
 set softtabstop=2
 "" 行頭でのTab文字の表示幅
@@ -367,7 +367,7 @@ set updatetime=100
 filetype on
 filetype plugin indent on
 
-" leader をスペースキーに
+" leader を spaceキーに
 let mapleader="\<Space>"
 
 " キーマップ
