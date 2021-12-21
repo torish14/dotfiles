@@ -375,7 +375,7 @@ let mapleader="\<Space>"
 "" 保存
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>qq :q!<CR>
-nnoremap <Leader>ee :e<CR>
+nnoremap <Leader>e :e<CR>
 nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>nn :noh<CR>
 
