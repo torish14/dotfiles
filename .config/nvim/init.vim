@@ -368,3 +368,36 @@ set updatetime=100
 " 意図しない挙動を防ぐ
 filetype on
 filetype plugin indent on
+
+"" leader をスペースキーに
+let mapleader="\<Space>"
+
+" キーマップ
+"" ノーマルモード
+"" 保存
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>qq :q!<CR>
+nnoremap <Leader>ee :e<CR>
+nnoremap <Leader>wq :wq<CR>
+nnoremap <Leader>nn :noh<CR>
+
+"" 移動
+nnoremap j gj
+nnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+"" gr で前のタブに移動
+nnoremap gr :tabprevious
+"" Y で行末までヤンク
+nnoremap Y y$
+"" + で数値 up
+nnoremap + <C-a>
+"" - で数値 down
+nnoremap - <C-x>
+"" カーソル下の単語を置換後の文字列の入力待ちにする
+nnoremap <Leader>re :%s;\<<C-R><C-W>\>;g<Left><Left>;
+"" space + , で .init.vim を開く
+nnoremap <Leader>, :vertical new ~/.config/nvim/init.vim<CR>
+"" ノーマルモードで Enter を押すと改行
+nnoremap <CR> i<Return><Esc>^k
+
