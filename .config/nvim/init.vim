@@ -228,3 +228,24 @@ augroup load_us_insert
         \ )| autocmd! load_us_insert
 augroup END
 
+" 設定
+
+"" 基本設定
+"" 文字コードを UFT-8 に設定
+set fenc=utf-8
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,sjis
+"" バックアップファイルを作らない
+set nobackup
+"" スワップファイルを作らない
+set noswapfile
+set fileformats=unix,dos,mac
+set nobomb
+"" ヤンクをクリップボードへ繋ぐ
+set clipboard=unnamed
+"" 編集中のファイルが変更されたら自動で読み直す
+set autoread
+"" バッファが編集中でもその他のファイルを開けるように
+set hidden
+
