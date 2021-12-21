@@ -340,6 +340,19 @@ let g:rainbow_active = 1
 let g:livedown_autorun = 0
 let g:livedown_port = 0803
 let g:livedown_browser = "vivaldi"
+
+"" vim-bookmarks
+highlight BookmarkSign guibg=NONE guifg=#f4468f
+highlight BookmarkLine guibg=#f4468f guifg=NONE
+let g:bookmark_sign = '♥'
+let g:bookmark_highlight_lines = 1
+"" mm :BookmarkToggle
+"" mi :BookmarkAnnotate<TEXT>
+"" mn :BookmarkNext
+"" mp :BookmarkPrev
+"" ma :BookmarkShowAll
+"" mc :BookmarkClear
+"" mx :BookmarkClearAll
 " 設定
 
 "" 基本設定
