@@ -260,6 +260,19 @@ augroup load_us_insert
         \ )| autocmd! load_us_insert
 augroup END
 
+"" プラグインの設定
+"" 見た目
+"" nvim-treesitter
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+ignore_install = { "haskell" }, -- List of parsers to ignore installing
+highlight = {
+enable = true,              -- false will disable the whole extension
+disable = { "c", "ruby" },  -- list of language that will be disabled
+},
+}
+EOF
 " 設定
 
 "" 基本設定
