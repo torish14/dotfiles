@@ -94,8 +94,6 @@ Plug 'rhysd/git-messenger.vim'
 Plug 'shime/vim-livedown', { 'on': [] }
 "" 相対番号と絶対番号の入れ替え
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
-"" タブの表示
-Plug 'romgrk/barbar.nvim', { 'on': [] }
 "" ブックマーク
 Plug 'MattesGroeger/vim-bookmarks'
 "" カーソル下の単語を移動するたびにハイライト
@@ -208,7 +206,6 @@ function! s:lazyLoadPlugs(timer)
         \ 'vim-matchup',
         \ 'fzf',
         \ 'splitjoin.vim',
-        \ 'barbar.nvim',
         \ 'vim-fugitive',
         \ 'vim-rhubarb',
         \ 'vim-brightest',
