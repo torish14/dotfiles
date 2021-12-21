@@ -332,6 +332,9 @@ let g:airline#extensions#ale#close_lnum_symbol = ')'
 
 "" vim-autoformat
 au BufWrite * :Autoformat
+
+"" rainbow
+let g:rainbow_active = 1
 " 設定
 
 "" 基本設定
