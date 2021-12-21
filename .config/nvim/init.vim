@@ -292,3 +292,15 @@ autocmd ColorScheme * hi PmenuSbar guibg=#15141b guifg=#edecee
 autocmd ColorScheme * hi PmenuThumb guibg=#15141b guifg=#edecee
 "" ワイルドメニューの色を変更
 autocmd ColorScheme * hi Wildmenu guibg=#a277ff guifg=#15141b
+
+"" Tab系
+"" 不可視文字を可視化(タブが「▸-」と表示される)
+set list listchars=tab:\▸\-
+"" Tab文字を半角スペースにする
+set expandtab
+"" 行頭以外のTab文字の表示幅（スペースいくつ分）
+set tabstop=2
+set softtabstop=2
+"" 行頭でのTab文字の表示幅
+set shiftwidth=2
+
