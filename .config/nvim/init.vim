@@ -160,7 +160,7 @@ Plug 'vim-scripts/ReplaceWithRegister'
 "" 指定ファイルでの文字列の置換
 Plug 'brooth/far.vim'
 "" コメントアウトをラクに
-Plug 'preservim/nerdcommenter'
+Plug 'preservim/nerdcommenter', { 'on': [] }
 "" ビジュアルモードでの選択箇所を増やす
 Plug 'terryma/vim-expand-region'
 "" . でのリピート機能の拡張
@@ -200,6 +200,7 @@ function! s:lazyLoadPlugs(timer)
         \ 'ale',
         \ 'vim-easymotion',
         \ 'vim-sandwich',
+        \ 'nerdcommenter',
         \ 'clever-f.vim',
         \ 'quick-scope',
         \ 'vim-nerdtree-syntax-highlight',
