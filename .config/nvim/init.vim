@@ -37,6 +37,13 @@ augroup vimrc-auto-cursorline
   endfunction
 augroup END
 
+" Undo の永続化
+if has('persistent_undo')
+  let undo_path = expand('~/.vim/undo')
+  exe 'set undodir=' .. undo_path
+  set undofile
+endif
+
 " カーソル位置の記憶
 augroup vimrcEx
   au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
