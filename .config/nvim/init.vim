@@ -360,6 +360,12 @@ augroup vimrc-sync-fromstart
   autocmd!
   autocmd BufEnter * :syntax sync maxlines=200
 augroup END
+
+"" emmet-vim
+autocmd FileType html imap <buffer><expr><tab>
+      \ emmet#isExpandable() ? "\<plug>(emmet-expand-abbr)" :
+      \ "\<tab>"
+
 " 設定
 
 "" 基本設定
