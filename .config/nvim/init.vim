@@ -206,7 +206,7 @@ Plug 'AndrewRadev/splitjoin.vim', { 'on': [] }
 "" 行移動
 Plug 'matze/vim-move'
 
-"" それ以外
+"" その他
 "" エラー検知
 Plug 'w0rp/ale', { 'on': [] }
 "" vim-doc を日本語化
