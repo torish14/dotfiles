@@ -622,6 +622,12 @@ nnoremap <Leader>, :vertical new ~/.config/nvim/init.vim<CR>
 "" Enter を押すと改行
 nnoremap <CR> i<Return><Esc>^k
 
+"" terminal
+nnoremap <Leader>sh :vertical terminal<CR>
+:tnoremap <Esc> <C-\><C-n>
+command! -nargs=* T split | wincmd j | resize 20 | terminal <args>
+autocmd TermOpen * startinsert
+
 "" nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
