@@ -213,7 +213,8 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'wakatime/vim-wakatime'
 "" 異なるエディタ間で設定を共有
 Plug 'editorconfig/editorconfig-vim'
-
+"" キーマップの表示
+Plug 'folke/which-key.nvim'
 call plug#end()
 
 "" プラグインをタイマーで遅延読み込み
@@ -485,6 +486,15 @@ let g:dashboard_custom_shortcut={
       \ 'find_word'          : 'SPC f a',
       \ 'book_marks'         : 'SPC f b',
       \ }
+
+"" which-key.nvim
+lua << EOF
+require("which-key").setup {
+  -- your configuration comes here
+  -- or leave it empty to use the default settings
+  -- refer to the configuration section below
+  }
+EOF
 
 " 設定
 
