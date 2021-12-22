@@ -251,7 +251,7 @@ augroup load_us_insert
         \ 'vim-coloresque',
         \ 'emmet-vim',
         \ 'vim-javascript-syntax',
-        \ 'live-preview',
+        \ 'vim-livedown',
         \ )| autocmd! load_us_insert
 augroup END
 
