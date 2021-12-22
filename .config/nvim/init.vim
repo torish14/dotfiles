@@ -458,6 +458,10 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=underline
 "" nerdcommenter
 let g:NERDSpaceDelims = 1
 
+"" vim-expand-region
+map <C-g> <Plug>(expand_region_expand)
+map <C-s> <Plug>(expand_region_shrink)
+
 "" vim-move
 "" コントロールキー + k / j / h / l で行の移動
 let g:move_key_modifier = 'C'
