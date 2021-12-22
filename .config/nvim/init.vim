@@ -381,7 +381,7 @@ autocmd FileType html imap <buffer><expr><tab>
       \ "\<tab>"
 
 "" 補完機能
-"" coc.vim
+"" coc.nvim
 "" space 2回で CocList
 nmap <silent> <space><space> :<C-u>CocList<cr>
 "" space + gd で定義元へ移動
