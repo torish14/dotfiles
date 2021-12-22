@@ -370,6 +370,16 @@ augroup END
 " typescript
 let g:typescript_indent_disable = 1
 
+"" template
+augroup templateGroup
+  autocmd!
+  autocmd BufNewFile *.html :0r ~/vim-template/t.html
+  autocmd BufNewFile *.cpp :0r ~/vim-template/t.cpp
+  autocmd BufNewFile *.py :0r ~/vim-template/t.py
+augroup END
+
+set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
+
 "" syntax
 augroup vimrc-sync-fromstart
   autocmd!
