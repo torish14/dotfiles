@@ -622,6 +622,8 @@ nnoremap j gj
 nnoremap k gk
 nnoremap <Down> gj
 nnoremap <Up> gk
+nnoremap <C-;> g;
+nnoremap <C-,> g,
 "" 行頭、行末に移動
 nnoremap <C-e> <Esc>$a
 nnoremap <C-a> <Esc>^i
