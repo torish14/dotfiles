@@ -290,6 +290,10 @@ if exists('g:loaded_webdevicons')
   call webdevicons#refresh()
 endif
 
+"" vim-easy-align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
 "" vim-airline
 let g:airline_theme = 'kolor'
 let g:airline_powerline_fonts = 1
