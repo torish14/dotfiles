@@ -444,6 +444,10 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=underline
 "" nerdcommenter
 let g:NERDSpaceDelims = 1
 
+"" vim-move
+"" コントロールキー + k / j / h / l で行の移動
+let g:move_key_modifier = 'C'
+
 "" その他
 
 " 設定
