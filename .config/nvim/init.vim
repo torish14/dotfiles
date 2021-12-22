@@ -109,8 +109,6 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': [] }
 "" nerdtree のアイコンを表示
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
-"" コードの整列
-Plug 'junegunn/vim-easy-align'
 "" オプションバーの表示
 Plug 'vim-airline/vim-airline', { 'on': [] }
 Plug 'vim-airline/vim-airline-themes'
@@ -289,10 +287,6 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
 if exists('g:loaded_webdevicons')
   call webdevicons#refresh()
 endif
-
-"" vim-easy-align
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
 
 "" vim-airline
 let g:airline_theme = 'kolor'
