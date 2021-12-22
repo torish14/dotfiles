@@ -627,8 +627,10 @@ nnoremap <Up> gk
 nnoremap <C-;> g;
 nnoremap <C-,> g,
 "" 行頭、行末に移動
-nnoremap <C-e> <Esc>$a
 nnoremap <C-a> <Esc>^i
+nnoremap 0 ^
+nnoremap ^ 0
+nnoremap <C-e> <Esc>$a
 "" gr で前のタブに移動
 nnoremap gr :tabprevious
 "" インデントに合わせてペースト
@@ -703,8 +705,8 @@ let &t_SI.="\e[5 q"
 let &t_EI.="\e[1 q"
 let &t_te.="\e[0 q"
 "" ctrlキーで行頭、行末に移動
-inoremap <C-e> <Esc>$a
 inoremap <C-a> <Esc>^i
+inoremap <C-e> <Esc>$a
 "" ctrl + k でカーソル位置から行末まで削除
 inoremap <C-K> <C-O>D
 "" jキーを二度押しで ESCキー
