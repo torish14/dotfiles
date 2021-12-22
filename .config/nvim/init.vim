@@ -112,8 +112,6 @@ Plug 'kyazdani42/nvim-web-devicons'
 "" オプションバーの表示
 Plug 'vim-airline/vim-airline', { 'on': [] }
 Plug 'vim-airline/vim-airline-themes'
-"" オートフォーマット
-Plug 'Chiel92/vim-autoformat', { 'on': [] }
 "" ヤンクした箇所をハイライト
 Plug 'machakann/vim-highlightedyank'
 "" 括弧に色付け
@@ -226,7 +224,6 @@ function! s:lazyLoadPlugs(timer)
         \ 'vim-nerdtree-tabs',
         \ 'nerdtree-git-plugin',
         \ 'vim-airline',
-        \ 'vim-autoformat',
         \ 'ale',
         \ 'vim-easymotion',
         \ 'vim-sandwich',
@@ -327,9 +324,6 @@ let g:airline_right_sep = '⮂'
 let g:airline_right_alt_sep = '⮃'
 let g:airline#extensions#ale#open_lnum_symbol = '('
 let g:airline#extensions#ale#close_lnum_symbol = ')'
-
-"" vim-autoformat
-au BufWrite * :Autoformat
 
 "" rainbow
 let g:rainbow_active = 1
