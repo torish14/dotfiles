@@ -441,6 +441,8 @@ highlight QuickScofePrimary guifg='#afff5f' gui=underline
 highlight QuickScopeSecondary guifg='#5fffff' gui=underline
 
 "" 編集機能
+"" nerdcommenter
+let g:NERDSpaceDelims = 1
 
 "" その他
 
