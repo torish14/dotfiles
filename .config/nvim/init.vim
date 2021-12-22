@@ -449,6 +449,17 @@ let g:NERDSpaceDelims = 1
 let g:move_key_modifier = 'C'
 
 "" その他
+" 保存時のみ ale を実行する
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_sign_column_always = 1
+let g:ale_set_highlights = 0
+" 表示に関する設定
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''
+let g:ale_echo_msg_format = '[%linter%]%code: %%s'
+highlight link ALEErrorSign Tag
+highlight link ALEWarningSign StorageClass
 
 " 設定
 
