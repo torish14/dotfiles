@@ -367,6 +367,9 @@ augroup vimrc-python
         \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
+" typescript
+let g:typescript_indent_disable = 1
+
 "" syntax
 augroup vimrc-sync-fromstart
   autocmd!
