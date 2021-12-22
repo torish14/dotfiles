@@ -607,6 +607,14 @@ xmap <leader><tab> <plug>(fzf-maps-x)
 nmap <leader><tab> <plug>(fzf-maps-n)
 omap <leader><tab> <plug>(fzf-maps-o)
 
+"" columnskip.vim
+nmap <S-j> <Plug>(columnskip:nonblank:next)
+omap <S-j> <Plug>(columnskip:nonblank:next)
+xmap <S-j> <Plug>(columnskip:nonblank:next)
+nmap <S-k> <Plug>(columnskip:nonblank:prev)
+omap <S-k> <Plug>(columnskip:nonblank:prev)
+xmap <S-k> <Plug>(columnskip:nonblank:prev)
+
 "" インサートモード
 "" Emacs のキーバインド使用
 inoremap <C-p> <Up>
