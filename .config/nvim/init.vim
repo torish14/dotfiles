@@ -359,6 +359,14 @@ let g:bookmark_highlight_lines = 1
 "" mx :BookmarkClearAll
 
 "" 言語
+"" python
+augroup vimrc-python
+  autocmd!
+  autocmd FileType python setlocal
+        \ formatoptions+=croq softtabstop=2
+        \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+augroup END
+
 "" syntax
 augroup vimrc-sync-fromstart
   autocmd!
