@@ -367,7 +367,7 @@ augroup vimrc-python
         \ cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 augroup END
 
-" typescript
+"" typescript
 let g:typescript_indent_disable = 1
 
 "" template
@@ -408,7 +408,7 @@ nmap <silent> <space>fm <Plug>(coc-format)
 "" vim-closetag
 let g:closetag_filenames = '*.html, *.xhtml, *.phthml, *.vue'
 
-" wilder.nvim
+"" wilder.nvim
 call wilder#setup({
       \ 'modes': [':', '/', '?'],
       \ 'next_key': '<C-n>',
@@ -454,13 +454,13 @@ call wilder#set_option('renderer', wilder#renderer_mux({
 let g:EasyMotion_do_mapping = 0 " Disable default mappings
 let g:EasyMotion_smartcase = 1
 
-" clever-f.vim
+"" clever-f.vim
 let g:clever_f_ignore_case = 1
 let g:clever_f_use_migemo = 1
 
-" quick-scope
+"" quick-scope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-" 遅延読み込み
+"" 遅延読み込み
 let g:qs_lazy_highlight = 1
 highlight QuickScofePrimary guifg='#afff5f' gui=underline
 highlight QuickScopeSecondary guifg='#5fffff' gui=underline
