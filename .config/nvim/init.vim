@@ -674,6 +674,9 @@ nmap <S-k> <Plug>(columnskip:nonblank:prev)
 omap <S-k> <Plug>(columnskip:nonblank:prev)
 xmap <S-k> <Plug>(columnskip:nonblank:prev)
 
+"" keyboard-quickfix
+nnoremap z= <Cmd>call VSCodeNotify('keyboard-quickfix.openQuickFix')<CR>
+
 "" インサートモード
 "" Emacs のキーバインド使用
 inoremap <C-p> <Up>
