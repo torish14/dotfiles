@@ -122,8 +122,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/git-messenger.vim'
 "" markdown のプレビュー
 Plug 'shime/vim-livedown', { 'on': [] }
-"" 相対番号と絶対番号の入れ替え
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
 "" ブックマーク
 Plug 'MattesGroeger/vim-bookmarks'
 "" カーソル下の単語を移動するたびにハイライト
