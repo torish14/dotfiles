@@ -122,8 +122,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/git-messenger.vim'
 "" markdown のプレビュー
 Plug 'shime/vim-livedown', { 'on': [] }
-"" ブックマーク
-Plug 'MattesGroeger/vim-bookmarks'
 "" カーソル下の単語を移動するたびにハイライト
 Plug 'osyo-manga/vim-brightest', { 'on': [] }
 
@@ -331,19 +329,6 @@ let g:rainbow_active = 1
 let g:livedown_autorun = 0
 let g:livedown_port = 0803
 let g:livedown_browser = "vivaldi"
-
-"" vim-bookmarks
-highlight BookmarkSign guibg=NONE guifg=#f4468f
-highlight BookmarkLine guibg=#f4468f guifg=NONE
-let g:bookmark_sign = '♥'
-let g:bookmark_highlight_lines = 1
-"" mm :BookmarkToggle
-"" mi :BookmarkAnnotate<TEXT>
-"" mn :BookmarkNext
-"" mp :BookmarkPrev
-"" ma :BookmarkShowAll
-"" mc :BookmarkClear
-"" mx :BookmarkClearAll
 
 "" 言語
 "" python
