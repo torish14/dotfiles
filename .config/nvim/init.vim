@@ -614,8 +614,9 @@ nnoremap <C-a> <Esc>^i
 nnoremap 0 ^
 nnoremap ^ 0
 nnoremap <C-e> <Esc>$a
-"" gr で前のタブに移動
-nnoremap gr :tabprevious
+"" タブの移動
+nnoremap <C-g> gt
+nnoremap <C-s> gT
 "" インデントに合わせてペースト
 nnoremap p ]p
 nnoremap P ]P
