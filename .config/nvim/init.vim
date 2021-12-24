@@ -185,8 +185,6 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'brooth/far.vim'
 "" コメントアウトをラクに
 Plug 'preservim/nerdcommenter', { 'on': [] }
-"" ビジュアルモードでの選択箇所を増やす
-Plug 'terryma/vim-expand-region'
 "" . でのリピート機能の拡張
 Plug 'tpope/vim-repeat', { 'on': [] }
 "" git を使う
@@ -440,10 +438,6 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=underline
 "" 編集機能
 "" nerdcommenter
 let g:NERDSpaceDelims = 1
-
-"" vim-expand-region
-map <C-g> <Plug>(expand_region_expand)
-map <C-s> <Plug>(expand_region_shrink)
 
 "" vim-move
 "" コントロールキー + k / j / h / l で行の移動
