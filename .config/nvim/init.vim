@@ -381,8 +381,8 @@ let g:closetag_filenames = '*.html, *.xhtml, *.phthml, *.vue'
 "" wilder.nvim
 call wilder#setup({
       \ 'modes': [':', '/', '?'],
-      \ 'next_key': '<C-n>',
-      \ 'previous_key': '<C-p>',
+      \ 'next_key': '<Tab>',
+      \ 'previous_key': '<S-Tab>',
       \ 'accept_key': '<Down>',
       \ 'reject_key': '<Up>',
       \ })
