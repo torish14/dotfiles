@@ -600,6 +600,12 @@ nnoremap <Leader>e :e<CR>
 nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>nn :noh<CR>
 
+"" プラグインの制御
+nnoremap <leader>ii :pluginstall<cr>
+nnoremap <leader>iu :plugupdate<cr>
+nnoremap <leader>ic :plugclean<cr>
+nnoremap <leader>ih :checkhealth<cr>
+
 "" 移動
 nnoremap j gj
 nnoremap k gk
