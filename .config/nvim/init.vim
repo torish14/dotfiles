@@ -630,6 +630,42 @@ nnoremap <Leader>re :%s;\<<C-R><C-W>\>;g<Left><Left>;
 nnoremap <Leader>, :vertical new ~/.config/nvim/init.vim<CR>
 "" Enter を押すと改行
 nnoremap <CR> i<Return><Esc>^k
+"" `i` の省略
+nmap cw ciw
+nmap ct cit
+nmap c( ci(
+nmap c{ ci{
+nmap c[ ci[
+nmap c' ci'
+nmap c" ci"
+nmap c` ci`
+
+nmap dw diw
+nmap dt dit
+nmap d( di(
+nmap d{ di{
+nmap d[ di[
+nmap d' di'
+nmap d" di"
+nmap d` di`
+
+nmap vw viw
+nmap vt vit
+nmap v( vi(
+nmap v{ vi{
+nmap v[ vi[
+nmap v' vi'
+nmap v" vi"
+nmap v` vi`
+
+nmap yw yiw
+nmap yt yit
+nmap y( yi(
+nmap y{ yi{
+nmap y[ yi[
+nmap y' yi'
+nmap y" yi"
+nmap y` yi`
 
 "" terminal
 nnoremap <Leader>sh :vertical terminal<CR>
