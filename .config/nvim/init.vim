@@ -186,7 +186,7 @@ Plug 'brooth/far.vim'
 "" コメントアウトをラクに
 Plug 'preservim/nerdcommenter', { 'on': [] }
 "" . でのリピート機能の拡張
-Plug 'tpope/vim-repeat', { 'on': [] }
+Plug 'tpope/vim-repeat'
 "" git を使う
 Plug 'tpope/vim-fugitive', { 'on': [] }
 "" fugitive の拡張
