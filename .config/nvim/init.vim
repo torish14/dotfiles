@@ -616,8 +616,8 @@ nnoremap 0 ^
 nnoremap ^ 0
 nnoremap <C-e> <Esc>$a
 "" タブの移動
-nnoremap <C-g> gt
-nnoremap <C-s> gT
+nnoremap <silent> <C-g> <Cmd>call VSCodeNotify('workbench.action.nextEditor')<CR>
+nnoremap <silent> <C-s> <Cmd>call VSCodeNotify('workbench.action.previousEditor')<CR>
 "" インデントに合わせてペースト
 nnoremap p ]p
 nnoremap P ]P
