@@ -432,8 +432,11 @@ let g:clever_f_use_migemo = 1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 "" 遅延読み込み
 let g:qs_lazy_highlight = 1
-highlight QuickScofePrimary guifg='#afff5f' gui=underline
-highlight QuickScopeSecondary guifg='#5fffff' gui=underline
+augroup qs_colors
+  autocmd!
+  autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline
+  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline
+augroup END
 
 "" 編集機能
 "" nerdcommenter
