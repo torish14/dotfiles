@@ -186,7 +186,7 @@ Plug 'brooth/far.vim'
 "" コメントアウトをラクに
 Plug 'preservim/nerdcommenter', { 'on': [] }
 "" . でのリピート機能の拡張
-Plug 'tpope/vim-repeat', { 'on': [] }
+Plug 'tpope/vim-repeat'
 "" git を使う
 Plug 'tpope/vim-fugitive', { 'on': [] }
 "" fugitive の拡張
@@ -432,8 +432,11 @@ let g:clever_f_use_migemo = 1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 "" 遅延読み込み
 let g:qs_lazy_highlight = 1
-highlight QuickScofePrimary guifg='#afff5f' gui=underline
-highlight QuickScopeSecondary guifg='#5fffff' gui=underline
+augroup qs_colors
+  autocmd!
+  autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline
+  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline
+augroup END
 
 "" 編集機能
 "" nerdcommenter
@@ -595,10 +598,10 @@ nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>nn :noh<CR>
 
 "" プラグインの制御
-nnoremap <leader>ii :pluginstall<cr>
-nnoremap <leader>iu :plugupdate<cr>
-nnoremap <leader>ic :plugclean<cr>
-nnoremap <leader>ih :checkhealth<cr>
+nnoremap <leader>ii :PlugInstall<cr>
+nnoremap <leader>iu :PlugUpdate<cr>
+nnoremap <leader>ic :PlugClean<cr>
+nnoremap <leader>ih :CheckHealth<cr>
 
 "" 移動
 nnoremap j gj
@@ -613,8 +616,8 @@ nnoremap 0 ^
 nnoremap ^ 0
 nnoremap <C-e> <Esc>$a
 "" タブの移動
-nnoremap <C-g> gt
-nnoremap <C-s> gT
+nnoremap <silent> <C-g> <Cmd>call VSCodeNotify('workbench.action.nextEditor')<CR>
+nnoremap <silent> <C-s> <Cmd>call VSCodeNotify('workbench.action.previousEditor')<CR>
 "" インデントに合わせてペースト
 nnoremap p ]p
 nnoremap P ]P
@@ -636,6 +639,7 @@ nmap ct cit
 nmap c( ci(
 nmap c{ ci{
 nmap c[ ci[
+nmap c< ci<
 nmap c' ci'
 nmap c" ci"
 nmap c` ci`
@@ -645,6 +649,7 @@ nmap dt dit
 nmap d( di(
 nmap d{ di{
 nmap d[ di[
+nmap d< di<
 nmap d' di'
 nmap d" di"
 nmap d` di`
@@ -654,6 +659,7 @@ nmap vt vit
 nmap v( vi(
 nmap v{ vi{
 nmap v[ vi[
+nmap v< vi<
 nmap v' vi'
 nmap v" vi"
 nmap v` vi`
@@ -663,6 +669,7 @@ nmap yt yit
 nmap y( yi(
 nmap y{ yi{
 nmap y[ yi[
+nmap y< yi<
 nmap y' yi'
 nmap y" yi"
 nmap y` yi`
@@ -745,4 +752,3 @@ imap <c-x><c-l> <plug>(fzf-complete-line)
 inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
 inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }})
-
