@@ -57,3 +57,5 @@ function ghcr
     ghq get $arvg[1]
     code (ghq list --full-path -e $argv[1])
 end
+
+# abbr
