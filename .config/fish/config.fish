@@ -179,3 +179,5 @@ abbr ps 'procs --sortd cpu'
 abbr ql 'qlmanage -p'
 
 abbr r rg
+
+abbr rmf 'rm -rfv'
