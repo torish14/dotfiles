@@ -153,3 +153,4 @@ abbr la 'exa -aF --icons'
 abbr ls 'exa -h --icons'
 abbr ll 'exa -laF --icons'
 
+abbr mk 'mkdir -pv'
