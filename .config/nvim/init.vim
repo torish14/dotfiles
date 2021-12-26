@@ -261,7 +261,7 @@ highlight = {
 enable = true,              -- false will disable the whole extension
 disable = { "c", "ruby" },  -- list of language that will be disabled
 },
-}
+  }
 EOF
 
 "" nerdtree
