@@ -195,3 +195,4 @@ abbr tb 'tig blame'
 abbr tg 'tig grep'
 
 abbr tl tldr
+abbr tm tmux
