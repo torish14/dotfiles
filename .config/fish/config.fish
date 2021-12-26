@@ -154,3 +154,10 @@ abbr ls 'exa -h --icons'
 abbr ll 'exa -laF --icons'
 
 abbr mk 'mkdir -pv'
+
+abbr ni 'npm install'
+abbr nig 'npm install -g'
+abbr nrd 'npm run dev'
+abbr nrf 'npm run format'
+abbr nrl 'npm run lint'
+abbr nr 'npm remove'
