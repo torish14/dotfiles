@@ -209,6 +209,7 @@ Plug 'wakatime/vim-wakatime'
 Plug 'editorconfig/editorconfig-vim'
 "" キーマップの表示
 Plug 'folke/which-key.nvim'
+
 call plug#end()
 
 "" プラグインをタイマーで遅延読み込み
