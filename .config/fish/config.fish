@@ -177,3 +177,5 @@ abbr pl 'pnpm lint'
 abbr ps 'procs --sortd cpu'
 
 abbr ql 'qlmanage -p'
+
+abbr r rg
