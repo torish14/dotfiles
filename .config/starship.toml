@@ -31,3 +31,5 @@ $username\
     $shell\
     $character"""
 
+# コマンドを実行したあとに改行を入れない
+add_newline = false
