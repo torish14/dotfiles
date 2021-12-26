@@ -163,3 +163,6 @@ abbr nrl 'npm run lint'
 abbr nr 'npm remove'
 
 abbr nsl nslookup
+
+abbr op open
+abbr opa 'open -a'
