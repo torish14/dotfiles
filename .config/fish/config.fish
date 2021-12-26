@@ -59,3 +59,10 @@ function ghcr
 end
 
 # abbr
+abbr b brew
+abbr bc 'brew cleanup'
+abbr bd 'brew doctor'
+abbr bi 'brew install'
+abbr bl 'brew list'
+abbr bud 'brew update'
+abbr bug 'brew upgrade'
