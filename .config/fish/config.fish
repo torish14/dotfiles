@@ -140,3 +140,5 @@ abbr gsts 'git stath save'
 abbr gstl 'git stash list'
 
 abbr grep rg
+
+abbr his history
