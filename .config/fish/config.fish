@@ -71,3 +71,4 @@ abbr c bat
 abbr cat bat
 abbr cafi 'caffeinate -i'
 abbr co code
+abbr cu curl
