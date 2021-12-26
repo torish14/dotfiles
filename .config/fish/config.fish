@@ -202,3 +202,11 @@ abbr tr tree
 abbr trai 'tree -a -I ".git|node_modules|bower_components|.DS_Store" -L 3 -C'
 abbr trl2 'tree -L 2 -C'
 abbr trl3 'tree -L 3 -C'
+
+abbr v nvim
+abbr vi nvim
+abbr vim nvim
+abbr vf 'nvim ~/.config/fish/config.fish'
+abbr vn 'nvim ~/.config/nvim/init.vim'
+abbr vr 'nvim ~/.vimrc'
+abbr vs 'nvim ~/.config/starship.toml'
