@@ -138,3 +138,5 @@ abbr gstp 'git stash pop'
 abbr gsts 'git stath save'
 # stash の一覧
 abbr gstl 'git stash list'
+
+abbr grep rg
