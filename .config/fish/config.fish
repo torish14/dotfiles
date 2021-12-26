@@ -74,3 +74,5 @@ abbr co code
 abbr cu curl
 
 abbr du ncdu
+
+abbr e emacs
