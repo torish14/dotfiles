@@ -142,3 +142,5 @@ abbr gstl 'git stash list'
 abbr grep rg
 
 abbr his history
+
+abbr j jobs
