@@ -161,3 +161,5 @@ abbr nrd 'npm run dev'
 abbr nrf 'npm run format'
 abbr nrl 'npm run lint'
 abbr nr 'npm remove'
+
+abbr nsl nslookup
