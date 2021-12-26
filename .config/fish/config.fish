@@ -187,3 +187,10 @@ abbr sp 'sudo purge'
 abbr sr 'sudo reboot'
 abbr ss 'sudo shutdown -h now'
 abbr so source
+
+# tigコマンド
+abbr t tig
+abbr ts 'tig status'
+abbr tb 'tig blame'
+abbr tg 'tig grep'
+
