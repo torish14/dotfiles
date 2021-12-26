@@ -196,3 +196,4 @@ abbr tg 'tig grep'
 
 abbr tl tldr
 abbr tm tmux
+abbr to touch
