@@ -219,3 +219,5 @@ abbr yf 'yarn format'
 abbr yl 'yarn lint'
 abbr yr 'yarn remove'
 
+abbr ... cd ../..
+abbr .... cd ../../..
