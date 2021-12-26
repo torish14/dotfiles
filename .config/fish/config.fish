@@ -181,3 +181,8 @@ abbr ql 'qlmanage -p'
 abbr r rg
 
 abbr rmf 'rm -rfv'
+
+abbr s sudo
+abbr sp 'sudo purge'
+abbr sr 'sudo reboot'
+abbr ss 'sudo shutdown -h now'
