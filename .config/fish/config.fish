@@ -175,3 +175,5 @@ abbr pu 'pnpm up'
 abbr pr 'pnpm remove'
 abbr pl 'pnpm lint'
 abbr ps 'procs --sortd cpu'
+
+abbr ql 'qlmanage -p'
