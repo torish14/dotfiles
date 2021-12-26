@@ -146,3 +146,5 @@ abbr his history
 abbr j jobs
 
 abbr k 'kill -9'
+
+abbr ka killall
