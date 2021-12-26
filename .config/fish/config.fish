@@ -69,3 +69,4 @@ abbr bug 'brew upgrade'
 
 abbr c bat
 abbr cat bat
+abbr cafi 'caffeinate -i'
