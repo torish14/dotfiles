@@ -210,3 +210,12 @@ abbr vf 'nvim ~/.config/fish/config.fish'
 abbr vn 'nvim ~/.config/nvim/init.vim'
 abbr vr 'nvim ~/.vimrc'
 abbr vs 'nvim ~/.config/starship.toml'
+
+abbr y yarn
+abbr ya 'yarn add'
+abbr yd 'yarn dev'
+abbr yu 'yarn upgrade'
+abbr yf 'yarn format'
+abbr yl 'yarn lint'
+abbr yr 'yarn remove'
+
