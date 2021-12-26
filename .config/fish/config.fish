@@ -221,3 +221,6 @@ abbr yr 'yarn remove'
 
 abbr ... cd ../..
 abbr .... cd ../../..
+
+# starship の読み込み
+starship init fish | source
