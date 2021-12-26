@@ -148,3 +148,8 @@ abbr j jobs
 abbr k 'kill -9'
 
 abbr ka killall
+
+abbr la 'exa -aF --icons'
+abbr ls 'exa -h --icons'
+abbr ll 'exa -laF --icons'
+
