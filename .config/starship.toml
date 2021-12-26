@@ -33,3 +33,6 @@ $username\
 
 # コマンドを実行したあとに改行を入れない
 add_newline = false
+
+# ファイルをスキャンするタイムアウト時間
+scan_timeout = 10
