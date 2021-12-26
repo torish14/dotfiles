@@ -166,3 +166,12 @@ abbr nsl nslookup
 
 abbr op open
 abbr opa 'open -a'
+
+abbr p pnpm
+abbr pa 'pnpm add'
+abbr pd 'pnpm dev'
+abbr pf 'pnpm format'
+abbr pi 'pnpm install'
+abbr pu 'pnpm up'
+abbr pr 'pnpm remove'
+abbr pl 'pnpm lint'
