@@ -14,3 +14,21 @@ function peco_select_history_order
         commandline ''
     end
 end
+
+# fish キーバインド
+function fish_user_key_bindings
+    # control + R
+    bind \cr 'peco_select_history (commandline -b)'
+    # control + X からの control + K
+    bind \cx\ck peco_kill
+    bind \c] peco_select_ghq_repository
+    bind \c] 'stty sane; peco_select_ghq_repository'
+    bind /cg ghq_peco_repo
+    bind \cg ghq_fzf_repo
+    bind \cx\cl peco_open_gh_repository
+    bind \cx\cr peco_recentdend
+end
+
+set -U FZF_LEGACY_KEYBINDINGS 0
+# "--reverse --height=100%"
+set -U FZF_REVERSE_ISEARCH_OPTS
