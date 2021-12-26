@@ -78,3 +78,63 @@ abbr du ncdu
 abbr e emacs
 
 abbr f fd
+
+# git
+abbr g git
+abbr gi 'git init'
+abbr gs 'git status'
+abbr gb 'git branch'
+abbr gco 'git checkout'
+# branch を作成 & 切り替え
+abbr gcob 'git checkout -b'
+abbr gc 'git commit'
+abbr gcm 'git commit -m'
+# 直前の commit の修正
+abbr gca 'git commit --amend'
+abbr gg 'git grep'
+abbr gi 'git init'
+abbr ga 'git add'
+abbr gap 'git add -p'
+abbr gaa 'git add .'
+# 直前の add を取り消し
+abbr grh 'git reset HEAD'
+# 直前の commit のみを取り消し
+abbr grs 'git reset --soft HEAD^'
+# 直前の commit をまるっと取り消し
+abbr grhh 'git reset --hard HEAD^'
+# git reset の取り消し
+abbr grho 'git reset --hard ORIG_HEAD'
+# コミットメッセージを修正
+abbr gri 'git rebase -i'
+abbr grir 'git rebase -i --root'
+abbr gra 'git remote add'
+abbr grao 'git remote add origin'
+abbr grv 'git remote -v'
+abbr gd 'git diff'
+abbr gdc 'git diff --cached'
+abbr gl 'git log --graph'
+abbr gln 'git log --name-status'
+abbr gls "git log --stat"
+abbr glo 'git log --oneline'
+abbr gcma 'git checkout main'
+abbr gf 'git fetch'
+abbr gfu 'git fetch upstream'
+abbr gfo 'git fetch origin'
+abbr gmod 'git merge origin/develop'
+abbr gmom 'git merge origin/main'
+abbr gp 'git push'
+abbr gpf 'git push -f'
+abbr gpo 'git push origin'
+abbr gpom 'git push origin main'
+# 変更の退避
+abbr gst 'git stash -u'
+# 退避した作業を戻す
+abbr gsta 'git stash apply'
+# 退避した作業を消す
+abbr gstd 'git stash drop'
+# 退避した作業を戻す & stash のリストから消す
+abbr gstp 'git stash pop'
+# stash にコメントを追加する
+abbr gsts 'git stath save'
+# stash の一覧
+abbr gstl 'git stash list'
