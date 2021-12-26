@@ -76,3 +76,5 @@ abbr cu curl
 abbr du ncdu
 
 abbr e emacs
+
+abbr f fd
