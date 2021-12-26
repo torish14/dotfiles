@@ -1,0 +1,33 @@
+# ターミナルに表示する文字列の並び替え
+format = """
+$username\
+    $hostname\
+    $directory\
+    $git_branch\
+    $git_commit\
+    $git_state\
+    $git_metrics\
+    $git_status\
+    $package\
+    $cmake\
+    $dart\
+    $deno\
+    $kotlin\
+    $nodejs\
+    $python\
+    $swift\
+    $vagrant\
+    $memory_usage\
+    $aws\
+    $gcloud\
+    $docker_context\
+    $custom\
+    $time\
+    $cmd_duration\
+    $line_break\
+    $jobs\
+    $battery\
+    $status\
+    $shell\
+    $character"""
+
