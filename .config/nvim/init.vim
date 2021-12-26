@@ -471,15 +471,6 @@ let g:dashboard_custom_shortcut={
       \ 'book_marks'         : 'SPC f b',
       \ }
 
-"" which-key.nvim
-lua << EOF
-require("which-key").setup {
-  -- your configuration comes here
-  -- or leave it empty to use the default settings
-  -- refer to the configuration section below
-  }
-EOF
-
 " 設定
 
 "" 基本設定
