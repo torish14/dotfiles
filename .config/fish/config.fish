@@ -32,3 +32,13 @@ end
 set -U FZF_LEGACY_KEYBINDINGS 0
 # "--reverse --height=100%"
 set -U FZF_REVERSE_ISEARCH_OPTS
+
+# ghq + peco
+function ghq_peco_repo
+    set selected_repository (ghq list -p | peco --query "$LBUFFER")
+    if [ -n "$selected_repository" ]
+        cd $selected_repository
+        echo " $selected_repository "
+        commandline -f repaint
+    end
+end
