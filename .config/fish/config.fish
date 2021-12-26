@@ -194,3 +194,4 @@ abbr ts 'tig status'
 abbr tb 'tig blame'
 abbr tg 'tig grep'
 
+abbr tl tldr
