@@ -42,3 +42,11 @@ function ghq_peco_repo
         commandline -f repaint
     end
 end
+
+# ghq + fzf
+function ghq_fzf_repo -d 'Repository search'
+    ghq list --full-path | fzf --reverse --height=100% | read select
+    [ -n "$select" ]; and cd "$select"
+    echo " $select "
+    commandline -f repaint
+end
