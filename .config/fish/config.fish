@@ -66,3 +66,6 @@ abbr bi 'brew install'
 abbr bl 'brew list'
 abbr bud 'brew update'
 abbr bug 'brew upgrade'
+
+abbr c bat
+abbr cat bat
