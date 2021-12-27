@@ -1,1 +1,1 @@
-# 設定ファイル
+# Dotfiles for mac
