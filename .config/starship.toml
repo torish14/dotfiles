@@ -73,3 +73,8 @@ style = "#ffca85"
 format = '[$time]($style) '
 time_format = "%T"
 
+# パッケージ
+[package]
+disabled = true
+format = "[🎁$version](208) "
+
