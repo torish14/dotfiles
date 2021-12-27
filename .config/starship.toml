@@ -134,3 +134,7 @@ symbol = "🐋"
 [aws]
 disabled = true
 
+# vagrant
+[vagrant]
+format = "[⍱ $version](white) "
+
