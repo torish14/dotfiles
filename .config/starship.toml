@@ -53,3 +53,10 @@ success_symbol = "[❯](#61ffca)"
 error_symbol = "[❯](#ff6767)"
 vicmd_symbol = "[V](green)"
 
+# ディレクトリの設定
+[directory]
+style = "#a277ff"
+format = "[$path]($style)[$read_only]($read_only_style) "
+truncation_length = 100
+truncate_to_repo = false
+
