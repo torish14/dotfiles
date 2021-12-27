@@ -130,3 +130,7 @@ disabled = true
 disabled = true
 symbol = "🐋"
 
+# aws
+[aws]
+disabled = true
+
