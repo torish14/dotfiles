@@ -125,3 +125,8 @@ deleted = "✘"
 [gcloud]
 disabled = true
 
+# docker
+[docker_context]
+disabled = true
+symbol = "🐋"
+
