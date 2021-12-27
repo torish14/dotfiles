@@ -36,3 +36,8 @@ add_newline = false
 
 # ファイルをスキャンするタイムアウト時間
 scan_timeout = 10
+
+# ユーザーネームを非表示
+[username]
+disabled = false
+
