@@ -97,3 +97,11 @@ pyenv_version_name = true
 [ruby]
 disabled = true
 
+# git_branch
+[git_branch]
+style = "#bdbdbd"
+format = "[$symbol$branch]($style)"
+symbol = ""
+truncation_length = 100
+truncation_symbol = ""
+
