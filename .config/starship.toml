@@ -1,0 +1,145 @@
+# ターミナルに表示する文字列の並び替え
+format = """
+$username\
+    $hostname\
+    $directory\
+    $git_branch\
+    $git_commit\
+    $git_state\
+    $git_metrics\
+    $git_status\
+    $package\
+    $cmake\
+    $dart\
+    $deno\
+    $kotlin\
+    $nodejs\
+    $python\
+    $swift\
+    $vagrant\
+    $memory_usage\
+    $aws\
+    $gcloud\
+    $docker_context\
+    $custom\
+    $time\
+    $cmd_duration\
+    $line_break\
+    $jobs\
+    $battery\
+    $status\
+    $shell\
+    $character"""
+
+# コマンドを実行したあとに改行を入れない
+add_newline = false
+
+# ファイルをスキャンするタイムアウト時間
+scan_timeout = 10
+
+# ユーザーネームを非表示
+[username]
+disabled = false
+
+# ホストネームを ssh接続のときのみ表示
+[hostname]
+ssh_only = true
+format =  "[$hostname](#a277ff) "
+disabled = false
+
+# 成功時とエラー時のシンボルを設定
+[character]
+success_symbol = "[❯](#61ffca)"
+error_symbol = "[❯](#ff6767)"
+vicmd_symbol = "[V](green)"
+
+# ディレクトリの設定
+[directory]
+style = "#a277ff"
+format = "[$path]($style)[$read_only]($read_only_style) "
+truncation_length = 100
+truncate_to_repo = false
+
+# コマンド実行時間
+[cmd_duration]
+style = "#ffca85"
+format = "[$duration]($style) "
+min_time = 1 # millisecond
+
+# 現在時刻
+[time]
+disabled = false
+style = "#ffca85"
+format = '[$time]($style) '
+time_format = "%T"
+
+# パッケージ
+[package]
+disabled = true
+format = "[🎁$version](208) "
+
+# nodejs
+[nodejs]
+disabled = true
+style = "#a277ff"
+format = "[$symbol($version)]($style) "
+symbol = "🤖"
+
+# python
+[python]
+disabled = true
+style = "yellow"
+format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\) )]($style) '
+symbol = "👾"
+pyenv_version_name = true
+
+# ruby
+[ruby]
+disabled = true
+
+# git_branch
+[git_branch]
+style = "#bdbdbd"
+format = "[$symbol$branch]($style)"
+symbol = ""
+truncation_length = 100
+truncation_symbol = ""
+
+# git_status
+[git_status]
+style = "#bdbdbd"
+format = "[$all_status$ahead_behind]($style) "
+conflicted = "="
+ahead = "[⇡${count}](#61ffca)"
+behind = "[⇣${count}](#61ffca)"
+diverged = "[⇕⇡${ahead_count}⇣${behind_count}](#61ffca)"
+untracked = "?"
+up_to_date = ""
+stashed = "≡"
+modified = "*"
+staged = '[++\($count\)](#61ffca)'
+renamed = "»"
+deleted = "✘"
+
+# google_cloud
+[gcloud]
+disabled = true
+
+# docker
+[docker_context]
+disabled = true
+symbol = "🐋"
+
+# aws
+[aws]
+disabled = true
+
+# vagrant
+[vagrant]
+format = "[⍱ $version](white) "
+
+# バッテリー
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "

@@ -138,3 +138,89 @@ abbr gstp 'git stash pop'
 abbr gsts 'git stath save'
 # stash の一覧
 abbr gstl 'git stash list'
+
+abbr grep rg
+
+abbr his history
+
+abbr j jobs
+
+abbr k 'kill -9'
+abbr ka killall
+
+abbr la 'exa -aF --icons'
+abbr ls 'exa -h --icons'
+abbr ll 'exa -laF --icons'
+
+abbr mk 'mkdir -pv'
+
+abbr ni 'npm install'
+abbr nig 'npm install -g'
+abbr nrd 'npm run dev'
+abbr nrf 'npm run format'
+abbr nrl 'npm run lint'
+abbr nr 'npm remove'
+
+abbr nsl nslookup
+
+abbr op open
+abbr opa 'open -a'
+
+abbr p pnpm
+abbr pa 'pnpm add'
+abbr pd 'pnpm dev'
+abbr pf 'pnpm format'
+abbr pi 'pnpm install'
+abbr pu 'pnpm up'
+abbr pr 'pnpm remove'
+abbr pl 'pnpm lint'
+abbr ps 'procs --sortd cpu'
+
+abbr ql 'qlmanage -p'
+
+abbr r rg
+
+abbr rmf 'rm -rfv'
+
+abbr s sudo
+abbr sp 'sudo purge'
+abbr sr 'sudo reboot'
+abbr ss 'sudo shutdown -h now'
+abbr so source
+
+# tigコマンド
+abbr t tig
+abbr ts 'tig status'
+abbr tb 'tig blame'
+abbr tg 'tig grep'
+
+abbr tl tldr
+abbr tm tmux
+abbr to touch
+abbr top glances
+abbr tr tree
+abbr trai 'tree -a -I ".git|node_modules|bower_components|.DS_Store" -L 3 -C'
+abbr trl2 'tree -L 2 -C'
+abbr trl3 'tree -L 3 -C'
+
+abbr v nvim
+abbr vi nvim
+abbr vim nvim
+abbr vf 'nvim ~/.config/fish/config.fish'
+abbr vn 'nvim ~/.config/nvim/init.vim'
+abbr vr 'nvim ~/.vimrc'
+abbr vs 'nvim ~/.config/starship.toml'
+
+abbr y yarn
+abbr ya 'yarn add'
+abbr yd 'yarn dev'
+abbr yu 'yarn upgrade'
+abbr yf 'yarn format'
+abbr yl 'yarn lint'
+abbr yr 'yarn remove'
+
+abbr ... cd ../..
+abbr .... cd ../../..
+
+# starship の読み込み
+starship init fish | source

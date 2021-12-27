@@ -262,7 +262,7 @@ highlight = {
 enable = true,              -- false will disable the whole extension
 disable = { "c", "ruby" },  -- list of language that will be disabled
 },
-}
+  }
 EOF
 
 "" nerdtree
@@ -471,15 +471,6 @@ let g:dashboard_custom_shortcut={
       \ 'find_word'          : 'SPC f a',
       \ 'book_marks'         : 'SPC f b',
       \ }
-
-"" which-key.nvim
-lua << EOF
-require("which-key").setup {
-  -- your configuration comes here
-  -- or leave it empty to use the default settings
-  -- refer to the configuration section below
-  }
-EOF
 
 " 設定
 
