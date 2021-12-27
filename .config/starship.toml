@@ -41,3 +41,9 @@ scan_timeout = 10
 [username]
 disabled = false
 
+# ホストネームを ssh接続のときのみ表示
+[hostname]
+ssh_only = true
+format =  "[$hostname](#a277ff) "
+disabled = false
+
