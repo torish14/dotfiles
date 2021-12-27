@@ -1,4 +1,4 @@
-# $B%?!<%_%J%k$KI=<($9$kJ8;zNs$NJB$SBX$((B
+# ターミナルに表示する文字列の並び替え
 format = """
 $username\
     $hostname\
@@ -31,19 +31,25 @@ $username\
     $shell\
     $character"""
 
-# $B%3%^%s%I$r<B9T$7$?$"$H$K2~9T$rF~$l$J$$(B
+# コマンドを実行したあとに改行を入れない
 add_newline = false
 
-# $B%U%!%$%k$r%9%-%c%s$9$k%?%$%`%"%&%H;~4V(B
+# ファイルをスキャンするタイムアウト時間
 scan_timeout = 10
 
-# $B%f!<%6!<%M!<%`$rHsI=<((B
+# ユーザーネームを非表示
 [username]
 disabled = false
 
-# $B%[%9%H%M!<%`$r(B ssh$B@\B3$N$H$-$N$_I=<((B
+# ホストネームを ssh接続のときのみ表示
 [hostname]
 ssh_only = true
 format =  "[$hostname](#a277ff) "
 disabled = false
+
+# 成功時とエラー時のシンボルを設定
+[character]
+success_symbol = "[❯](#61ffca)"
+error_symbol = "[❯](#ff6767)"
+vicmd_symbol = "[V](green)"
 
