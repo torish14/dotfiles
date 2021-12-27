@@ -78,3 +78,10 @@ time_format = "%T"
 disabled = true
 format = "[🎁$version](208) "
 
+# nodejs
+[nodejs]
+disabled = true
+style = "#a277ff"
+format = "[$symbol($version)]($style) "
+symbol = "🤖"
+
