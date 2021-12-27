@@ -93,3 +93,7 @@ format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\) )]($style) '
 symbol = "👾"
 pyenv_version_name = true
 
+# ruby
+[ruby]
+disabled = true
+
