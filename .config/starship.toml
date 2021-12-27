@@ -60,3 +60,9 @@ format = "[$path]($style)[$read_only]($read_only_style) "
 truncation_length = 100
 truncate_to_repo = false
 
+# コマンド実行時間
+[cmd_duration]
+style = "#ffca85"
+format = "[$duration]($style) "
+min_time = 1 # millisecond
+
