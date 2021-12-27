@@ -105,3 +105,19 @@ symbol = ""
 truncation_length = 100
 truncation_symbol = ""
 
+# git_status
+[git_status]
+style = "#bdbdbd"
+format = "[$all_status$ahead_behind]($style) "
+conflicted = "="
+ahead = "[⇡${count}](#61ffca)"
+behind = "[⇣${count}](#61ffca)"
+diverged = "[⇕⇡${ahead_count}⇣${behind_count}](#61ffca)"
+untracked = "?"
+up_to_date = ""
+stashed = "≡"
+modified = "*"
+staged = '[++\($count\)](#61ffca)'
+renamed = "»"
+deleted = "✘"
+
