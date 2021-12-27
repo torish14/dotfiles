@@ -121,3 +121,7 @@ staged = '[++\($count\)](#61ffca)'
 renamed = "»"
 deleted = "✘"
 
+# google_cloud
+[gcloud]
+disabled = true
+
