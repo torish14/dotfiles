@@ -104,7 +104,7 @@ abbr grhh 'git reset --hard HEAD^'
 # git reset の取り消し
 abbr grho 'git reset --hard ORIG_HEAD'
 # コミットメッセージを修正
-abbr gri 'git rebase -i'
+abbr grih 'git rebase -i HEAD~'
 abbr grir 'git rebase -i --root'
 abbr gra 'git remote add'
 abbr grao 'git remote add origin'
