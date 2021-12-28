@@ -122,7 +122,7 @@ abbr gfo 'git fetch origin'
 abbr gmod 'git merge origin/develop'
 abbr gmom 'git merge origin/main'
 abbr gp 'git push'
-abbr gpf 'git push -f'
+abbr gpf 'git push --force-with-lease'
 abbr gpo 'git push origin'
 abbr gpom 'git push origin main'
 # 変更の退避
