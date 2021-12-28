@@ -691,7 +691,6 @@ nnoremap <Leader>v :<C-u>vsplit<CR>
 "" nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 
 "" vim-easymotion
 nmap <Leader>m <Plug>(easymotion-overwin-f)
