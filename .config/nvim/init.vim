@@ -153,7 +153,12 @@ Plug 'github/copilot.vim'
 
 "" モーション移動
 "" 高速なカーソル移動
-Plug 'easymotion/vim-easymotion', { 'on': [] }
+function! Cond(Cond, ...)
+  let opts = get(a:000, 0, {})
+  return a:Cond ? opts : extend(opts, { 'on': [], 'for': [] })
+endfunction
+Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
+Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 "" カーソル位置の単語で検索
 Plug 'thinca/vim-visualstar'
 "" モーション移動の拡張
@@ -221,7 +226,6 @@ function! s:lazyLoadPlugs(timer)
         \ 'nerdtree-git-plugin',
         \ 'vim-airline',
         \ 'ale',
-        \ 'vim-easymotion',
         \ 'vim-sandwich',
         \ 'nerdcommenter',
         \ 'clever-f.vim',
