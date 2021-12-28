@@ -677,6 +677,13 @@ nnoremap <Leader>v :<C-u>vsplit<CR>
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 
+"" vim-gitgutter
+nmap <Leader>gn <Plug>(GitGutterNextHunk)
+nmap <Leader>gp <Plug>(GitGutterPrevHunk)
+nmap <Leader>gv <Plug>(GitGutterPreviewHunk)
+nmap <Leader>gu <Plug>(GitGutterUndoHunk)
+nmap <Leader>gs <Plug>(GitGutterStageHunk)
+
 "" coc.nvim
 if !exists('g:vscode')
   "" space 2回で CocList
