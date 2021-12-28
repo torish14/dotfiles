@@ -81,7 +81,6 @@ abbr f fd
 
 # git
 abbr g git
-abbr gi 'git init'
 abbr gs 'git status'
 abbr gb 'git branch'
 abbr gco 'git checkout'
