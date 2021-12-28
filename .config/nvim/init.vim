@@ -367,21 +367,6 @@ autocmd FileType html imap <buffer><expr><tab>
       \ "\<tab>"
 
 "" 補完機能
-"" coc.nvim
-if !exists('g:vscode')
-  "" space 2回で CocList
-  nmap <silent> <space><space> :<C-u>CocList<cr>
-  "" space + gd で定義元へ移動
-  nmap <silent> gd <Plug>(coc-definition)
-  nmap <silent> gy <Plug>(coc-type-definition)
-  nmap <silent> gi <Plug>(coc-implementation)
-  nmap <silent> gr <Plug>(coc-references)
-  "" space + rn で Rename
-  nmap <silent> <space>rn <Plug>(coc-rename)
-  "" space + fm で Format
-  nmap <silent> <space>fm <Plug>(coc-format)
-endif
-
 "" vim-closetag
 let g:closetag_filenames = '*.html, *.xhtml, *.phthml, *.vue'
 
@@ -691,6 +676,21 @@ nnoremap <Leader>v :<C-u>vsplit<CR>
 "" nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
+
+"" coc.nvim
+if !exists('g:vscode')
+  "" space 2回で CocList
+  nmap <silent> <Leader><space> :<C-u>CocList<cr>
+  "" space + gd で定義元へ移動
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
+  "" space + rn で Rename
+  nmap <silent> <Leader>rn <Plug>(coc-rename)
+  "" space + fm で Format
+  nmap <silent> <Leader>fm <Plug>(coc-format)
+endif
 
 "" vim-easymotion
 nmap <Leader>m <Plug>(easymotion-overwin-f)
