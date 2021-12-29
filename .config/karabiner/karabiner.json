@@ -175,6 +175,40 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "ctrl + w を option + Delete に変換",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.microsoft.VSCode",
+                      "com.apple.Terminal",
+                      "com.googlecode.iterm2"
+                    ],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "w",
+                  "modifiers": {
+                    "mandatory": [
+                      "control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": [
+                      "option"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       }
