@@ -209,6 +209,40 @@
                 "type": "basic"
               }
             ]
+          },
+          {
+            "description": "ctrl + u を cmd + Delete に変換",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.microsoft.VSCode",
+                      "com.apple.Terminal",
+                      "com.googlecode.iterm2"
+                    ],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "u",
+                  "modifiers": {
+                    "mandatory": [
+                      "control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "delete_or_backspace",
+                    "modifiers": [
+                      "command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
           }
         ]
       }
