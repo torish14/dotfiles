@@ -73,7 +73,7 @@ abbr cafi 'caffeinate -i'
 abbr co code
 abbr cu curl
 
-abbr du ncdu
+abbr du dust
 
 abbr e emacs
 
