@@ -309,6 +309,37 @@
               }
             ]
           },
+          {
+            "description": "ctrl + , を pagedown に変換",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.microsoft.VSCode",
+                      "com.apple.Terminal",
+                      "com.googlecode.iterm2"
+                    ],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "comma",
+                  "modifiers": {
+                    "mandatory": [
+                      "control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "page_down"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
         ]
       }
     }
