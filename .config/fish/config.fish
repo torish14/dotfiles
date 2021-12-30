@@ -58,6 +58,11 @@ function ghcr
     code (ghq list --full-path -e $argv[1])
 end
 
+# 日本語の使用
+set -x LANG ja_JP.UTF-8
+set -x LC_CTYPE ja_JP.UTF-8
+set -x LC_ALL ja_JP.UTF-8
+
 # abbr
 abbr b brew
 abbr bc 'brew cleanup'
