@@ -468,13 +468,13 @@ let g:dashboard_custom_shortcut={
 
 "" 基本設定
 "" 文字コードを UFT-8 に設定
-set fenc=utf-8
 set encoding=utf-8
+set fileencoding=utf-8
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileformats=unix,dos,mac
 set nobackup
 "" スワップファイルを作らない
 set noswapfile
-set fileformats=unix,dos,mac
 set nobomb
 "" ヤンクをクリップボードへ繋ぐ
 set clipboard=unnamed
