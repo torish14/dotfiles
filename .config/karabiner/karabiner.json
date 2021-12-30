@@ -177,6 +177,40 @@
             ]
           },
           {
+            "description": "ctrl + g を option + → に変換",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "com.microsoft.VSCode",
+                      "com.apple.Terminal",
+                      "com.googlecode.iterm2"
+                    ],
+                    "type": "frontmost_application_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "g",
+                  "modifiers": {
+                    "mandatory": [
+                      "control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_arrow",
+                    "modifiers": [
+                      "option"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "ctrl + w を option + Delete に変換",
             "manipulators": [
               {
