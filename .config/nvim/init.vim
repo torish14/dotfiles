@@ -584,10 +584,10 @@ nnoremap <Leader>wq :wq<CR>
 nnoremap <Leader>nn :noh<CR>
 
 "" プラグインの制御
-nnoremap <leader>ii :PlugInstall<cr>
-nnoremap <leader>iu :PlugUpdate<cr>
-nnoremap <leader>ic :PlugClean<cr>
-nnoremap <leader>ih :CheckHealth<cr>
+nnoremap <leader>pi :PlugInstall<cr>
+nnoremap <leader>pu :PlugUpdate<cr>
+nnoremap <leader>pc :PlugClean<cr>
+nnoremap <leader>ch :CheckHealth<cr>
 
 "" 移動
 nnoremap j gj
