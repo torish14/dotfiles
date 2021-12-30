@@ -157,7 +157,7 @@ function! Cond(Cond, ...)
   let opts = get(a:000, 0, {})
   return a:Cond ? opts : extend(opts, { 'on': [], 'for': [] })
 endfunction
-Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'), { 'on': [] })
+Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
 Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 "" カーソル位置の単語で検索
 Plug 'thinca/vim-visualstar'
@@ -228,7 +228,6 @@ function! s:lazyLoadPlugs(timer)
         \ 'ale',
         \ 'vim-sandwich',
         \ 'nerdcommenter',
-        \ 'vim-easymotion',
         \ 'clever-f.vim',
         \ 'quick-scope',
         \ 'vim-nerdtree-syntax-highlight',
