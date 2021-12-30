@@ -472,6 +472,8 @@ set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set fileformats=unix,dos,mac
+set ttimeout
+set ttimeoutlen=50
 set nobackup
 "" スワップファイルを作らない
 set noswapfile
