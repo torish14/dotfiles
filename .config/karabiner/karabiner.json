@@ -143,7 +143,7 @@
             ]
           },
           {
-            "description": "ctrl + s $B$r(B option + $B"+(B $B$KJQ49(B",
+            "description": "ctrl + s を option + ← に変換",
             "manipulators": [
               {
                 "conditions": [
@@ -177,7 +177,7 @@
             ]
           },
           {
-            "description": "ctrl + w $B$r(B option + Delete $B$KJQ49(B",
+            "description": "ctrl + w を option + Delete に変換",
             "manipulators": [
               {
                 "conditions": [
@@ -211,8 +211,8 @@
             ]
           },
           {
-            "description": "ctrl + u $B$r(B cmd + Delete $B$KJQ49(B",
-            "manipulators": [
+            "description": "ctrl + u を cmd + Delete に変換",
+           "manipulators": [
               {
                 "conditions": [
                   {
