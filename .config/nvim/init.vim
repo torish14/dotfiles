@@ -170,7 +170,7 @@ Plug 'rhysd/clever-f.vim', { 'on': [] }
 "" クイックスコープ
 Plug 'unblevable/quick-scope', { 'on': [] }
 "" grep の使用
-Plug 'mhinz/vim-grepper'
+Plug 'mhinz/vim-grepper', { 'on': [] }
 "" 括弧の移動を高度に
 Plug 'andymass/vim-matchup', { 'on': [] }
 "" fzf であいまい検索
@@ -230,6 +230,7 @@ function! s:lazyLoadPlugs(timer)
         \ 'nerdcommenter',
         \ 'clever-f.vim',
         \ 'quick-scope',
+        \ 'vim-grepper',
         \ 'vim-nerdtree-syntax-highlight',
         \ 'vim-matchup',
         \ 'fzf',
