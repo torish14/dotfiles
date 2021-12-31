@@ -21,11 +21,15 @@ function fish_user_key_bindings
     bind \cr 'peco_select_history (commandline -b)'
     # control + X からの control + K
     bind \cx\ck peco_kill
+    # control + ]
     bind \c] peco_select_ghq_repository
     bind \c] 'stty sane; peco_select_ghq_repository'
     bind /cg ghq_peco_repo
+    # control + G
     bind \cg ghq_fzf_repo
+    # control + X からの control + L
     bind \cx\cl peco_open_gh_repository
+    # control + X からの control + R
     bind \cx\cr peco_recentdend
 end
 
