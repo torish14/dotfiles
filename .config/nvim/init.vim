@@ -590,12 +590,17 @@ nnoremap <leader>pc :PlugClean<cr>
 nnoremap <leader>ch :CheckHealth<cr>
 
 "" 移動
-nnoremap j gj
-nnoremap k gk
-nnoremap <Down> gj
-nnoremap <Up> gk
-nnoremap <C-;> g;
-nnoremap <C-,> g,
+if !exists('g:vscode')
+  nnoremap j gj
+  nnoremap k gk
+  nnoremap <Down> gj
+  nnoremap <Up> gk
+else
+  nmap j gj
+  nmap k gk
+  nmap <Down> gj
+  nmap <Up> gk
+endif
 "" 行頭、行末に移動
 nnoremap <C-a> <Esc>^i
 nnoremap 0 ^
