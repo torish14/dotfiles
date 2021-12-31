@@ -1,2 +1,4 @@
   user.name=
   user.email=
+  core.editor=vim -c "set fileencoding=utf-8
+  "
