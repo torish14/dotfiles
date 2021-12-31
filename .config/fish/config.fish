@@ -59,8 +59,7 @@ function fish_user_key_bindings
 end
 
 set -U FZF_LEGACY_KEYBINDINGS 0
-# "--reverse --height=100%"
-set -U FZF_REVERSE_ISEARCH_OPTS
+set -U FZF_REVERSE_ISEARCH_OPTS "--reverse --height=100%"
 
 # 日本語の使用
 set -x LANG ja_JP.UTF-8
