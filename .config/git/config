@@ -4,3 +4,4 @@ core.editor=vim -c "set fileencoding=utf-8
 "
 commit.template=/Users/user/gist/.commit_template
 init.defaultbranch=main
+push.default=current
