@@ -683,11 +683,11 @@ nnoremap <Leader>v :<C-u>vsplit<CR>
 
 " エディタサイズの制御
 function! s:manageEditorSize(...)
-    let cunt = a:1
-    let to = a:2
-    for i in range(1, count ? count : 1)
-        call VSCodeNotify(to ==# 'increase' ? 'workbench.action.increaseViewSize' : 'workbench.action.decreaseViewSize')
-    endfor
+  let cunt = a:1
+  let to = a:2
+  for i in range(1, count ? count : 1)
+    call VSCodeNotify(to ==# 'increase' ? 'workbench.action.increaseViewSize' : 'workbench.action.decreaseViewSize')
+  endfor
 endfunction
 
 nnoremap <C-w>> <Cmd>call <SID>manageEditorSize(v:count, 'increase')<CR>
