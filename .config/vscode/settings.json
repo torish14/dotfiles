@@ -8,6 +8,7 @@
       "string": true
     },
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.renderControlCharacters": true
+    "editor.renderControlCharacters": true,
+    "editor.wordWrap": "on"
   }
 ]
