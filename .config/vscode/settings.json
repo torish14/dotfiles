@@ -1,6 +1,11 @@
 [
   { 
     "editor.tabCompletion": "on",
-    "diffEditor.renderSideBySide": true
+    "diffEditor.renderSideBySide": true,
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "string": true
+    }
   }
 ]
