@@ -11,6 +11,7 @@
     "editor.renderControlCharacters": true,
     "editor.wordWrap": "on",
     "editor.lineNumbers": "relative",
-    "editor.linkedEditing": true
+    "editor.linkedEditing": true,
+    "emmet.showSuggestionsAsSnippets": true
   }
 ]
