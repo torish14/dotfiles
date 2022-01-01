@@ -15,6 +15,7 @@
     "emmet.showSuggestionsAsSnippets": true,
     "emmet.triggerExpansionOnTab": true,
     "explorer.confirmDelete": false,
-    "files.trimTrailingWhitespace": true
+    "files.trimTrailingWhitespace": true,
+    "html.format.wrapLineLength": 70
   }
 ]
