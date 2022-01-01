@@ -18,6 +18,7 @@
     "files.trimTrailingWhitespace": true,
     "html.format.wrapLineLength": 70,
     "search.smartCase": true,
-    "window.openFoldersInNewWindow": "on"
+    "window.openFoldersInNewWindow": "on",
+    "window.title": "${activeEditorMedium}${separator}${rootName}"
   }
 ]
