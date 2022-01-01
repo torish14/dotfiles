@@ -6,6 +6,7 @@
       "other": true,
       "comments": true,
       "string": true
-    }
+    },
+    "editor.multiCursorModifier": "ctrlCmd"
   }
 ]
