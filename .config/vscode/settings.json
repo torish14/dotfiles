@@ -16,6 +16,7 @@
     "emmet.triggerExpansionOnTab": true,
     "explorer.confirmDelete": false,
     "files.trimTrailingWhitespace": true,
-    "html.format.wrapLineLength": 70
+    "html.format.wrapLineLength": 70,
+    "search.smartCase": true
   }
 ]
