@@ -12,6 +12,7 @@
     "editor.wordWrap": "on",
     "editor.lineNumbers": "relative",
     "editor.linkedEditing": true,
-    "emmet.showSuggestionsAsSnippets": true
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true
   }
 ]
