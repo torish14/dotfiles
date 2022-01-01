@@ -17,6 +17,7 @@
     "explorer.confirmDelete": false,
     "files.trimTrailingWhitespace": true,
     "html.format.wrapLineLength": 70,
-    "search.smartCase": true
+    "search.smartCase": true,
+    "window.openFoldersInNewWindow": "on"
   }
 ]
