@@ -9,6 +9,7 @@
     },
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.renderControlCharacters": true,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "editor.lineNumbers": "relative"
   }
 ]
