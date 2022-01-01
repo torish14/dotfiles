@@ -13,6 +13,7 @@
     "editor.lineNumbers": "relative",
     "editor.linkedEditing": true,
     "emmet.showSuggestionsAsSnippets": true,
-    "emmet.triggerExpansionOnTab": true
+    "emmet.triggerExpansionOnTab": true,
+    "explorer.confirmDelete": false
   }
 ]
