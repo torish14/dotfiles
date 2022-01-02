@@ -20,6 +20,7 @@
     "search.smartCase": true,
     "window.openFoldersInNewWindow": "on",
     "window.title": "${activeEditorMedium}${separator}${rootName}",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "files.autoSave": "onFocusChange"
   }
 ]
