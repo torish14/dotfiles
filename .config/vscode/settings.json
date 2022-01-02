@@ -22,6 +22,7 @@
     "window.title": "${activeEditorMedium}${separator}${rootName}",
     "workbench.startupEditor": "none",
     "files.autoSave": "onFocusChange",
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false
   }
 ]
