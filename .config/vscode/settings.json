@@ -23,6 +23,7 @@
     "workbench.startupEditor": "none",
     "files.autoSave": "onFocusChange",
     "editor.tabSize": 2,
-    "editor.insertSpaces": false
+    "editor.insertSpaces": false,
+    "explorer.confirmDragAndDrop": false
   }
 ]
