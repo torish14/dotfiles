@@ -33,6 +33,7 @@
     "terminal.integrated.fontSize": 14,
     "workbench.tree.renderIndentGuides": "always",
     "workbench.tree.indent": 16,
-    "editor.fontLigatures": true
+    "editor.fontLigatures": true,
+    "workbench.iconTheme": "material-icon-theme"
   }
 ]
