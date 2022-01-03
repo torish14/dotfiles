@@ -31,6 +31,7 @@
     "workbench.sideBar.location": "left",
     "workbench.editor.wrapTabs": true,
     "terminal.integrated.fontSize": 14,
-    "workbench.tree.renderIndentGuides": "always"
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.tree.indent": 16
   }
 ]
