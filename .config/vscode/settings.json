@@ -24,6 +24,7 @@
     "files.autoSave": "onFocusChange",
     "editor.tabSize": 2,
     "editor.insertSpaces": false,
-    "explorer.confirmDragAndDrop": false
+    "explorer.confirmDragAndDrop": false,
+    "editor.suggestSelection": "recentlyUsedByPrefix"
   }
 ]
