@@ -32,6 +32,7 @@
     "workbench.editor.wrapTabs": true,
     "terminal.integrated.fontSize": 14,
     "workbench.tree.renderIndentGuides": "always",
-    "workbench.tree.indent": 16
+    "workbench.tree.indent": 16,
+    "editor.fontLigatures": true
   }
 ]
