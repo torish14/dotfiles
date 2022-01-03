@@ -25,6 +25,7 @@
     "editor.tabSize": 2,
     "editor.insertSpaces": false,
     "explorer.confirmDragAndDrop": false,
-    "editor.suggestSelection": "recentlyUsedByPrefix"
+    "editor.suggestSelection": "recentlyUsedByPrefix",
+    "workbench.editor.highlihghtModifiedTabs": true
   }
 ]
