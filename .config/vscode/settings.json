@@ -35,6 +35,7 @@
     "workbench.tree.indent": 16,
     "editor.fontLigatures": true,
     "workbench.iconTheme": "material-icon-theme",
-    "editor.cursorStyle": "block"
+    "editor.cursorStyle": "block",
+    "terminal.integrated.macOptionIsMeta": true
   }
 ]
