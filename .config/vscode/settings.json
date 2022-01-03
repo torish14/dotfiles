@@ -34,6 +34,7 @@
     "workbench.tree.renderIndentGuides": "always",
     "workbench.tree.indent": 16,
     "editor.fontLigatures": true,
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.cursorStyle": "block"
   }
 ]
