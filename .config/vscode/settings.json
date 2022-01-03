@@ -27,6 +27,7 @@
     "explorer.confirmDragAndDrop": false,
     "editor.suggestSelection": "recentlyUsedByPrefix",
     "workbench.editor.highlihghtModifiedTabs": true,
-    "git.autoStash": true
+    "git.autoStash": true,
+    "workbench.sideBar.location": "left"
   }
 ]
