@@ -26,6 +26,7 @@
     "editor.insertSpaces": false,
     "explorer.confirmDragAndDrop": false,
     "editor.suggestSelection": "recentlyUsedByPrefix",
-    "workbench.editor.highlihghtModifiedTabs": true
+    "workbench.editor.highlihghtModifiedTabs": true,
+    "git.autoStash": true
   }
 ]
