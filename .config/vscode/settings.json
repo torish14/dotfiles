@@ -29,6 +29,7 @@
     "workbench.editor.highlihghtModifiedTabs": true,
     "git.autoStash": true,
     "workbench.sideBar.location": "left",
-    "workbench.editor.wrapTabs": true
+    "workbench.editor.wrapTabs": true,
+    "terminal.integrated.fontSize": 14
   }
 ]
