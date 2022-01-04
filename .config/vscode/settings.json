@@ -45,6 +45,7 @@
     "terminal.integrated.fontFamily": "Hack Nerd Font, monospace",
     "terminal.external.osxExec": "iTerm.app",
     "editor.acceptSuggestionOnEnter": "off",
-    "git.autofetch": true
+    "git.autofetch": true,
+    "editor.autoClosingDelete": "always"
   }
 ]
