@@ -41,6 +41,7 @@
     "editor.fontSize": 14,
     "debug.console.fontSize": 14,
     "errorLens.fontSize": 14,
-    "terminal.integrated.defaultProfile.osx": "fish"
+    "terminal.integrated.defaultProfile.osx": "fish",
+    "terminal.integrated.fontFamily": "Hack Nerd Font, monospace"
   }
 ]
