@@ -46,6 +46,7 @@
     "terminal.external.osxExec": "iTerm.app",
     "editor.acceptSuggestionOnEnter": "off",
     "git.autofetch": true,
-    "editor.autoClosingDelete": "always"
+    "editor.autoClosingDelete": "always",
+    "editor.autoClosingOvertype": "always"
   }
 ]
