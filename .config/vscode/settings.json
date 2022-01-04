@@ -43,6 +43,7 @@
     "errorLens.fontSize": 14,
     "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.fontFamily": "Hack Nerd Font, monospace",
-    "terminal.external.osxExec": "iTerm.app"
+    "terminal.external.osxExec": "iTerm.app",
+    "editor.acceptSuggestionOnEnter": "off"
   }
 ]
