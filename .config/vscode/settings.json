@@ -44,6 +44,7 @@
     "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.fontFamily": "Hack Nerd Font, monospace",
     "terminal.external.osxExec": "iTerm.app",
-    "editor.acceptSuggestionOnEnter": "off"
+    "editor.acceptSuggestionOnEnter": "off",
+    "git.autofetch": true
   }
 ]
