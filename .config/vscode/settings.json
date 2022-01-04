@@ -37,6 +37,7 @@
     "workbench.iconTheme": "material-icon-theme",
     "editor.cursorStyle": "block",
     "terminal.integrated.macOptionIsMeta": true,
-    "terminal.integrated.cursorBlinking": true
+    "terminal.integrated.cursorBlinking": true,
+    "editor.fontSize": 14
   }
 ]
