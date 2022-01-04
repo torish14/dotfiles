@@ -38,6 +38,7 @@
     "editor.cursorStyle": "block",
     "terminal.integrated.macOptionIsMeta": true,
     "terminal.integrated.cursorBlinking": true,
-    "editor.fontSize": 14
+    "editor.fontSize": 14,
+    "debug.console.fontSize": 14
   }
 ]
