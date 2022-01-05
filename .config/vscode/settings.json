@@ -47,6 +47,7 @@
     "editor.acceptSuggestionOnEnter": "off",
     "git.autofetch": true,
     "editor.autoClosingDelete": "always",
-    "editor.autoClosingOvertype": "always"
+    "editor.autoClosingOvertype": "always",
+    "terminal.integrated.copyOnSelection": true
   }
 ]
