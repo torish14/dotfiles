@@ -51,6 +51,7 @@
     "terminal.integrated.copyOnSelection": true,
     "diffEditor.codeLens": true,
     "problems.showCurrentInStatus": true,
-    "files.trimFinalNewlines": true
+    "files.trimFinalNewlines": true,
+    "editor.formatOnSave": true
   }
 ]
