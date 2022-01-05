@@ -48,6 +48,7 @@
     "git.autofetch": true,
     "editor.autoClosingDelete": "always",
     "editor.autoClosingOvertype": "always",
-    "terminal.integrated.copyOnSelection": true
+    "terminal.integrated.copyOnSelection": true,
+    "diffEditor.codeLens": true
   }
 ]
