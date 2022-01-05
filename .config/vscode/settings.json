@@ -52,6 +52,7 @@
     "diffEditor.codeLens": true,
     "problems.showCurrentInStatus": true,
     "files.trimFinalNewlines": true,
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "workbench.activityBar.visible": false
   }
 ]
