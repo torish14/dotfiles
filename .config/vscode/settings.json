@@ -50,6 +50,7 @@
     "editor.autoClosingOvertype": "always",
     "terminal.integrated.copyOnSelection": true,
     "diffEditor.codeLens": true,
-    "problems.showCurrentInStatus": true
+    "problems.showCurrentInStatus": true,
+    "files.trimFinalNewlines": true
   }
 ]
