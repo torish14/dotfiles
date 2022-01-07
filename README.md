@@ -1,2 +1,2 @@
 # Dotfiles for mac
-karabiner, vscode neovim, fish, starship, tig
+alfred, karabiner, vscode neovim, fish, starship, tig
