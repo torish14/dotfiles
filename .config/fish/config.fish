@@ -224,6 +224,7 @@ abbr vs 'nvim ~/.config/starship.toml'
 
 abbr y yarn
 abbr ya 'yarn add'
+abbr yad 'yarn add -D'
 abbr yd 'yarn dev'
 abbr yu 'yarn upgrade'
 abbr yf 'yarn format'
