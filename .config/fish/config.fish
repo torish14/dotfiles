@@ -60,6 +60,7 @@ end
 
 set -U FZF_LEGACY_KEYBINDINGS 0
 set -U FZF_REVERSE_ISEARCH_OPTS "--reverse --height=100%"
+set -gx LDFLAGS "-L/usr/local/opt/python@3.8/lib"
 
 # 日本語の使用
 set -x LANG ja_JP.UTF-8
