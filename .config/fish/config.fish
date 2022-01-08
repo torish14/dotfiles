@@ -36,8 +36,8 @@ end
 # github にリポジトリを作成して ghq で取得、vscode で開く
 function ghcr
     gh repo create $argv
-    ghq get $arvg[1]
-    code (ghq list --full-path -e $argv[1])
+    ghq get git@github.com:torish14/{$argv[1]}.git
+    code /Users/user/ghq/github.com/torish14/{$argv[1]}
 end
 
 # fish キーバインド
