@@ -115,6 +115,7 @@ abbr grho 'git reset --hard ORIG_HEAD'
 # コミットメッセージを修正
 abbr grih 'git rebase -i HEAD~'
 abbr grir 'git rebase -i --root'
+abbr grc 'git rebase --continue'
 abbr gra 'git remote add'
 abbr grao 'git remote add origin'
 abbr grv 'git remote -v'
