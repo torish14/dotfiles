@@ -1,0 +1,1 @@
+set main-view = id date author:full commit-title:yes,graph,refs
