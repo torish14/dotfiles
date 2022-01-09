@@ -26,3 +26,4 @@ set ignore-space = at-eol
 set refresh-mode = auto
 set mouse = true
 
+bind generic P      ?git push -u %(remote) %(repo:head)
