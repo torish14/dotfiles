@@ -18,3 +18,4 @@ color diff-chunk  black   white
 set editor-line-number = yes
 set vertical-split = no
 set split-view-height = 80%
+set horizontal-scroll = 33%
