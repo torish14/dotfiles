@@ -1,3 +1,4 @@
 set main-view = id date author:full commit-title:yes,graph,refs
 set blame-view  = id:yes,color file-name:auto author:full date:default line-number:yes,interval=1 text
 set grep-view = file-name:auto line-number:yes,interval=1 text
+set reflog-view = line-number:yes,interval=1 id:yes date:no author:no commit-title:yes,refs,overflow=no
