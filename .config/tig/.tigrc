@@ -25,7 +25,6 @@ set ignore-case = true
 set ignore-space = at-eol
 set refresh-mode = auto
 set mouse = true
-
 bind generic P      ?git push -u %(remote) %(repo:head)
 bind generic U      ?git pull %(remote)
 bind generic F      ?git fetch %(remote)
