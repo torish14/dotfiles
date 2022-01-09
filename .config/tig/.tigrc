@@ -7,3 +7,9 @@ set stash-view  = line-number:yes,interval=1 id:no date:default author:full comm
 set status-view = line-number:yes,interval=1 status:short file-name
 set tree-view = line-number:yes,interval=1 mode author:full file-size date:default id:no file-name
 set diff-options = -m --first-parent
+set pager-view  = line-number:yes,interval=1 text
+set stage-view  = line-number:yes,interval=1 text
+set log-view    = line-number:yes,interval=1 text
+set blob-view   = line-number:yes,interval=1 text
+set diff-view   = line-number:yes,interval=1 text:yes,commit-title-overflow=no
+
