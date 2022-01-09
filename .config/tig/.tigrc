@@ -27,3 +27,4 @@ set refresh-mode = auto
 set mouse = true
 
 bind generic P      ?git push -u %(remote) %(repo:head)
+bind generic U      ?git pull %(remote)
