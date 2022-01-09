@@ -135,6 +135,7 @@ abbr gp 'git push'
 abbr gpf 'git push --force-with-lease'
 abbr gpo 'git push origin'
 abbr gpom 'git push origin main'
+abbr gpl 'git pull'
 # 変更の退避
 abbr gst 'git stash -u'
 # 退避した作業を戻す
