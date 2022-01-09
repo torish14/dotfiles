@@ -21,3 +21,4 @@ set split-view-height = 80%
 set horizontal-scroll = 33%
 set wrap-lines = yes
 set tab-size = 2
+set ignore-case = true
