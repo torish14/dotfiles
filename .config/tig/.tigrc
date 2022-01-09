@@ -15,3 +15,4 @@ set diff-view   = line-number:yes,interval=1 text:yes,commit-title-overflow=no
 set diff-highlight = true
 color diff-header default magenta
 color diff-chunk  black   white
+set editor-line-number = yes
