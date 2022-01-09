@@ -24,4 +24,5 @@ set tab-size = 2
 set ignore-case = true
 set ignore-space = at-eol
 set refresh-mode = auto
+set mouse = true
 
