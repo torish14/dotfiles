@@ -41,3 +41,4 @@ bind diff    <Esc>. ?sh -c "git diff %(commit)..%(prompt Enter commit ID: ) | ti
 bind refs    <Esc>. ?sh -c "git diff %(branch)..%(prompt Enter branch name: ) | tig"
 bind generic ~      :goto %(commit)^
 bind generic <Esc>~ :toggle line-graphics
+bind generic S      ?git stash save "%(prompt Enter stash comment: )"
