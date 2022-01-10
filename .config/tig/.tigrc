@@ -44,3 +44,5 @@ bind generic <Esc>~ :toggle line-graphics
 bind generic S      ?git stash save "%(prompt Enter stash comment: )"
 bind diff    Y      ?git stash pop %(stash)
 bind stash   Y      ?git stash pop %(stash)
+bind diff    <Esc>y ?git stash apply %(stash)
+bind stash   <Esc>y ?git stash apply %(stash)
