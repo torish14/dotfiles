@@ -32,3 +32,4 @@ bind main    F      ?git fetch %(remote)
 bind generic L      !sh -c "git reflog --pretty=raw | tig --pretty=raw"
 bind generic _      ?git reset --hard HEAD@{"%(prompt Enter HEAD@{} number: )
 bind generic _      ?git reset --hard HEAD@{"%(prompt Enter HEAD@{} number: )"}
+bind generic ^      ?git reset --soft HEAD^
