@@ -49,3 +49,4 @@ bind stash   <Esc>y ?git stash apply %(stash)
 bind main    H      ?git reset --hard %(commit)
 bind diff    H      ?git reset --hard %(commit)
 bind refs    H      ?git reset --hard %(branch)
+bind status  H      ?git reset --hard HEAD
