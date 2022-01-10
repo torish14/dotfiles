@@ -55,3 +55,4 @@ bind stage   `      @bash -c "echo -n '%(file)' | pbcopy"
 bind status  `      @bash -c "echo -n '%(file)' | pbcopy"
 bind tree    `      @bash -c "echo -n '%(file)' | pbcopy"
 bind blob    `      @bash -c "echo -n '%(file)' | pbcopy"
+bind refs    D      ?git branch -d %(branch)
