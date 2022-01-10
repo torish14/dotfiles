@@ -33,3 +33,6 @@ bind generic L      !sh -c "git reflog --pretty=raw | tig --pretty=raw"
 bind generic _      ?git reset --hard HEAD@{"%(prompt Enter HEAD@{} number: )
 bind generic _      ?git reset --hard HEAD@{"%(prompt Enter HEAD@{} number: )"}
 bind generic ^      ?git reset --soft HEAD^
+bind main    .      !sh -c "git diff %(commit) | tig"
+bind diff    .      !sh -c "git diff %(commit) | tig"
+bind refs    .      !sh -c "git diff %(branch) | tig"
