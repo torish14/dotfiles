@@ -58,3 +58,4 @@ bind blob    `      @bash -c "echo -n '%(file)' | pbcopy"
 bind refs    D      ?git branch -d %(branch)
 bind status  D      ?git clean -d -f -- %(file)
 bind stash   D      ?git stash drop %(stash)
+bind tree    D      ?git rm %(file)
