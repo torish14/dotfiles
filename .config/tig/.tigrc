@@ -51,3 +51,7 @@ bind diff    H      ?git reset --hard %(commit)
 bind refs    H      ?git reset --hard %(branch)
 bind status  H      ?git reset --hard HEAD
 bind generic `      @bash -c "echo -n '%(commit)' | pbcopy"
+bind stage   `      @bash -c "echo -n '%(file)' | pbcopy"
+bind status  `      @bash -c "echo -n '%(file)' | pbcopy"
+bind tree    `      @bash -c "echo -n '%(file)' | pbcopy"
+bind blob    `      @bash -c "echo -n '%(file)' | pbcopy"
