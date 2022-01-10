@@ -59,3 +59,5 @@ bind refs    D      ?git branch -d %(branch)
 bind status  D      ?git clean -d -f -- %(file)
 bind stash   D      ?git stash drop %(stash)
 bind tree    D      ?git rm %(file)
+bind main    x      ?git clean -d -f
+bind status  x      ?git clean -d -f
