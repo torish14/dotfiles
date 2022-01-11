@@ -62,3 +62,4 @@ bind tree    D      ?git rm %(file)
 bind main    x      ?git clean -d -f
 bind status  x      ?git clean -d -f
 bind refs    x      ?sh -c "git branch --merged | grep -vE '^\\*|master$|develop$' |
+bind refs    x      ?sh -c "git branch --merged | grep -vE '^\\*|master$|develop$' |
