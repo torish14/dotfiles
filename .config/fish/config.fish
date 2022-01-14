@@ -58,8 +58,23 @@ function fish_user_key_bindings
     bind \cx\cr peco_recentdend
 end
 
-set -U FZF_LEGACY_KEYBINDINGS 0
+function reload
+    exec fish
+end
+
+# デフォルトのキーバインドを無効
+set -U FZF_LEGACY_KEYBINDINGS 0 
 set -U FZF_REVERSE_ISEARCH_OPTS "--reverse --height=100%"
+# ctrl + O
+set -U FZF_FIND_FILE_COMMAND "rg --files --hidden --follow --glob '!.git/*'"
+set -U FZF_FIND_FILE_OPTS "--preview 'bat  --color=always --style=header,grid --line-range :100 {}'"
+# alt + C
+set -U FZF_CD_COMMAND "fd --type d . \$dir"
+set -U FZF_CD_OPTS "--preview 'tree -C {} | head -200'"
+# default editor
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+# python
 set -gx LDFLAGS "-L/usr/local/opt/python@3.8/lib"
 
 # 日本語の使用
