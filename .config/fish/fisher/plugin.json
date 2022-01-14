@@ -1,0 +1,18 @@
+{
+  "yoshiori/fish-peco_select_ghq_repository": true,
+  "0rax/fish-bd": true,
+  "jethrokuan/z": true,
+  "jethrokuan/fzf": true,
+  "decors/fish-ghq": true,
+  "oh-my-fish/plugin-expand": true,
+  "oh-my-fish/plugin-extract": true,
+  "sijad/gitignore": true,
+  "jorgebucaran/fish-bax": true,
+  "edc/bass": true,
+  "tsu-nera/fish-peco_open_gh_repository": true,
+  "oh-my-fish/plugin-peco": true,
+  "pure-fish/pure": true,
+  "tsu-nera/fish-peco_recentd": true,
+  "jorgebucaran/autopair.fish": true,
+  "jorgebucaran/nvm.fish": true
+}
