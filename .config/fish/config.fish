@@ -230,6 +230,8 @@ abbr yu 'yarn upgrade'
 abbr yf 'yarn format'
 abbr yl 'yarn lint'
 abbr yr 'yarn remove'
+abbr ys 'yarn serve'
+abbr yt 'yarn test'
 
 abbr ... cd ../..
 abbr .... cd ../../..
