@@ -102,7 +102,7 @@ abbr gg 'git grep'
 abbr gi 'git init'
 abbr ga 'git add'
 abbr gap 'git add -p'
-abbr gaa 'git add .'
+abbr gaa 'git add -A'
 # 直前の add を取り消し
 abbr grh 'git reset HEAD'
 # 直前の commit のみを取り消し
