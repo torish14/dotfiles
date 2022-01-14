@@ -70,7 +70,6 @@ set -x LC_ALL ja_JP.UTF-8
 # abbr
 abbr b brew
 abbr bc 'brew cleanup'
-abbr bd 'brew doctor'
 abbr bi 'brew install'
 abbr bls 'brew list'
 abbr bud 'brew update'
