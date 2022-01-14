@@ -120,7 +120,7 @@ abbr grao 'git remote add origin'
 abbr grv 'git remote -v'
 abbr gd 'git diff'
 abbr gdc 'git diff --cached'
-abbr gl 'git log --graph'
+abbr gl 'git log --graph --all --pretty=format:"%C(yellow reverse)%d%Creset%C(white reverse) %h% Creset %C(cyan reverse) %an %Creset %C(green)%ar%Creset%n%C(white)%w(80)%s%Creset%n%n%w(80,2,2)%b"'
 abbr gln 'git log --name-status'
 abbr gls "git log --stat"
 abbr glo 'git log --oneline'
