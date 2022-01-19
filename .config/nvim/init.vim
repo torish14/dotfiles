@@ -190,7 +190,7 @@ Plug 'machakann/vim-sandwich', { 'on': [] }
 "" ヤンクしている内容で置換
 Plug 'vim-scripts/ReplaceWithRegister'
 "" 指定ファイルでの文字列の置換
-Plug 'brooth/far.vim'
+Plug 'brooth/far.vim', { 'do': ':UpdateRemotePlugins' }
 "" コメントアウトをラクに
 Plug 'preservim/nerdcommenter', { 'on': [] }
 "" . でのリピート機能の拡張
