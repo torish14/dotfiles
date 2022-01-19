@@ -749,6 +749,14 @@ xmap <S-k> <Plug>(columnskip:nonblank:prev)
 "" keyboard-quickfix
 nnoremap z= <Cmd>call VSCodeNotify('keyboard-quickfix.openQuickFix')<CR>
 
+"" dashboard-nvim
+nnoremap <silent> <Leader>fh :DashboardFindHistory<CR>
+nnoremap <silent> <Leader>ff :DashboardFindFile<CR>
+nnoremap <silent> <Leader>tc :DashboardChangeColorscheme<CR>
+nnoremap <silent> <Leader>fa :DashboardFindWord<CR>
+nnoremap <silent> <Leader>fb :DashboardJumpMark<CR>
+nnoremap <silent> <Leader>cn :DashboardNewFile<CR>
+
 "" インサートモード
 "" Emacs のキーバインド使用
 inoremap <C-p> <Up>
