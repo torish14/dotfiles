@@ -98,16 +98,11 @@ call plug#begin('~/.vim/plugged')
 Plug 'EdenEast/nightfox.nvim'
 "" コードのハイライトを高度に
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'romgrk/nvim-treesitter-context'
+Plug 'nvim-treesitter/nvim-treesitter-refactor'
 "" エクスプローラーを表示
-Plug 'scrooloose/nerdtree', { 'on': [] }
-Plug 'jistr/vim-nerdtree-tabs', { 'on': [] }
-"" nerdtree に git の状態を表示
-Plug 'preservim/nerdtree' |
-      \ Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': [] }
-"" nerdtree にシンタックスハイライト
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': [] }
-"" nerdtree のアイコンを表示
-Plug 'ryanoasis/vim-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
+"" アイコンを表示
 Plug 'kyazdani42/nvim-web-devicons'
 "" ステータスバーの表示
 Plug 'nvim-lualine/lualine.nvim',
@@ -224,17 +219,12 @@ call plug#end()
 function! s:lazyLoadPlugs(timer)
   call plug#load (
         \ 'coc.nvim',
-        \ 'nerdtree',
-        \ 'vim-nerdtree-tabs',
-        \ 'nerdtree-git-plugin',
-        \ 'vim-airline',
         \ 'ale',
         \ 'vim-sandwich',
         \ 'nerdcommenter',
         \ 'clever-f.vim',
         \ 'quick-scope',
-        \ 'vim-grepper',
-        \ 'vim-nerdtree-syntax-highlight',
+        \ 'vim-ripgrep',
         \ 'vim-matchup',
         \ 'fzf',
         \ 'splitjoin.vim',
