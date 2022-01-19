@@ -699,9 +699,9 @@ xnoremap <C-w>< <Cmd>call <SID>manageEditorSize(v:count, 'decrease')<CR>
 nnoremap <C-w>- <Cmd>call <SID>manageEditorSize(v:count, 'decrease')<CR>
 xnoremap <C-w>- <Cmd>call <SID>manageEditorSize(v:count, 'decrease')<CR>
 
-"" nerdtree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+"" nvim-tree
+nnoremap <C-t> :NvimTreeToggle<CR>
+nnoremap <leader>n :NvimTreeFindFile<CR>
 
 "" vim-gitgutter
 nmap <Leader>gn <Plug>(GitGutterNextHunk)
