@@ -109,9 +109,8 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': [] }
 "" nerdtree のアイコンを表示
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
-"" オプションバーの表示
-Plug 'vim-airline/vim-airline', { 'on': [] }
-Plug 'vim-airline/vim-airline-themes'
+"" ステータスバーの表示
+Plug 'nvim-lualine/lualine.nvim',
 "" ヤンクした箇所をハイライト
 Plug 'machakann/vim-highlightedyank'
 "" 括弧に色付け
