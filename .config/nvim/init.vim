@@ -141,7 +141,11 @@ Plug 'alvan/vim-closetag'
 Plug 'cohama/lexima.vim'
 "" ワイルドメニュー
 if has('nvim')
-  Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
+  function! UpdateRemotePlugins(...)
+    let &rtp=&rtp
+    UpdateRemotePlugins
+  endfunction
+  Plug 'gelguy/wilder.nvim', { 'do': function('UpdateRemotePlugins') }
 else
   Plug 'gelguy/wilder.nvim'
   Plug 'roxma/nvim-yarp'
