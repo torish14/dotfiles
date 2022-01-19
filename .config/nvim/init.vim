@@ -334,6 +334,9 @@ let g:livedown_browser = "vivaldi"
 
 "" 言語
 "" python
+let g:python_host_prog = $PYENV_ROOT.'/versions/neovim-2/bin/python'
+let g:python3_host_prog = '~/.pyenv/versions/3.10.1/bin/python3'
+
 augroup vimrc-python
   autocmd!
   autocmd FileType python setlocal
