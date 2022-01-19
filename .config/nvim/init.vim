@@ -268,61 +268,379 @@ disable = { "c", "ruby" },  -- list of language that will be disabled
   }
 EOF
 
-"" nerdtree
-let g:NERDTreeChDirMode=2
-let g:NERDTreeIgnore=['\.rbc$', '\~$', '\.pyc$', '\.db$', '\.sqlite$', '__pycache__']
-let g:NERDTreeSortOrder=['^__\.py$', '\/$', '*', '\.swp$', '\.bak$', '\~$']
-let g:NERDTreeShowBookmarks=1
-let g:nerdtree_tabs_focus_on_files=1
-let g:NERDTreeMapOpenInTabSilent = '<RightMouse>'
-let g:NERDTreeWinSize = 30
-let NERDTreeShowHidden=1
-let g:NERDTreeLimitedSyntax = 1
-let g:WebDevIconsNerdTreeBeforeGlyphPadding = ""
-let g:WebDevIconsUnicodeDecorateFolderNodes = v:true
-if exists('g:loaded_webdevicons')
-  call webdevicons#refresh()
-endif
+"" nvim-treesitter-context
+lua <<EOF
+require'treesitter-context'.setup{
+    enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+    throttle = true, -- Throttles plugin updates (may improve performance)
+    max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
+    patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
+        -- For all filetypes
+        -- Note that setting an entry here replaces all other patterns for this entry.
+        -- By setting the 'default' entry below, you can control which nodes you want to
+        -- appear in the context window.
+        default = {
+            'class',
+            'function',
+            'method',
+            -- 'for', -- These won't appear in the context
+            -- 'while',
+            -- 'if',
+            -- 'switch',
+            -- 'case',
+        },
+        -- Example for a specific filetype.
+        -- If a pattern is missing, *open a PR* so everyone can benefit.
+        --   rust = {
+        --       'impl_item',
+        --   },
+    },
+    exact_patterns = {
+        -- Example for a specific filetype with Lua patterns
+        -- Treat patterns.rust as a Lua pattern (i.e "^impl_item$" will
+        -- exactly match "impl_item" only)
+        -- rust = true, 
+    }
+}
+EOF
 
-"" vim-airline
-let g:airline_theme = 'kolor'
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_idx_mode = 1
-let g:airline#extensions#whitespace#mixed_indent_algo = 1
+"" nvim-treesitter-refactor
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  refactor = {
+    highlight_definitions = { enable = true },
+    highlight_current_scope = { enable = true }
+  },
+}
+EOF
 
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
+"" nvim-tree
+let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file
+let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
+let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
+let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
+let g:nvim_tree_root_folder_modifier = ':~' "This is the default. See :help filename-modifiers for more options
+let g:nvim_tree_add_trailing = 1 "0 by default, append a trailing slash to folder names
+let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree
+let g:nvim_tree_disable_window_picker = 1 "0 by default, will disable the window picker.
+let g:nvim_tree_icon_padding = ' ' "one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
+let g:nvim_tree_symlink_arrow = ' >> ' " defaults to ' ➛ '. used as a separator between symlinks' source and target.
+let g:nvim_tree_respect_buf_cwd = 1 "0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
+let g:nvim_tree_create_in_closed_folder = 0 "1 by default, When creating files, sets the path of a file when cursor is on a closed folder to the parent folder when 0, and inside the folder when 1.
+let g:nvim_tree_refresh_wait = 500 "1000 by default, control how often the tree can be refreshed, 1000 means the tree can be refresh once per 1000ms.
+let g:nvim_tree_window_picker_exclude = {
+      \   'filetype': [
+        \     'notify',
+        \     'packer',
+        \     'qf'
+        \   ],
+        \   'buftype': [
+          \     'terminal'
+          \   ]
+          \ }
+" Dictionary of buffer option names mapped to a list of option values that
+" indicates to the window picker that the buffer's window should not be
+" selectable.
+let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } " List of filenames that gets highlighted with NvimTreeSpecialFile
+let g:nvim_tree_show_icons = {
+      \ 'git': 1,
+      \ 'folders': 0,
+      \ 'files': 0,
+      \ 'folder_arrows': 0,
+      \ }
+"If 0, do not show the icons for one of 'git' 'folder' and 'files'
+"1 by default, notice that if 'files' is 1, it will only display
+"if nvim-web-devicons is installed and on your runtimepath.
+"if folder is 1, you can also tell folder_arrows 1 to show small arrows next to the folder icons.
+"but this will not work when you set indent_markers (because of UI conflict)
 
-let g:airline_left_sep = '»'
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
-let g:airline_right_sep = '◀'
-let g:airline_symbols.crypt = '🔒'
-let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'
-let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.maxlinenr = '☰'
-let g:airline_symbols.maxlinenr = ''
-let g:airline_symbols.branch = '⎇'
-let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.spell = 'Ꞩ'
-let g:airline_symbols.notexists = '∄'
-let g:airline_symbols.whitespace = 'Ξ'
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline#extensions#ale#open_lnum_symbol = '('
-let g:airline#extensions#ale#close_lnum_symbol = ')'
+" default will show icon by default if no icon is provided
+" default shows no icon by default
+let g:nvim_tree_icons = {
+      \ 'default': '',
+      \ 'symlink': '',
+      \ 'git': {
+        \   'unstaged': "✗",
+        \   'staged': "✓",
+        \   'unmerged': "",
+        \   'renamed': "➜",
+        \   'untracked': "★",
+        \   'deleted': "",
+        \   'ignored': "◌"
+        \   },
+        \ 'folder': {
+          \   'arrow_open': "",
+          \   'arrow_closed': "",
+          \   'default': "",
+          \   'open': "",
+          \   'empty': "",
+          \   'empty_open': "",
+          \   'symlink': "",
+          \   'symlink_open': "",
+          \   }
+          \ }
+
+lua << EOF
+require'nvim-tree'.setup {
+  disable_netrw       = true,
+  hijack_netrw        = true,
+  open_on_setup       = false,
+  ignore_ft_on_setup  = {},
+  auto_close          = false,
+  open_on_tab         = false,
+  hijack_cursor       = false,
+  update_cwd          = false,
+  update_to_buf_dir   = {
+  enable = true,
+  auto_open = true,
+  },
+diagnostics = {
+enable = false,
+icons = {
+  hint = "",
+  info = "",
+  warning = "",
+  error = "",
+  }
+},
+update_focused_file = {
+enable      = false,
+update_cwd  = false,
+ignore_list = {}
+},
+system_open = {
+  cmd  = nil,
+  args = {}
+  },
+filters = {
+  dotfiles = false,
+  custom = {}
+  },
+git = {
+enable = true,
+ignore = true,
+timeout = 500,
+},
+view = {
+  width = 30,
+  height = 30,
+  hide_root_folder = false,
+  side = 'left',
+  auto_resize = false,
+  mappings = {
+    custom_only = false,
+    list = {}
+    },
+  number = false,
+  relativenumber = false,
+  signcolumn = "yes"
+  },
+trash = {
+  cmd = "trash",
+  require_confirm = true
+  }
+}
+EOF
+
+" a list of groups can be found at `:help nvim_tree_highlight`
+highlight NvimTreeFolderIcon guibg=blue
+
+"" lualine
+lua << END
+local lualine = require('lualine')
+
+local colors = {
+  bg       = '#15141b',
+  fg       = '#edecee',
+  yellow   = '#ECBE7B',
+  cyan     = '#008080',
+  darkblue = '#081633',
+  green    = '#61ffca',
+  orange   = '#ffca85',
+  violet   = '#a277ff',
+  magenta  = '#f694ff',
+  blue     = '#82e2ff',
+  red      = '#ff6767',
+  }
+
+local conditions = {
+  buffer_not_empty = function()
+  return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
+end,
+hide_in_width = function()
+return vim.fn.winwidth(0) > 80
+  end,
+  check_git_workspace = function()
+  local filepath = vim.fn.expand('%:p:h')
+  local gitdir = vim.fn.finddir('.git', filepath .. ';')
+  return gitdir and #gitdir > 0 and #gitdir < #filepath
+end,
+}
+
+-- Config
+local config = {
+  options = {
+    -- Disable sections and component separators
+    component_separators = '',
+    section_separators = '',
+    theme = {
+      -- We are going to use lualine_c an lualine_x as left and
+      -- right section. Both are highlighted by c theme .  So we
+      -- are just setting default looks o statusline
+      normal = { c = { fg = colors.fg, bg = colors.bg } },
+      inactive = { c = { fg = colors.fg, bg = colors.bg } },
+      },
+    },
+  sections = {
+    -- these are to remove the defaults
+    lualine_a = {},
+    lualine_b = {},
+    lualine_y = {},
+    lualine_z = {},
+    -- These will be filled later
+    lualine_c = {},
+    lualine_x = {},
+    },
+  inactive_sections = {
+    -- these are to remove the defaults
+    lualine_a = {},
+    lualine_b = {},
+    lualine_y = {},
+    lualine_z = {},
+    lualine_c = {},
+    lualine_x = {},
+    },
+  }
+
+-- Inserts a component in lualine_c at left section
+local function ins_left(component)
+table.insert(config.sections.lualine_c, component)
+end
+
+-- Inserts a component in lualine_x ot right section
+local function ins_right(component)
+table.insert(config.sections.lualine_x, component)
+end
+
+ins_left({
+function()
+  return '▊'
+end,
+color = { fg = colors.blue }, -- Sets highlighting of component
+padding = { left = 0, right = 1 }, -- We don't need space before this
+})
+
+ins_left({
+-- mode component
+function()
+  -- auto change color according to neovims mode
+  local mode_color = {
+    n = colors.red,
+    i = colors.blue,
+    v = colors.orange,
+    [''] = colors.orange,
+    V = colors.orange,
+    c = colors.magenta,
+    no = colors.red,
+    s = colors.orange,
+    S = colors.orange,
+    [''] = colors.orange,
+    ic = colors.yellow,
+    R = colors.violet,
+    Rv = colors.violet,
+    cv = colors.red,
+    ce = colors.red,
+    r = colors.cyan,
+    rm = colors.cyan,
+    ['r?'] = colors.cyan,
+    ['!'] = colors.red,
+    t = colors.red,
+    }
+  vim.api.nvim_command('hi! LualineMode guifg=' .. mode_color[vim.fn.mode()] .. ' guibg=' .. colors.bg)
+  return ''
+end,
+color = 'LualineMode',
+padding = { right = 1 },
+})
+
+ins_left({
+-- filesize component
+'filesize',
+cond = conditions.buffer_not_empty,
+})
+
+ins_left({
+'filename',
+cond = conditions.buffer_not_empty,
+color = { fg = colors.magenta, gui = 'bold' },
+})
+
+ins_left({ 'location' })
+
+ins_left({ 'progress', color = { fg = colors.fg, gui = 'bold' } })
+
+ins_left({
+'diagnostics',
+sources = { 'nvim_diagnostic' },
+symbols = { error = ' ', warn = ' ', info = ' ' },
+diagnostics_color = {
+  color_error = { fg = colors.red },
+  color_warn = { fg = colors.yellow },
+  color_info = { fg = colors.cyan },
+  },
+})
+
+-- Insert mid section. You can make any number of sections in neovim :)
+-- for lualine it's any number greater then 2
+ins_left({
+function()
+  return '%='
+end,
+})
+
+-- Add components to right sections
+ins_right({
+'o:encoding', -- option component same as &encoding in viml
+fmt = string.upper, -- I'm not sure why it's upper case either ;)
+cond = conditions.hide_in_width,
+color = { fg = colors.green, gui = 'bold' },
+})
+
+ins_right({
+'fileformat',
+fmt = string.upper,
+icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
+color = { fg = colors.green, gui = 'bold' },
+})
+
+ins_right({
+'branch',
+icon = '',
+color = { fg = colors.violet, gui = 'bold' },
+})
+
+ins_right({
+'diff',
+-- Is it me or the symbol for modified us really weird
+symbols = { added = ' ', modified = '柳 ', removed = ' ' },
+diff_color = {
+  added = { fg = colors.green },
+  modified = { fg = colors.orange },
+  removed = { fg = colors.red },
+  },
+cond = conditions.hide_in_width,
+})
+
+ins_right({
+function()
+  return '▊'
+end,
+color = { fg = colors.blue },
+padding = { left = 1 },
+})
+
+lualine.setup(config)
+END
 
 "" rainbow
 let g:rainbow_active = 1
@@ -451,20 +769,11 @@ let g:ale_set_highlights = 0
 let g:ale_sign_error = ''
 let g:ale_sign_warning = ''
 let g:ale_echo_msg_format = '[%linter%]%code: %%s'
-highlight link ALEErrorSign Tag
 highlight link ALEWarningSign StorageClass
+highlight link ALEErrorSign Tag
 
 "" dashboard-nvim
 let g:dashboard_default_executive ='fzf'
-let g:dashboard_custom_shortcut={
-      \ 'last_session'       : 'SPC s l',
-      \ 'find_history'       : 'SPC f h',
-      \ 'find_file'          : 'SPC f f',
-      \ 'new_file'           : 'SPC c n',
-      \ 'change_colorscheme' : 'SPC t c',
-      \ 'find_word'          : 'SPC f a',
-      \ 'book_marks'         : 'SPC f b',
-      \ }
 
 " 設定
 
