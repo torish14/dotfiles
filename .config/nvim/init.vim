@@ -681,9 +681,9 @@ nnoremap sv :<C-u>vs<CR><C-w>l
 nnoremap <Leader>s :<C-u>split<CR>
 nnoremap <Leader>v :<C-u>vsplit<CR>
 
-" エディタサイズの制御
+" 画面サイズの制御
 function! s:manageEditorSize(...)
-  let cunt = a:1
+  let count = a:1
   let to = a:2
   for i in range(1, count ? count : 1)
     call VSCodeNotify(to ==# 'increase' ? 'workbench.action.increaseViewSize' : 'workbench.action.decreaseViewSize')
