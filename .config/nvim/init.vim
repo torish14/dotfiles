@@ -91,7 +91,7 @@ if !filereadable(expand('~/.vim/autoload/plug.vim'))
 endif
 
 " プラグイン
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 "" 見た目
 "" テーマ
