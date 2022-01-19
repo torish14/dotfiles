@@ -95,7 +95,7 @@ call plug#begin('~/.vim/plugged')
 
 "" 見た目
 "" テーマ
-Plug 'haishanh/night-owl.vim'
+Plug 'EdenEast/nightfox.nvim'
 "" コードのハイライトを高度に
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 "" エクスプローラーを表示
