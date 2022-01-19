@@ -412,7 +412,8 @@ call wilder#set_option('renderer', wilder#renderer_mux({
 
 "" モーション移動
 "" vim-easymotion
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
+"" Disable default mappings
+let g:EasyMotion_do_mapping = 0 
 let g:EasyMotion_smartcase = 1
 
 "" clever-f.vim
