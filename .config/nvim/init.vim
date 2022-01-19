@@ -169,8 +169,8 @@ Plug 'wellle/targets.vim'
 Plug 'rhysd/clever-f.vim', { 'on': [] }
 "" クイックスコープ
 Plug 'unblevable/quick-scope', { 'on': [] }
-"" grep の使用
-Plug 'mhinz/vim-grepper', { 'on': [] }
+"" ripgrep の使用
+Plug 'jremmen/vim-ripgrep', { 'on': [] }
 "" 括弧の移動を高度に
 Plug 'andymass/vim-matchup', { 'on': [] }
 "" fzf であいまい検索
