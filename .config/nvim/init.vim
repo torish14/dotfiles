@@ -14,24 +14,24 @@ augroup vimrc-auto-cursorline
   function! s:auto_cursorline(event)
     if a:event ==# 'WinEnter'
       setlocal cursorline
-      hi CursorLine term=underline cterm=underline gui=underline guibg=NONE " ADD
+      " hi CursorLine term=underline cterm=underline gui=underline guibg=NONE " ADD
       let s:cursorline_lock = 2
     elseif a:event ==# 'WinLeave'
       setlocal nocursorline
-      hi clear CursorLine " ADD
+      " hi clear CursorLine " ADD
     elseif a:event ==# 'CursorMoved'
       if s:cursorline_lock
         if 1 < s:cursorline_lock
           let s:cursorline_lock = 1
         else
           " setlocal nocursorline
-          hi clear CursorLine " ADD
+          " hi clear CursorLine " ADD
           let s:cursorline_lock = 0
         endif
       endif
     elseif a:event ==# 'CursorHold'
       " setlocal cursorline
-      hi CursorLine term=underline cterm=underline gui=underline guibg=NONE " ADD
+      " hi CursorLine term=underline cterm=underline gui=underline guibg=NONE " ADD
       let s:cursorline_lock = 1
     endif
   endfunction
