@@ -599,7 +599,11 @@ else
   nmap k gk
   nmap <Down> gj
   nmap <Up> gk
+  " nnoremap gk :<C-u>call VSCodeCall('cursorMove', { 'to': 'up', 'by': 'wrappedLine', 'value': v:count ? v:count : 1 })<CR> 
+  " nnoremap gj :<C-u>call VSCodeCall('cursorMove', { 'to': 'down', 'by': 'wrappedLine', 'value': v:count ? v:count : 1 })<CR>
 endif
+nnoremap <C-;> g;
+nnoremap <C-,> g,
 "" 行頭、行末に移動
 nnoremap <C-a> <Esc>^i
 nnoremap 0 ^
