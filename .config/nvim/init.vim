@@ -108,11 +108,8 @@ Plug 'osyo-manga/vim-brightest', { 'on': [] }
 
 "" 言語
 "" html
-Plug 'hail2u/vim-css3-syntax', { 'on': [] }
 Plug 'gorodinskiy/vim-coloresque', { 'on': [] }
 Plug 'mattn/emmet-vim', { 'on': [] }
-"" javascript
-Plug 'jelera/vim-javascript-syntax', { 'on': [] }
 
 "" 補完機能
 "" 強力な補完機能
@@ -121,18 +118,6 @@ Plug 'neoclide/coc.nvim', { 'on': [], 'branch': 'release' }
 Plug 'alvan/vim-closetag'
 "" 括弧を自動的に閉じる
 Plug 'cohama/lexima.vim'
-"" ワイルドメニュー
-if has('nvim')
-  function! UpdateRemotePlugins(...)
-    let &rtp=&rtp
-    UpdateRemotePlugins
-  endfunction
-  Plug 'gelguy/wilder.nvim', { 'do': function('UpdateRemotePlugins') }
-else
-  Plug 'gelguy/wilder.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
 "" github copilot
 Plug 'github/copilot.vim'
 
@@ -675,12 +660,6 @@ augroup END
 
 set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 
-"" syntax
-augroup vimrc-sync-fromstart
-  autocmd!
-  autocmd BufEnter * :syntax sync maxlines=200
-augroup END
-
 "" emmet-vim
 autocmd FileType html imap <buffer><expr><tab>
       \ emmet#isExpandable() ? "\<plug>(emmet-expand-abbr)" :
@@ -689,47 +668,6 @@ autocmd FileType html imap <buffer><expr><tab>
 "" 補完機能
 "" vim-closetag
 let g:closetag_filenames = '*.html, *.xhtml, *.phthml, *.vue'
-
-"" wilder.nvim
-call wilder#setup({
-      \ 'modes': [':', '/', '?'],
-      \ 'next_key': '<Tab>',
-      \ 'previous_key': '<S-Tab>',
-      \ 'accept_key': '<Down>',
-      \ 'reject_key': '<Up>',
-      \ })
-
-call wilder#set_option('pipeline', [
-      \   wilder#branch(
-      \     wilder#cmdline_pipeline({
-      \       'fuzzy': 1,
-      \       'set_pcre2_pattern': has('nvim'),
-      \     }),
-      \     wilder#python_search_pipeline({
-      \       'pattern': 'fuzzy',
-      \     }),
-      \   ),
-      \ ])
-
-let s:highlighters = [
-      \ wilder#pcre2_highlighter(),
-      \ wilder#basic_highlighter(),
-      \ ]
-
-call wilder#set_option('renderer', wilder#renderer_mux({
-      \ ':': wilder#popupmenu_renderer({
-      \   'highlighter': s:highlighters,
-      \ 'left': [
-        \   ' ', wilder#popupmenu_devicons(),
-        \ ],
-        \ 'right': [
-          \   ' ', wilder#popupmenu_scrollbar(),
-          \ ],
-          \ }),
-          \ '/': wilder#wildmenu_renderer({
-          \   'highlighter': s:highlighters,
-          \ }),
-          \ }))
 
 "" モーション移動
 "" vim-easymotion
