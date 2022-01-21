@@ -791,6 +791,8 @@ set softtabstop=2
 set shiftwidth=2
 
 "" 検索
+"" ワイルドメニュー
+set wildmenu
 "" 履歴
 set history=1000
 "" 検索文字列が小文字の場合は大文字小文字を区別なく検索する
