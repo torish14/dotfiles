@@ -182,6 +182,8 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'wakatime/vim-wakatime'
 "" 異なるエディタ間で設定を共有
 Plug 'editorconfig/editorconfig-vim'
+"" ファイルタイプを検知
+Plug 'nathom/filetype.nvim'
 
 call plug#end()
 
