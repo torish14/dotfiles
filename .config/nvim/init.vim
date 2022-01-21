@@ -24,13 +24,13 @@ augroup vimrc-auto-cursorline
         if 1 < s:cursorline_lock
           let s:cursorline_lock = 1
         else
-          " setlocal nocursorline
+          setlocal nocursorline
           " hi clear CursorLine " ADD
           let s:cursorline_lock = 0
         endif
       endif
     elseif a:event ==# 'CursorHold'
-      " setlocal cursorline
+      setlocal cursorline
       " hi CursorLine term=underline cterm=underline gui=underline guibg=NONE " ADD
       let s:cursorline_lock = 1
     endif
