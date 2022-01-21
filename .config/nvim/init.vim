@@ -1,4 +1,4 @@
-"" 'cursorline' を必要なときだけ有効する
+" 'cursorline' を必要なときだけ有効する
 "" http://d.hatena.ne.jp/thinca/20090530/1243615055
 augroup vimrc-auto-cursorline
   autocmd!
@@ -108,6 +108,7 @@ Plug 'osyo-manga/vim-brightest', { 'on': [] }
 
 "" 言語
 "" html
+Plug 'norcalli/nvim-colorizer.lua'
 Plug 'gorodinskiy/vim-coloresque', { 'on': [] }
 Plug 'mattn/emmet-vim', { 'on': [] }
 
@@ -623,6 +624,11 @@ let g:livedown_port = 0803
 let g:livedown_browser = "vivaldi"
 
 "" 言語
+"" nvim-colorizer
+lua << EOF
+  require'colorizer'.setup()
+EOF
+
 "" python
 let g:python_host_prog = $PYENV_ROOT.'/versions/neovim-2/bin/python'
 let g:python3_host_prog = '~/.pyenv/versions/3.10.1/bin/python3'
