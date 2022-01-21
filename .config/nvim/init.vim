@@ -98,7 +98,7 @@ Plug 'machakann/vim-highlightedyank'
 "" 括弧に色付け
 Plug 'luochen1990/rainbow'
 "" git の差分表示
-Plug 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter', { 'on': [] }
 "" git下の隠しファイルの表示
 Plug 'rhysd/git-messenger.vim'
 "" markdown のプレビュー
@@ -132,9 +132,9 @@ Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymot
 "" カーソル位置の単語で検索
 Plug 'thinca/vim-visualstar'
 "" モーション移動の拡張
-Plug 'haya14busa/vim-asterisk'
+Plug 'haya14busa/vim-asterisk', { 'on': [] }
 "" テキストオブジェクト拡張
-Plug 'wellle/targets.vim'
+Plug 'wellle/targets.vim', { 'on': [] }
 "" fキーの拡張
 Plug 'rhysd/clever-f.vim', { 'on': [] }
 "" クイックスコープ
@@ -157,7 +157,7 @@ Plug 'machakann/vim-sandwich', { 'on': [] }
 "" ヤンクしている内容で置換
 Plug 'vim-scripts/ReplaceWithRegister'
 "" 指定ファイルでの文字列の置換
-Plug 'brooth/far.vim', { 'do': ':UpdateRemotePlugins' }
+Plug 'brooth/far.vim', { 'on': [] }
 "" コメントアウトをラクに
 Plug 'preservim/nerdcommenter', { 'on': [] }
 "" . でのリピート機能の拡張
@@ -182,18 +182,18 @@ Plug 'glepnir/dashboard-nvim'
 Plug 'wakatime/vim-wakatime'
 "" 異なるエディタ間で設定を共有
 Plug 'editorconfig/editorconfig-vim'
-"" キーマップの表示
-Plug 'folke/which-key.nvim'
 
 call plug#end()
 
 "" プラグインをタイマーで遅延読み込み
-function! s:lazyLoadPlugs(timer)
+function! s:lazyLoadPlugs(timer) abort
   call plug#load (
         \ 'coc.nvim',
         \ 'ale',
         \ 'vim-sandwich',
         \ 'nerdcommenter',
+        \ 'targets.vim',
+        \ 'vim-asterisk',
         \ 'clever-f.vim',
         \ 'quick-scope',
         \ 'vim-ripgrep',
@@ -203,21 +203,21 @@ function! s:lazyLoadPlugs(timer)
         \ 'vim-fugitive',
         \ 'vim-rhubarb',
         \ 'vim-brightest',
+        \ 'vim-gitgutter',
         \ )
 endfunction
 
-call timer_start(100, function("s:lazyLoadPlugs"))
+call timer_start(20, function("s:lazyLoadPlugs"))
 
 "" プラグインをインサートモードで遅延読み込み
 augroup load_us_insert
   autocmd!
   autocmd InsertEnter * call plug#load(
         \ 'supertab',
-        \ 'vim-css3-syntax',
         \ 'vim-coloresque',
         \ 'emmet-vim',
-        \ 'vim-javascript-syntax',
         \ 'vim-livedown',
+        \ 'far.vim',
         \ )| autocmd! load_us_insert
 augroup END
 
@@ -404,7 +404,7 @@ filters = {
 git = {
 enable = true,
 ignore = true,
-timeout = 500,
+timeout = 100,
 },
 view = {
   width = 30,
@@ -814,10 +814,9 @@ set autoindent
 set background=dark
 "" 遅延読み込み
 set updatetime=100
-
-" 意図しない挙動を防ぐ
-filetype on
-filetype plugin indent on
+set re=1
+set ttyfast
+set lazyredraw
 
 " leader を spaceキーに
 let mapleader="\<Space>"
