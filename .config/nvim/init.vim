@@ -243,8 +243,13 @@ let g:loaded_zipPlugin          = 1
 let g:skip_loading_mswin        = 1
 
 "" 見た目
+"" nightfox
+lua << EOF
+require('nightfox').load(nightfox)
+EOF
+
 "" nvim-treesitter
-lua <<EOF
+lua << EOF
 require'nvim-treesitter.configs'.setup {
 ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
 ignore_install = { "haskell" }, -- List of parsers to ignore installing
@@ -256,49 +261,33 @@ disable = { "c", "ruby" },  -- list of language that will be disabled
 EOF
 
 "" nvim-treesitter-context
-lua <<EOF
+lua << EOF
 require'treesitter-context'.setup{
     enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
     throttle = true, -- Throttles plugin updates (may improve performance)
     max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
     patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
-        -- For all filetypes
-        -- Note that setting an entry here replaces all other patterns for this entry.
-        -- By setting the 'default' entry below, you can control which nodes you want to
-        -- appear in the context window.
-        default = {
-            'class',
-            'function',
-            'method',
-            -- 'for', -- These won't appear in the context
-            -- 'while',
-            -- 'if',
-            -- 'switch',
-            -- 'case',
-        },
-        -- Example for a specific filetype.
-        -- If a pattern is missing, *open a PR* so everyone can benefit.
-        --   rust = {
-        --       'impl_item',
-        --   },
+    default = {
+      'class',
+      'function',
+      'method',
+      },
+    -- Example for a specific filetype.
     },
-    exact_patterns = {
-        -- Example for a specific filetype with Lua patterns
-        -- Treat patterns.rust as a Lua pattern (i.e "^impl_item$" will
-        -- exactly match "impl_item" only)
-        -- rust = true, 
+  exact_patterns = {
+    -- Example for a specific filetype with Lua patterns
     }
-}
+  }
 EOF
 
 "" nvim-treesitter-refactor
-lua <<EOF
+lua << EOF
 require'nvim-treesitter.configs'.setup {
   refactor = {
     highlight_definitions = { enable = true },
     highlight_current_scope = { enable = true }
-  },
-}
+    },
+  }
 EOF
 
 "" nvim-tree
@@ -314,7 +303,7 @@ let g:nvim_tree_icon_padding = ' ' "one space by default, used for rendering the
 let g:nvim_tree_symlink_arrow = ' >> ' " defaults to ' ➛ '. used as a separator between symlinks' source and target.
 let g:nvim_tree_respect_buf_cwd = 1 "0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
 let g:nvim_tree_create_in_closed_folder = 0 "1 by default, When creating files, sets the path of a file when cursor is on a closed folder to the parent folder when 0, and inside the folder when 1.
-let g:nvim_tree_refresh_wait = 500 "1000 by default, control how often the tree can be refreshed, 1000 means the tree can be refresh once per 1000ms.
+let g:nvim_tree_refresh_wait = 100 "1000 by default, control how often the tree can be refreshed, 1000 means the tree can be refresh once per 1000ms.
 let g:nvim_tree_window_picker_exclude = {
       \   'filetype': [
         \     'notify',
@@ -325,24 +314,15 @@ let g:nvim_tree_window_picker_exclude = {
           \     'terminal'
           \   ]
           \ }
-" Dictionary of buffer option names mapped to a list of option values that
-" indicates to the window picker that the buffer's window should not be
-" selectable.
+
 let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } " List of filenames that gets highlighted with NvimTreeSpecialFile
 let g:nvim_tree_show_icons = {
       \ 'git': 1,
-      \ 'folders': 0,
-      \ 'files': 0,
+      \ 'folders': 1,
+      \ 'files': 1,
       \ 'folder_arrows': 0,
       \ }
-"If 0, do not show the icons for one of 'git' 'folder' and 'files'
-"1 by default, notice that if 'files' is 1, it will only display
-"if nvim-web-devicons is installed and on your runtimepath.
-"if folder is 1, you can also tell folder_arrows 1 to show small arrows next to the folder icons.
-"but this will not work when you set indent_markers (because of UI conflict)
 
-" default will show icon by default if no icon is provided
-" default shows no icon by default
 let g:nvim_tree_icons = {
       \ 'default': '',
       \ 'symlink': '',
@@ -367,6 +347,7 @@ let g:nvim_tree_icons = {
           \   }
           \ }
 
+"" nvim-tree
 lua << EOF
 require'nvim-tree'.setup {
   disable_netrw       = true,
@@ -430,7 +411,14 @@ trash = {
 EOF
 
 " a list of groups can be found at `:help nvim_tree_highlight`
-highlight NvimTreeFolderIcon guibg=blue
+highlight NvimTreeFolderIcon guibg=cyan
+
+"" nvim-web-devicons
+lua << EOF
+  require 'nvim-web-devicons'.setup {
+    default = true
+  }
+EOF
 
 "" lualine
 lua << END
@@ -843,8 +831,6 @@ set visualbell
 set showmatch
 "" ステータスラインを常に表示
 set laststatus=2
-"" 色の設定
-set t_Co=256
 "" コマンドラインの補完
 set wildmode=list:longest
 "" 新規ファイルを横に開く
@@ -853,10 +839,7 @@ set splitright
 set termguicolors
 "" シンタックスハイライトの有効化
 syntax enable
-"" テーマ
-if !exists('g:vscode')
-  colorscheme nightfox
-endif
+
 "" 検索ハイライトの色を変更
 autocmd ColorScheme * hi Search guibg=#a277ff guifg=#15141b
 autocmd ColorScheme * hi incSearch guibg=#a277ff guifg=#15141b
@@ -939,8 +922,6 @@ else
   nmap k gk
   nmap <Down> gj
   nmap <Up> gk
-  " nnoremap gk :<C-u>call VSCodeCall('cursorMove', { 'to': 'up', 'by': 'wrappedLine', 'value': v:count ? v:count : 1 })<CR> 
-  " nnoremap gj :<C-u>call VSCodeCall('cursorMove', { 'to': 'down', 'by': 'wrappedLine', 'value': v:count ? v:count : 1 })<CR>
 endif
 nnoremap <C-;> g;
 nnoremap <C-,> g,
