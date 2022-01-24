@@ -76,6 +76,8 @@ set -gx EDITOR nvim
 set -gx VISUAL nvim
 # python
 set -gx LDFLAGS "-L/usr/local/opt/python@3.8/lib"
+set -x PYENV_ROOT $HOME/.pyenv
+set -x PATH $PYENV_ROOT/bin $PATH
 
 # 日本語の使用
 set -x LANG ja_JP.UTF-8
