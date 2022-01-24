@@ -275,5 +275,9 @@ abbr yt 'yarn test'
 abbr ... cd ../..
 abbr .... cd ../../..
 
+# python の読み込み
+pyenv init - | source
+pyenv virtualenv-init - | source
+
 # starship の読み込み
 starship init fish | source
