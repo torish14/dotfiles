@@ -107,6 +107,7 @@ abbr du dust
 abbr e emacs
 
 abbr f fd
+abbr ff 'fd -t f' 
 
 # git
 abbr g git
