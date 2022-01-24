@@ -99,7 +99,7 @@ abbr bug 'brew upgrade'
 abbr c bat
 abbr cat bat
 abbr cafi 'caffeinate -i'
-abbr co code
+abbr co 'code -r'
 abbr cu curl
 
 abbr du dust
