@@ -238,6 +238,9 @@ abbr so source
 # tigコマンド
 abbr t tig
 abbr ts 'tig status'
+abbr tsh 'tig show'
+abbr tl 'tig log'
+abbr trf 'tig reflog'
 abbr tb 'tig blame'
 abbr tg 'tig grep'
 
