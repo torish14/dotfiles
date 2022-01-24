@@ -224,8 +224,8 @@ abbr ps 'procs --sortd cpu'
 abbr ql 'qlmanage -p'
 
 abbr r rg
-
 abbr rf "rg -g '*.js' --files"
+abbr rm 'rm -rv'
 abbr rmf 'rm -rfv'
 
 abbr s sudo
