@@ -112,10 +112,12 @@ abbr ff 'fd -t f'
 # git
 abbr g git
 abbr gs 'git status'
+abbr gsh 'git show'
 abbr gb 'git branch'
 abbr gco 'git checkout'
 # branch を作成 & 切り替え
 abbr gcob 'git checkout -b'
+abbr gcom 'git checkout main'
 abbr gc 'git commit'
 abbr gcm 'git commit -m'
 # 直前の commit の修正
@@ -137,26 +139,35 @@ abbr grho 'git reset --hard ORIG_HEAD'
 abbr grih 'git rebase -i HEAD~'
 abbr grir 'git rebase -i --root'
 abbr grc 'git rebase --continue'
+abbr grf 'git reflog'
 abbr gra 'git remote add'
 abbr grao 'git remote add origin'
 abbr grv 'git remote -v'
 abbr gd 'git diff'
 abbr gdc 'git diff --cached'
 abbr gl 'git log --graph --all --pretty=format:"%C(yellow reverse)%d%Creset%C(white reverse) %h% Creset %C(cyan reverse) %an %Creset %C(green)%ar%Creset%n%C(white)%w(80)%s%Creset%n%n%w(80,2,2)%b"'
+abbr glg 'git log --graph --all --pretty=format:"%C(yellow reverse)%d%Creset%C(white reverse) %h% Creset %C(cyan reverse) %an %Creset %C(green)%ar%Creset%n%C(white)%w(80)%s%Creset%n%n%w(80,2,2)%b" --grep=""'
 abbr gln 'git log --name-status'
 abbr gls "git log --stat"
 abbr glo 'git log --oneline'
-abbr gcma 'git checkout main'
 abbr gf 'git fetch'
 abbr gfu 'git fetch upstream'
 abbr gfo 'git fetch origin'
 abbr gmod 'git merge origin/develop'
 abbr gmom 'git merge origin/main'
 abbr gp 'git push'
+# すべてのブランチを push
+abbr gpa 'git push --all'
 abbr gpf 'git push --force-with-lease'
 abbr gpo 'git push origin'
 abbr gpom 'git push origin main'
 abbr gpl 'git pull'
+
+# git flow
+abbr gfl 'git flow'
+# git flow の初期化
+abbr gfli 'git flow init -d'
+
 # 変更の退避
 abbr gst 'git stash -u'
 # 退避した作業を戻す
@@ -191,7 +202,6 @@ abbr nrd 'npm run dev'
 abbr nrf 'npm run format'
 abbr nrl 'npm run lint'
 abbr nr 'npm remove'
-
 abbr nsl nslookup
 
 abbr op open
