@@ -35,8 +35,8 @@ end
 
 # github にリポジトリを作成して ghq で取得、vscode で開く
 function ghcr
-    gh repo create $argv
-    ghq get git@github.com:torish14/{$argv[1]}.git
+    gh repo create --public $argv
+    ghq get github.com/torish14/{$argv[1]}.git
     code /Users/user/ghq/github.com/torish14/{$argv[1]}
 end
 
