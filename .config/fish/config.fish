@@ -226,6 +226,7 @@ abbr r rg
 abbr rmf 'rm -rfv'
 
 abbr s sudo
+abbr shc 'sh ~/clean.sh'
 abbr sp 'sudo purge'
 abbr sr 'sudo reboot'
 abbr ss 'sudo shutdown -h now'
