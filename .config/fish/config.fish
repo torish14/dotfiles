@@ -92,6 +92,7 @@ abbr b brew
 abbr bc 'brew cleanup'
 abbr bi 'brew install'
 abbr bls 'brew list'
+abbr bu 'brew uninstall'
 abbr bud 'brew update'
 abbr bug 'brew upgrade'
 
