@@ -244,7 +244,7 @@ abbr trf 'tig reflog'
 abbr tb 'tig blame'
 abbr tg 'tig grep'
 
-abbr tl tldr
+abbr td tldr
 abbr tm tmux
 abbr to touch
 abbr top glances
