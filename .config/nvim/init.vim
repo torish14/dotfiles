@@ -118,7 +118,7 @@ Plug 'neoclide/coc.nvim', { 'on': [], 'branch': 'release' }
 "" 自動で閉じタグを補完
 Plug 'alvan/vim-closetag'
 "" 括弧を自動的に閉じる
-Plug 'cohama/lexima.vim'
+Plug 'windwp/nvim-autopairs'
 "" github copilot
 Plug 'github/copilot.vim'
 
@@ -1059,6 +1059,11 @@ if !exists('g:vscode')
   "" space + fm で Format
   nmap <silent> <Leader>fm <Plug>(coc-format)
 endif
+
+"" nvim-autopairs
+lua << EOF
+require('nvim-autopairs').setup{}
+EOF
 
 "" vim-easymotion
 nmap <Leader>m <Plug>(easymotion-overwin-f)
