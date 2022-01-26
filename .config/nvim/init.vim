@@ -83,12 +83,8 @@ call plug#begin('~/.config/nvim/plugged')
 "" 見た目
 "" テーマ
 Plug 'EdenEast/nightfox.nvim'
-"" コードのハイライトを高度に
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-Plug 'romgrk/nvim-treesitter-context'
-Plug 'nvim-treesitter/nvim-treesitter-refactor'
-"" エクスプローラーを表示
-Plug 'kyazdani42/nvim-tree.lua'
+"" ハイライト強化
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  
 "" アイコンを表示
 Plug 'kyazdani42/nvim-web-devicons'
 "" ステータスバーの表示
@@ -620,12 +616,31 @@ let g:rainbow_active = 1
 "" vim-livedown
 let g:livedown_autorun = 0
 let g:livedown_port = 0803
-let g:livedown_browser = "vivaldi"
+
+"" nvim-treesitter
+if !exists('g:vscode')
+  lua <<EOF
+  require'nvim-treesitter.configs'.setup {
+  ensure_installed = "maintained",
+
+  sync_install = false,
+
+  ignore_install = {},
+
+  highlight = {
+  enable = true,
+  disable = {},
+  additional_vim_regex_highlighting = false,
+  },
+}
+EOF
+
+endif
 
 "" 言語
 "" nvim-colorizer
 lua << EOF
-  require'colorizer'.setup()
+require'colorizer'.setup()
 EOF
 
 "" python
