@@ -106,7 +106,6 @@ Plug 'osyo-manga/vim-brightest', { 'on': [] }
 "" 言語
 "" html
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'gorodinskiy/vim-coloresque', { 'on': [] }
 Plug 'mattn/emmet-vim', { 'on': [] }
 
 "" 補完機能
@@ -135,8 +134,6 @@ Plug 'haya14busa/vim-asterisk', { 'on': [] }
 Plug 'wellle/targets.vim', { 'on': [] }
 "" fキーの拡張
 Plug 'rhysd/clever-f.vim', { 'on': [] }
-"" クイックスコープ
-Plug 'unblevable/quick-scope', { 'on': [] }
 "" ripgrep の使用
 Plug 'jremmen/vim-ripgrep', { 'on': [] }
 "" 括弧の移動を高度に
@@ -181,7 +178,7 @@ Plug 'vim-jp/vimdoc-ja'
 "" nvim 起動時に管理画面を表示
 Plug 'glepnir/dashboard-nvim'
 "" wakatime
-Plug 'wakatime/vim-wakatime'
+Plug 'wakatime/vim-wakatime', { 'on': [] }
 "" 異なるエディタ間で設定を共有
 Plug 'editorconfig/editorconfig-vim'
 "" ファイルタイプを検知
@@ -201,14 +198,11 @@ function! s:lazyLoadPlugs(timer) abort
         \ 'targets.vim',
         \ 'vim-asterisk',
         \ 'clever-f.vim',
-        \ 'quick-scope',
         \ 'vim-ripgrep',
         \ 'vim-matchup',
         \ 'fzf',
-        \ 'splitjoin.vim',
-        \ 'vim-fugitive',
-        \ 'vim-rhubarb',
         \ 'vim-brightest',
+        \ 'vim-wakatime',
         \ )
 endfunction
 
@@ -234,7 +228,6 @@ let g:loaded_man                = 1
 let g:loaded_matchit            = 1
 let g:loaded_matchparen         = 1
 let g:loaded_netrwPlugin        = 1
-let g:loaded_remote_plugins     = 1
 let g:loaded_shada_plugin       = 1
 let g:loaded_spellfile_plugin   = 1
 let g:loaded_tarPlugin          = 1
@@ -248,175 +241,10 @@ lua << EOF
 require('nightfox').load(nightfox)
 EOF
 
-"" nvim-treesitter
-lua << EOF
-require'nvim-treesitter.configs'.setup {
-ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-ignore_install = { "haskell" }, -- List of parsers to ignore installing
-highlight = {
-enable = true,              -- false will disable the whole extension
-disable = { "c", "ruby" },  -- list of language that will be disabled
-},
-  }
-EOF
-
-"" nvim-treesitter-context
-lua << EOF
-require'treesitter-context'.setup{
-    enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
-    throttle = true, -- Throttles plugin updates (may improve performance)
-    max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
-    patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
-    default = {
-      'class',
-      'function',
-      'method',
-      },
-    -- Example for a specific filetype.
-    },
-  exact_patterns = {
-    -- Example for a specific filetype with Lua patterns
-    }
-  }
-EOF
-
-"" nvim-treesitter-refactor
-lua << EOF
-require'nvim-treesitter.configs'.setup {
-  refactor = {
-    highlight_definitions = { enable = true },
-    highlight_current_scope = { enable = true }
-    },
-  }
-EOF
-
-"" nvim-tree
-let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file
-let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
-let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
-let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
-let g:nvim_tree_root_folder_modifier = ':~' "This is the default. See :help filename-modifiers for more options
-let g:nvim_tree_add_trailing = 1 "0 by default, append a trailing slash to folder names
-let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree
-let g:nvim_tree_disable_window_picker = 1 "0 by default, will disable the window picker.
-let g:nvim_tree_icon_padding = ' ' "one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
-let g:nvim_tree_symlink_arrow = ' >> ' " defaults to ' ➛ '. used as a separator between symlinks' source and target.
-let g:nvim_tree_respect_buf_cwd = 1 "0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
-let g:nvim_tree_create_in_closed_folder = 0 "1 by default, When creating files, sets the path of a file when cursor is on a closed folder to the parent folder when 0, and inside the folder when 1.
-let g:nvim_tree_refresh_wait = 100 "1000 by default, control how often the tree can be refreshed, 1000 means the tree can be refresh once per 1000ms.
-let g:nvim_tree_window_picker_exclude = {
-      \   'filetype': [
-        \     'notify',
-        \     'packer',
-        \     'qf'
-        \   ],
-        \   'buftype': [
-          \     'terminal'
-          \   ]
-          \ }
-
-let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } " List of filenames that gets highlighted with NvimTreeSpecialFile
-let g:nvim_tree_show_icons = {
-      \ 'git': 1,
-      \ 'folders': 1,
-      \ 'files': 1,
-      \ 'folder_arrows': 0,
-      \ }
-
-let g:nvim_tree_icons = {
-      \ 'default': '',
-      \ 'symlink': '',
-      \ 'git': {
-        \   'unstaged': "✗",
-        \   'staged': "✓",
-        \   'unmerged': "",
-        \   'renamed': "➜",
-        \   'untracked': "★",
-        \   'deleted': "",
-        \   'ignored': "◌"
-        \   },
-        \ 'folder': {
-          \   'arrow_open': "",
-          \   'arrow_closed': "",
-          \   'default': "",
-          \   'open': "",
-          \   'empty': "",
-          \   'empty_open': "",
-          \   'symlink': "",
-          \   'symlink_open': "",
-          \   }
-          \ }
-
-"" nvim-tree
-lua << EOF
-require'nvim-tree'.setup {
-  disable_netrw       = true,
-  hijack_netrw        = true,
-  open_on_setup       = false,
-  ignore_ft_on_setup  = {},
-  auto_close          = false,
-  open_on_tab         = false,
-  hijack_cursor       = false,
-  update_cwd          = false,
-  update_to_buf_dir   = {
-  enable = true,
-  auto_open = true,
-  },
-diagnostics = {
-enable = false,
-icons = {
-  hint = "",
-  info = "",
-  warning = "",
-  error = "",
-  }
-},
-update_focused_file = {
-enable      = false,
-update_cwd  = false,
-ignore_list = {}
-},
-system_open = {
-  cmd  = nil,
-  args = {}
-  },
-filters = {
-  dotfiles = false,
-  custom = {}
-  },
-git = {
-enable = true,
-ignore = true,
-timeout = 100,
-},
-view = {
-  width = 30,
-  height = 30,
-  hide_root_folder = false,
-  side = 'left',
-  auto_resize = false,
-  mappings = {
-    custom_only = false,
-    list = {}
-    },
-  number = false,
-  relativenumber = false,
-  signcolumn = "yes"
-  },
-trash = {
-  cmd = "trash",
-  require_confirm = true
-  }
-}
-EOF
-
-" a list of groups can be found at `:help nvim_tree_highlight`
-highlight NvimTreeFolderIcon guibg=cyan
-
 "" nvim-web-devicons
 lua << EOF
-  require 'nvim-web-devicons'.setup {
-    default = true
+require 'nvim-web-devicons'.setup {
+  default = true
   }
 EOF
 
@@ -772,27 +600,6 @@ let g:dashboard_custom_header = [
       \'                                   ',
       \]
 
-" let g:dashboard_custom_shortcut={
-" \ 'last_session'       : 'SPC s l',
-" \ 'find_history'       : 'SPC f h',
-" \ 'find_file'          : 'SPC f f',
-" \ 'new_file'           : 'SPC c n',
-" \ 'change_colorscheme' : 'SPC t c',
-" \ 'find_word'          : 'SPC f a',
-" \ 'book_marks'         : 'SPC f b',
-" \ }
-
-" let g:dashboard_custom_shortcut_icon['find_history'] = 'ﭯ '
-" let g:dashboard_custom_shortcut_icon['find_file'] = ' '
-" let g:dashboard_custom_shortcut_icon['new_file'] = '洛 '
-" let g:dashboard_custom_shortcut_icon['change_colorscheme'] = ' '
-" let g:dashboard_custom_shortcut_icon['find_word'] = ' '
-" let g:dashboard_custom_shortcut_icon['book_marks'] = ' '
-
-let g:dashboard_custom_footer = [
-      \'   ',
-      \]
-
 "" filetype
 lua << EOF
 require("filetype").setup({
@@ -954,6 +761,7 @@ set lazyredraw
 let mapleader="\<Space>"
 
 " キーマップ
+
 "" ノーマルモード
 "" 保存
 nnoremap <Leader>w :w<CR>
