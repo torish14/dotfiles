@@ -98,7 +98,8 @@ Plug 'machakann/vim-highlightedyank'
 "" 括弧に色付け
 Plug 'luochen1990/rainbow'
 "" git の差分表示
-Plug 'airblade/vim-gitgutter', { 'on': [] }
+Plug 'nvim-lua/plenary.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 "" git下の隠しファイルの表示
 Plug 'rhysd/git-messenger.vim'
 "" markdown のプレビュー
@@ -208,7 +209,6 @@ function! s:lazyLoadPlugs(timer) abort
         \ 'vim-fugitive',
         \ 'vim-rhubarb',
         \ 'vim-brightest',
-        \ 'vim-gitgutter',
         \ )
 endfunction
 
@@ -218,11 +218,8 @@ call timer_start(20, function("s:lazyLoadPlugs"))
 augroup load_us_insert
   autocmd!
   autocmd InsertEnter * call plug#load(
-        \ 'supertab',
-        \ 'vim-coloresque',
         \ 'emmet-vim',
         \ 'vim-livedown',
-        \ 'far.vim',
         \ )| autocmd! load_us_insert
 augroup END
 
@@ -1025,25 +1022,21 @@ function! s:manageEditorSize(...)
   endfor
 endfunction
 
-nnoremap <C-w>> <Cmd>call <SID>manageEditorSize(v:count, 'increase')<CR>
-xnoremap <C-w>> <Cmd>call <SID>manageEditorSize(v:count, 'increase')<CR>
-nnoremap <C-w>+ <Cmd>call <SID>manageEditorSize(v:count, 'increase')<CR>
-xnoremap <C-w>+ <Cmd>call <SID>manageEditorSize(v:count, 'increase')<CR>
-nnoremap <C-w>< <Cmd>call <SID>manageEditorSize(v:count, 'decrease')<CR>
-xnoremap <C-w>< <Cmd>call <SID>manageEditorSize(v:count, 'decrease')<CR>
-nnoremap <C-w>- <Cmd>call <SID>manageEditorSize(v:count, 'decrease')<CR>
-xnoremap <C-w>- <Cmd>call <SID>manageEditorSize(v:count, 'decrease')<CR>
+if exists('g:vscode')
+  nnoremap <C-w>> <Cmd>call <SID>manageEditorSize(v:count, 'increase')<CR>
+  xnoremap <C-w>> <Cmd>call <SID>manageEditorSize(v:count, 'increase')<CR>
+  nnoremap <C-w>+ <Cmd>call <SID>manageEditorSize(v:count, 'increase')<CR>
+  xnoremap <C-w>+ <Cmd>call <SID>manageEditorSize(v:count, 'increase')<CR>
+  nnoremap <C-w>< <Cmd>call <SID>manageEditorSize(v:count, 'decrease')<CR>
+  xnoremap <C-w>< <Cmd>call <SID>manageEditorSize(v:count, 'decrease')<CR>
+  nnoremap <C-w>- <Cmd>call <SID>manageEditorSize(v:count, 'decrease')<CR>
+  xnoremap <C-w>- <Cmd>call <SID>manageEditorSize(v:count, 'decrease')<CR>
+endif
 
-"" nvim-tree
-nnoremap <C-t> :NvimTreeToggle<CR>
-nnoremap <leader>n :NvimTreeFindFile<CR>
-
-"" vim-gitgutter
-nmap <Leader>gn <Plug>(GitGutterNextHunk)
-nmap <Leader>gp <Plug>(GitGutterPrevHunk)
-nmap <Leader>gv <Plug>(GitGutterPreviewHunk)
-nmap <Leader>gu <Plug>(GitGutterUndoHunk)
-nmap <Leader>gs <Plug>(GitGutterStageHunk)
+"" gitsigns.nvim
+lua << EOF
+require('gitsigns').setup()
+EOF
 
 "" coc.nvim
 if !exists('g:vscode')
