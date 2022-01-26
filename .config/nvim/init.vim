@@ -185,6 +185,8 @@ Plug 'wakatime/vim-wakatime'
 Plug 'editorconfig/editorconfig-vim'
 "" ファイルタイプを検知
 Plug 'nathom/filetype.nvim'
+"" 翻訳
+Plug 'voldikss/vim-translator'
 
 call plug#end()
 
@@ -795,6 +797,9 @@ end,
   })
 EOF
 
+"" vim-translator
+let g:translator_target_lang = 'ja'
+
 " 設定
 
 "" 基本設定
@@ -1086,6 +1091,18 @@ nnoremap <silent> <Leader>tc :DashboardChangeColorscheme<CR>
 nnoremap <silent> <Leader>fa :DashboardFindWord<CR>
 nnoremap <silent> <Leader>fb :DashboardJumpMark<CR>
 nnoremap <silent> <Leader>cn :DashboardNewFile<CR>
+
+"" vim-translator
+nmap <silent> <Leader>tl <Plug>Translate
+vmap <silent> <Leader>tl <Plug>TranslateV
+" Display translation in a window
+nmap <silent> <Leader>tw <Plug>TranslateW
+vmap <silent> <Leader>tw <Plug>TranslateWV
+" Replace the text with translation
+nmap <silent> <Leader>tr <Plug>TranslateR
+vmap <silent> <Leader>tr <Plug>TranslateRV
+" Translate the text in clipboard
+nmap <silent> <Leader>tx <Plug>TranslateX
 
 "" インサートモード
 "" Emacs のキーバインド使用
