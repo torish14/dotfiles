@@ -146,26 +146,30 @@ Plug 'junegunn/fzf', { 'on': [], 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 "" 縦方向のスキップ移動
 Plug 'tyru/columnskip.vim'
+"" ワイルドメニュー
+if has('nvim')
+  function! UpdateRemotePlugins(...)
+    " Needed to refresh runtime files
+    let &rtp=&rtp
+    UpdateRemotePlugins
+  endfunction
+
+  Plug 'gelguy/wilder.nvim', { 'do': function('UpdateRemotePlugins') }
+else
+  Plug 'gelguy/wilder.nvim'
+
+  " To use Python remote plugin features in Vim, can be skipped
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
 
 "" 編集機能
-"" タブキーの拡張
-Plug 'ervandew/supertab', { 'on': [] }
 "" 文字列を括弧などで囲む
 Plug 'machakann/vim-sandwich', { 'on': [] }
-"" ヤンクしている内容で置換
-Plug 'vim-scripts/ReplaceWithRegister'
-"" 指定ファイルでの文字列の置換
-Plug 'brooth/far.vim', { 'on': [] }
 "" コメントアウトをラクに
 Plug 'preservim/nerdcommenter', { 'on': [] }
-"" . でのリピート機能の拡張
-Plug 'tpope/vim-repeat'
 "" git を使う
-Plug 'tpope/vim-fugitive', { 'on': [] }
-"" fugitive の拡張
-Plug 'tpope/vim-rhubarb', { 'on': [] }
-"" 一行のコードと複数行のコードの入れ替え
-Plug 'AndrewRadev/splitjoin.vim', { 'on': [] }
+Plug 'lambdalisue/gina.vim'
 "" 行移動
 Plug 'matze/vim-move'
 
@@ -682,19 +686,50 @@ let g:closetag_filenames = '*.html, *.xhtml, *.phthml, *.vue'
 let g:EasyMotion_do_mapping = 0 
 let g:EasyMotion_smartcase = 1
 
+" wilder.nvim
+call wilder#setup({
+      \ 'modes': [':', '/', '?'],
+      \ 'next_key': '<Tab>',
+      \ 'previous_key': '<S-Tab>',
+      \ 'accept_key': '<Down>',
+      \ 'reject_key': '<Up>',
+      \ })
+
+call wilder#set_option('pipeline', [
+      \   wilder#branch(
+      \     wilder#cmdline_pipeline({
+      \       'fuzzy': 1,
+      \       'set_pcre2_pattern': has('nvim'),
+      \     }),
+      \     wilder#python_search_pipeline({
+      \       'pattern': 'fuzzy',
+      \     }),
+      \   ),
+      \ ])
+
+let s:highlighters = [
+      \ wilder#pcre2_highlighter(),
+      \ wilder#basic_highlighter(),
+      \ ]
+
+call wilder#set_option('renderer', wilder#renderer_mux({
+      \ ':': wilder#popupmenu_renderer({
+      \   'highlighter': s:highlighters,
+      \ 'left': [
+        \   ' ', wilder#popupmenu_devicons(),
+        \ ],
+        \ 'right': [
+          \   ' ', wilder#popupmenu_scrollbar(),
+          \ ],
+          \ }),
+          \ '/': wilder#wildmenu_renderer({
+          \   'highlighter': s:highlighters,
+          \ }),
+          \ }))
+
 "" clever-f.vim
 let g:clever_f_ignore_case = 1
 let g:clever_f_use_migemo = 1
-
-"" quick-scope
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-"" 遅延読み込み
-let g:qs_lazy_highlight = 1
-augroup qs_colors
-  autocmd!
-  autocmd ColorScheme * highlight QuickScopePrimary guifg='#afff5f' gui=underline
-  autocmd ColorScheme * highlight QuickScopeSecondary guifg='#5fffff' gui=underline
-augroup END
 
 "" 編集機能
 "" nerdcommenter
@@ -886,8 +921,6 @@ set softtabstop=2
 set shiftwidth=2
 
 "" 検索
-"" ワイルドメニュー
-set wildmenu
 "" 履歴
 set history=1000
 "" 検索文字列が小文字の場合は大文字小文字を区別なく検索する
