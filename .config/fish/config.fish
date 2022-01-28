@@ -256,13 +256,13 @@ abbr trl3 'tree -L 3 -C'
 abbr v nvim
 abbr vi nvim
 abbr vim nvim
-abbr vf 'nvim ~/.config/fish/config.fish'
+abbr vf 'nvim ~/dotfiles/.config/fish/config.fish'
 abbr vh 'nvim ~/.hammerspoon/init.lua'
-abbr vn 'nvim ~/.config/nvim/init.vim'
+abbr vn 'nvim ~/dotfiles/.config/nvim/init.vim'
 abbr vr 'nvim ~/.vimrc'
 abbr vk 'nvim ~/.config/karabiner/assets/complex_modifications/2021121011111.json'
-abbr vs 'nvim ~/.config/starship.toml'
-abbr vt 'nvim ~/.config/kitty/kitty.conf'
+abbr vs 'nvim ~/dotfiles/.config/startshiiip/starship.toml'
+abbr vt 'nvim ~/dotfiles/.config/kitty/kitty.conf'
 
 abbr y yarn
 abbr yi 'yarn init'
