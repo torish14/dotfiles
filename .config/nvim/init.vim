@@ -740,6 +740,8 @@ set hlsearch
 set incsearch
 "" 検索時に最後まで行ったら最初に戻る
 set wrapscan
+"" 一括置換するときファイルを分割して編集箇所を見やすくする
+set inccommand=split
 "" ESC 連打でハイライト解除
 nmap <ESC><Esc> :nohlsearch<CR><Esc>
 set backspace=indent,eol,start
