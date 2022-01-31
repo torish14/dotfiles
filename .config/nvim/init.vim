@@ -77,6 +77,12 @@ function! s:smooth_scroll(fn) abort
   let s:smooth_scroll_timer = timer_start(s:stop_time, function('s:' . a:fn), {'repeat' : &scroll/3})
 endfunction
 
+"" ヤンクした箇所をハイライト
+augroup LuaHighlight
+  autocmd!
+  autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
+augroup END
+
 " プラグイン
 call plug#begin('~/.config/nvim/plugged')
 
@@ -89,8 +95,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'kyazdani42/nvim-web-devicons'
 "" ステータスバーの表示
 Plug 'nvim-lualine/lualine.nvim',
-"" ヤンクした箇所をハイライト
-Plug 'machakann/vim-highlightedyank'
 "" 括弧に色付け
 Plug 'luochen1990/rainbow'
 "" git の差分表示
