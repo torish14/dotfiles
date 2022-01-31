@@ -687,6 +687,10 @@ set showcmd
 set modeline
 set modelines=10
 set scrolloff=3
+"" 長いコードを折り返す
+set wrap
+"" 長いコードも表示する
+set display=lastline
 set mouse=a
 set title
 set titleold="Termminal"
