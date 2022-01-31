@@ -750,6 +750,8 @@ set incsearch
 set wrapscan
 "" 一括置換するときファイルを分割して編集箇所を見やすくする
 set inccommand=split
+"" 補完数を10個にする
+set pumheight=10
 "" ESC 連打でハイライト解除
 nmap <ESC><Esc> :nohlsearch<CR><Esc>
 set backspace=indent,eol,start
