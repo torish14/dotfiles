@@ -781,6 +781,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>qq :q!<CR>
 nnoremap <Leader>e :e<CR>
 nnoremap <Leader>wq :wq<CR>
+nnoremap <Leader>x :x<CR>
 
 "" プラグインの制御
 nnoremap <leader>pi :PlugInstall<cr>
