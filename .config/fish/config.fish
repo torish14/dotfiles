@@ -140,6 +140,7 @@ abbr grho 'git reset --hard ORIG_HEAD'
 abbr grih 'git rebase -i HEAD~'
 abbr grir 'git rebase -i --root'
 abbr grc 'git rebase --continue'
+# 過去の git の操作履歴を見る
 abbr grf 'git reflog'
 abbr gra 'git remote add'
 abbr grao 'git remote add origin'
