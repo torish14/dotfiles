@@ -122,6 +122,7 @@ abbr gc 'git commit'
 abbr gcm 'git commit -m'
 # 直前の commit の修正
 abbr gca 'git commit --amend'
+abbr gcam 'git commit --amend -m ""'
 abbr gg 'git grep'
 abbr gi 'git init'
 abbr ga 'git add'
