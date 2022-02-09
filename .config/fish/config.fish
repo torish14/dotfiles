@@ -129,17 +129,17 @@ abbr ga 'git add'
 abbr gap 'git add -p'
 abbr gaa 'git add -A'
 # 直前の add を取り消し
-abbr grh 'git reset HEAD'
+abbr grsh 'git reset HEAD'
 # 直前の commit のみを取り消し
-abbr grs 'git reset --soft HEAD^'
+abbr grss 'git reset --soft HEAD^'
 # 直前の commit をまるっと取り消し
-abbr grhh 'git reset --hard HEAD^'
+abbr grshh 'git reset --hard HEAD^'
 # git reset の取り消し
-abbr grho 'git reset --hard ORIG_HEAD'
+abbr grsho 'git reset --hard ORIG_HEAD'
 # コミットメッセージを修正
-abbr grih 'git rebase -i HEAD~'
-abbr grir 'git rebase -i --root'
-abbr grc 'git rebase --continue'
+abbr grbih 'git rebase -i HEAD~n'
+abbr grbir 'git rebase -i --root'
+abbr grbc 'git rebase --continue'
 # 過去の git の操作履歴を見る
 abbr grf 'git reflog'
 abbr gra 'git remote add'
