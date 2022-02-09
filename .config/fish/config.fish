@@ -113,6 +113,10 @@ abbr ff 'fd -t f'
 abbr g git
 abbr gs 'git status'
 abbr gsh 'git show'
+abbr gi 'git init'
+abbr ga 'git add'
+abbr gap 'git add -p'
+abbr gaa 'git add -A'
 abbr gb 'git branch'
 abbr gco 'git checkout'
 # branch を作成 & 切り替え
@@ -124,10 +128,6 @@ abbr gcm 'git commit -m'
 abbr gca 'git commit --amend'
 abbr gcam 'git commit --amend -m ""'
 abbr gg 'git grep'
-abbr gi 'git init'
-abbr ga 'git add'
-abbr gap 'git add -p'
-abbr gaa 'git add -A'
 # 直前の add を取り消し
 abbr grsh 'git reset HEAD'
 # 直前の commit のみを取り消し
