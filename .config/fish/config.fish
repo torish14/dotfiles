@@ -100,6 +100,7 @@ abbr c bat
 abbr cat bat
 abbr cafi 'caffeinate -i'
 abbr co 'code -r'
+abbr cog 'code -g'
 abbr cu curl
 
 abbr du dust
