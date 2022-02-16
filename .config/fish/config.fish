@@ -251,7 +251,7 @@ abbr tm tmux
 abbr to touch
 abbr top glances
 abbr tr 'tree -C'
-abbr trai 'tree -a -I ".git|node_modules|bower_components|.DS_Store" -L 3 -C'
+abbr trai 'tree -a -I ".git|node_modules|bower_components|.DS_Store" -C'
 abbr trl2 'tree -L 2 -C'
 abbr trl3 'tree -L 3 -C'
 
