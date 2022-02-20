@@ -209,6 +209,9 @@ function! s:lazyLoadPlugs(timer) abort
         \ 'vim-wakatime',
         \ )
 endfunction
+"" jetpack の自動実行
+Jetpack 'tani/vim-jetpack', { 'opt': 1 }
+call jetpack#add('tani/vim-jetpack', { 'opt': 1 })
 
 call timer_start(20, function("s:lazyLoadPlugs"))
 
