@@ -234,7 +234,9 @@ abbr rmf 'rm -rfv'
 abbr s sudo
 abbr shc 'sh ~/clean.sh'
 abbr sp 'sudo purge'
+# 再起動
 abbr sr 'sudo reboot'
+# シャットダウン
 abbr ss 'sudo shutdown -h now'
 abbr so source
 
