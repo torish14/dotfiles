@@ -721,7 +721,7 @@ set laststatus=2
 "" コマンドラインの補完
 set wildmode=list:longest
 "" 新規ファイルを横に開く
-set splitright
+" set splitright
 "" guiカラーの許可
 set termguicolors
 "" シンタックスハイライトの有効化
