@@ -37,7 +37,7 @@ end
 function ghcr
     gh repo create --public $argv
     ghq get github.com/torish14/{$argv[1]}.git
-    code /Users/user/ghq/github.com/torish14/{$argv[1]}
+    code -r /Users/user/ghq/github.com/torish14/{$argv[1]}
 end
 
 # fish キーバインド
