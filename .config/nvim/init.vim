@@ -189,9 +189,6 @@ Jetpack 'editorconfig/editorconfig-vim'
 Jetpack 'nathom/filetype.nvim'
 "" 翻訳
 Jetpack 'voldikss/vim-translator'
-"" jetpack の自動実行
-Jetpack 'tani/vim-jetpack', { 'opt': 1 }
-call jetpack#add('tani/vim-jetpack', { 'opt': 1 })
 
 call jetpack#end()
 
