@@ -213,9 +213,6 @@ let g:loaded_tutor_mode_jetpackin  = 1
 let g:loaded_zipJetpackin          = 1
 let g:skip_loading_mswin        = 1
 
-"" jetpack の最適化
-let g:jetpack#optimize = 2
-
 "" 見た目
 "" nightfox
 lua << EOF
