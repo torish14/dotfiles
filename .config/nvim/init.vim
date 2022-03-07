@@ -778,7 +778,6 @@ nnoremap <leader>pi :PlugInstall<cr>
 nnoremap <leader>pu :PlugUpdate<cr>
 nnoremap <leader>pc :PlugClean<cr>
 nnoremap <leader>ch :CheckHealth<cr>
-nnoremap <leader>js :JetpackSync<cr>
 
 "" 移動
 if !exists('g:vscode')
