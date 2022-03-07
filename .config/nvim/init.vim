@@ -84,69 +84,69 @@ augroup LuaHighlight
 augroup END
 
 " プラグイン
-call jetpack#begin()
+call plug#begin()
 
 "" 見た目
 "" テーマ
-Jetpack 'EdenEast/nightfox.nvim'
+Plug 'EdenEast/nightfox.nvim'
 "" ハイライト強化
-Jetpack 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  
 "" アイコンを表示
-Jetpack 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 "" ステータスバーの表示
-Jetpack 'nvim-lualine/lualine.nvim'
+Plug 'nvim-lualine/lualine.nvim'
 "" 括弧に色付け
-Jetpack 'luochen1990/rainbow'
+Plug 'luochen1990/rainbow'
 "" git の差分表示
-Jetpack 'nvim-lua/plenary.nvim'
-Jetpack 'lewis6991/gitsigns.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 "" git下の隠しファイルの表示
-Jetpack 'rhysd/git-messenger.vim'
+Plug 'rhysd/git-messenger.vim'
 "" markdown のプレビュー
-Jetpack 'shime/vim-livedown'
+Plug 'shime/vim-livedown', { 'on': [] }
 "" カーソル下の単語を移動するたびにハイライト
-Jetpack 'osyo-manga/vim-brightest'
+Plug 'osyo-manga/vim-brightest', { 'on': [] }
 
 "" 言語
 "" html
-Jetpack 'norcalli/nvim-colorizer.lua'
-Jetpack 'mattn/emmet-vim'
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'mattn/emmet-vim', { 'on': [] }
 
 "" 補完機能
 "" 強力な補完機能
-Jetpack 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'neoclide/coc.nvim', { 'on': [], 'branch': 'release' }
 "" 自動で閉じタグを補完
-Jetpack 'alvan/vim-closetag'
+Plug 'alvan/vim-closetag'
 "" 括弧を自動的に閉じる
-Jetpack 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-autopairs'
 "" github copilot
-Jetpack 'github/copilot.vim'
+Plug 'github/copilot.vim'
 
 "" モーション移動
 "" 高速なカーソル移動
 function! Cond(Cond, ...)
   let opts = get(a:000, 0, {})
-  return a:Cond ? opts : extend(opts, { 'for': [] })
+  return a:Cond ? opts : extend(opts, { 'on': [], 'for': [] })
 endfunction
-Jetpack 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
-Jetpack 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
+Plug 'easymotion/vim-easymotion', Cond(!exists('g:vscode'))
+Plug 'asvetliakov/vim-easymotion', Cond(exists('g:vscode'), { 'as': 'vsc-easymotion' })
 "" カーソル位置の単語で検索
-Jetpack 'thinca/vim-visualstar'
+Plug 'thinca/vim-visualstar'
 "" モーション移動の拡張
-Jetpack 'haya14busa/vim-asterisk'
+Plug 'haya14busa/vim-asterisk', { 'on': [] }
 "" テキストオブジェクト拡張
-Jetpack 'wellle/targets.vim'
+Plug 'wellle/targets.vim', { 'on': [] }
 "" fキーの拡張
-Jetpack 'rhysd/clever-f.vim'
+Plug 'rhysd/clever-f.vim', { 'on': [] }
 "" ripgrep の使用
-Jetpack 'jremmen/vim-ripgrep'
+Plug 'jremmen/vim-ripgrep', { 'on': [] }
 "" 括弧の移動を高度に
-Jetpack 'andymass/vim-matchup'
+Plug 'andymass/vim-matchup', { 'on': [] }
 "" fzf であいまい検索
-Jetpack 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Jetpack 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'on': [], 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 "" 縦方向のスキップ移動
-Jetpack 'tyru/columnskip.vim'
+Plug 'tyru/columnskip.vim'
 "" ワイルドメニュー
 if has('nvim')
   function! UpdateRemotePlugins(...)
@@ -155,42 +155,42 @@ if has('nvim')
     UpdateRemotePlugins
   endfunction
 
-  Jetpack 'gelguy/wilder.nvim', { 'do': function('UpdateRemotePlugins') }
+  Plug 'gelguy/wilder.nvim', { 'do': function('UpdateRemotePlugins') }
 else
-  Jetpack 'gelguy/wilder.nvim'
+  Plug 'gelguy/wilder.nvim'
 
-  " To use Python remote jetpackin features in Vim, can be skipped
-  Jetpack 'roxma/nvim-yarp'
-  Jetpack 'roxma/vim-hug-neovim-rpc'
+  " To use Python remote plugin features in Vim, can be skipped
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
 "" 編集機能
 "" 文字列を括弧などで囲む
-Jetpack 'machakann/vim-sandwich'
+Plug 'machakann/vim-sandwich', { 'on': [] }
 "" コメントアウトをラクに
-Jetpack 'preservim/nerdcommenter'
+Plug 'preservim/nerdcommenter', { 'on': [] }
 "" git を使う
-Jetpack 'lambdalisue/gina.vim'
+Plug 'lambdalisue/gina.vim'
 "" 行移動
-Jetpack 'matze/vim-move'
+Plug 'matze/vim-move'
 
 "" その他
 "" エラー検知
-Jetpack 'w0rp/ale'
+Plug 'w0rp/ale', { 'on': [] }
 "" vim-doc を日本語化
-Jetpack 'vim-jp/vimdoc-ja'
+Plug 'vim-jp/vimdoc-ja'
 "" nvim 起動時に管理画面を表示
-Jetpack 'glepnir/dashboard-nvim'
+Plug 'glepnir/dashboard-nvim'
 "" wakatime
-Jetpack 'wakatime/vim-wakatime'
+Plug 'wakatime/vim-wakatime', { 'on': [] }
 "" 異なるエディタ間で設定を共有
-Jetpack 'editorconfig/editorconfig-vim'
+Plug 'editorconfig/editorconfig-vim'
 "" ファイルタイプを検知
-Jetpack 'nathom/filetype.nvim'
+Plug 'nathom/filetype.nvim'
 "" 翻訳
-Jetpack 'voldikss/vim-translator'
+Plug 'voldikss/vim-translator'
 
-call jetpack#end()
+call plug#end()
 
 "" プラグインをタイマーで遅延読み込み
 function! s:lazyLoadPlugs(timer) abort
@@ -225,18 +225,18 @@ augroup END
 "" デフォルトのプラグイン読み込みをスキップ
 let g:did_install_default_menus = 1
 let g:did_install_syntax_menu   = 1
-let g:did_load_ftjetpackin         = 1
-let g:loaded_2html_jetpackin       = 1
+let g:did_load_ftplugin         = 1
+let g:loaded_2html_plugin       = 1
 let g:loaded_gzip               = 1
 let g:loaded_man                = 1
 let g:loaded_matchit            = 1
 let g:loaded_matchparen         = 1
-let g:loaded_netrwJetpackin        = 1
-let g:loaded_shada_jetpackin       = 1
-let g:loaded_spellfile_jetpackin   = 1
-let g:loaded_tarJetpackin          = 1
-let g:loaded_tutor_mode_jetpackin  = 1
-let g:loaded_zipJetpackin          = 1
+let g:loaded_netrwPlugin        = 1
+let g:loaded_shada_plugin       = 1
+let g:loaded_spellfile_plugin   = 1
+let g:loaded_tarPlugin          = 1
+let g:loaded_tutor_mode_plugin  = 1
+let g:loaded_zipPlugin          = 1
 let g:skip_loading_mswin        = 1
 
 "" 見た目
@@ -505,7 +505,7 @@ set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete\ 12
 
 "" emmet-vim
 autocmd FileType html imap <buffer><expr><tab>
-      \ emmet#isExpandable() ? "\<jetpack>(emmet-expand-abbr)" :
+      \ emmet#isExpandable() ? "\<plug>(emmet-expand-abbr)" :
       \ "\<tab>"
 
 "" 補完機能
@@ -618,7 +618,7 @@ overrides = {
     },
   complex = {
     -- Set the filetype of any full filename matching the regex to gitconfig
-    [".*git/config"] = "gitconfig", -- Included in the jetpackin
+    [".*git/config"] = "gitconfig", -- Included in the plugin
     },
 
   -- The same as the ones above except the keys map to functions
@@ -951,39 +951,39 @@ if !exists('g:vscode')
 
   " Use `[g` and `]g` to navigate diagnostics
   " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-  nmap <silent> [g <Jetpack>(coc-diagnostic-prev)
-  nmap <silent> ]g <Jetpack>(coc-diagnostic-next)
+  nmap <silent> [g <Plug>(coc-diagnostic-prev)
+  nmap <silent> ]g <Plug>(coc-diagnostic-next)
   "" space 2回で CocList
   nmap <silent> <Leader><space> :<C-u>CocList<cr>
   "" space + gd で定義元へ移動
-  nmap <silent> gd <Jetpack>(coc-definition)
-  nmap <silent> gy <Jetpack>(coc-type-definition)
-  nmap <silent> gi <Jetpack>(coc-implementation)
-  nmap <silent> gr <Jetpack>(coc-references)
+  nmap <silent> gd <Plug>(coc-definition)
+  nmap <silent> gy <Plug>(coc-type-definition)
+  nmap <silent> gi <Plug>(coc-implementation)
+  nmap <silent> gr <Plug>(coc-references)
   "" space + rn で Rename
-  nmap <silent> <Leader>rn <Jetpack>(coc-rename)
+  nmap <silent> <Leader>rn <Plug>(coc-rename)
   "" space + fm で Format
-  nmap <silent> <Leader>fm <Jetpack>(coc-format)
+  nmap <silent> <Leader>fm <Plug>(coc-format)
   " Use K to show documentation in preview window.
   nnoremap <silent> K :call <SID>show_documentation()<CR>
   " Applying codeAction to the selected region.
   " Example: `<leader>aap` for current paragraph
-  xmap <leader>a  <Jetpack>(coc-codeaction-selected)
-  nmap <leader>a  <Jetpack>(coc-codeaction-selected)
+  xmap <leader>a  <Plug>(coc-codeaction-selected)
+  nmap <leader>a  <Plug>(coc-codeaction-selected)
   " Remap keys for applying codeAction to the current buffer.
-  nmap <leader>ac  <Jetpack>(coc-codeaction)
+  nmap <leader>ac  <Plug>(coc-codeaction)
   " Apply AutoFix to problem on the current line.
-  nmap <leader>qf  <Jetpack>(coc-fix-current)
+  nmap <leader>qf  <Plug>(coc-fix-current)
   " Map function and class text objects
   " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-  xmap if <Jetpack>(coc-funcobj-i)
-  omap if <Jetpack>(coc-funcobj-i)
-  xmap af <Jetpack>(coc-funcobj-a)
-  omap af <Jetpack>(coc-funcobj-a)
-  xmap ic <Jetpack>(coc-classobj-i)
-  omap ic <Jetpack>(coc-classobj-i)
-  xmap ac <Jetpack>(coc-classobj-a)
-  omap ac <Jetpack>(coc-classobj-a)
+  xmap if <Plug>(coc-funcobj-i)
+  omap if <Plug>(coc-funcobj-i)
+  xmap af <Plug>(coc-funcobj-a)
+  omap af <Plug>(coc-funcobj-a)
+  xmap ic <Plug>(coc-classobj-i)
+  omap ic <Plug>(coc-classobj-i)
+  xmap ac <Plug>(coc-classobj-a)
+  omap ac <Plug>(coc-classobj-a)
 endif
 
 "" nvim-autopairs
@@ -992,25 +992,25 @@ require('nvim-autopairs').setup{}
 EOF
 
 "" vim-easymotion
-nmap <Leader>m <Jetpack>(easymotion-overwin-f)
-nmap <Leader>m <Jetpack>(easymotion-overwin-f2)
-map <Leader>l <Jetpack>(easymotion-lineforward)
-map <Leader>j <Jetpack>(easymotion-j)
-map <Leader>k <Jetpack>(easymotion-k)
-map <Leader>h <Jetpack>(easymotion-linebackward)
+nmap <Leader>m <Plug>(easymotion-overwin-f)
+nmap <Leader>m <Plug>(easymotion-overwin-f2)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
 
 "" fzf
-xmap <leader><tab> <jetpack>(fzf-maps-x)
-nmap <leader><tab> <jetpack>(fzf-maps-n)
-omap <leader><tab> <jetpack>(fzf-maps-o)
+xmap <leader><tab> <plug>(fzf-maps-x)
+nmap <leader><tab> <plug>(fzf-maps-n)
+omap <leader><tab> <plug>(fzf-maps-o)
 
 "" columnskip.vim
-nmap <S-j> <Jetpack>(columnskip:nonblank:next)
-omap <S-j> <Jetpack>(columnskip:nonblank:next)
-xmap <S-j> <Jetpack>(columnskip:nonblank:next)
-nmap <S-k> <Jetpack>(columnskip:nonblank:prev)
-omap <S-k> <Jetpack>(columnskip:nonblank:prev)
-xmap <S-k> <Jetpack>(columnskip:nonblank:prev)
+nmap <S-j> <Plug>(columnskip:nonblank:next)
+omap <S-j> <Plug>(columnskip:nonblank:next)
+xmap <S-j> <Plug>(columnskip:nonblank:next)
+nmap <S-k> <Plug>(columnskip:nonblank:prev)
+omap <S-k> <Plug>(columnskip:nonblank:prev)
+xmap <S-k> <Plug>(columnskip:nonblank:prev)
 
 "" keyboard-quickfix
 nnoremap z= <Cmd>call VSCodeNotify('keyboard-quickfix.openQuickFix')<CR>
@@ -1024,16 +1024,16 @@ nnoremap <silent> <Leader>fb :DashboardJumpMark<CR>
 nnoremap <silent> <Leader>cn :DashboardNewFile<CR>
 
 "" vim-translator
-nmap <silent> <Leader>tl <Jetpack>Translate
-vmap <silent> <Leader>tl <Jetpack>TranslateV
+nmap <silent> <Leader>tl <Plug>Translate
+vmap <silent> <Leader>tl <Plug>TranslateV
 " Display translation in a window
-nmap <silent> <Leader>tw <Jetpack>TranslateW
-vmap <silent> <Leader>tw <Jetpack>TranslateWV
+nmap <silent> <Leader>tw <Plug>TranslateW
+vmap <silent> <Leader>tw <Plug>TranslateWV
 " Replace the text with translation
-nmap <silent> <Leader>tr <Jetpack>TranslateR
-vmap <silent> <Leader>tr <Jetpack>TranslateRV
+nmap <silent> <Leader>tr <Plug>TranslateR
+vmap <silent> <Leader>tr <Plug>TranslateRV
 " Translate the text in clipboard
-nmap <silent> <Leader>tx <Jetpack>TranslateX
+nmap <silent> <Leader>tx <Plug>TranslateX
 
 "" インサートモード
 "" Emacs のキーバインド使用
@@ -1062,9 +1062,9 @@ inoremap <expr><CR>  pumvisible() ? "<C-y>" : "<CR>"
 inoremap <C-CR> <C-y>
 
 "" fzf
-imap <c-x><c-k> <jetpack>(fzf-complete-word)
-imap <c-x><c-f> <jetpack>(fzf-complete-path)
-imap <c-x><c-l> <jetpack>(fzf-complete-line)
+imap <c-x><c-k> <plug>(fzf-complete-word)
+imap <c-x><c-f> <plug>(fzf-complete-path)
+imap <c-x><c-l> <plug>(fzf-complete-line)
 inoremap <expr> <c-x><c-f> fzf#vim#complete#path('fd')
 inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
 inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'height': 0.9, 'xoffset': 1 }})
@@ -1072,7 +1072,7 @@ inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'window': { 'width': 0.2, 'hei
 "" coc.nvim
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other jetpackin before putting this into your config.
+" other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -1087,7 +1087,7 @@ else
 endif
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
-" format on enter, <cr> could be remapped by other vim jetpackin
+" format on enter, <cr> could be remapped by other vim plugin
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
       \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
