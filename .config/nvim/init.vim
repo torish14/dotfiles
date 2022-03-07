@@ -192,6 +192,35 @@ Jetpack 'voldikss/vim-translator'
 
 call jetpack#end()
 
+"" プラグインをタイマーで遅延読み込み
+function! s:lazyLoadPlugs(timer) abort
+  call plug#load (
+        \ 'coc.nvim',
+        \ 'ale',
+        \ 'vim-sandwich',
+        \ 'nerdcommenter',
+        \ 'targets.vim',
+        \ 'vim-asterisk',
+        \ 'clever-f.vim',
+        \ 'vim-ripgrep',
+        \ 'vim-matchup',
+        \ 'fzf',
+        \ 'vim-brightest',
+        \ 'vim-wakatime',
+        \ )
+endfunction
+
+call timer_start(20, function("s:lazyLoadPlugs"))
+
+"" プラグインをインサートモードで遅延読み込み
+augroup load_us_insert
+  autocmd!
+  autocmd InsertEnter * call plug#load(
+        \ 'emmet-vim',
+        \ 'vim-livedown',
+        \ )| autocmd! load_us_insert
+augroup END
+
 "" プラグインの設定
 "" デフォルトのプラグイン読み込みをスキップ
 let g:did_install_default_menus = 1
