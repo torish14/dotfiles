@@ -722,7 +722,7 @@ set termguicolors
 "" シンタックスハイライトの有効化
 syntax enable
 "" カラーテーマ
-colorscheme duskfox
+colorscheme nightfox
 
 "" 検索ハイライトの色を変更
 autocmd ColorScheme * hi Search guibg=#a277ff guifg=#15141b
