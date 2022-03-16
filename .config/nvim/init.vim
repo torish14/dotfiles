@@ -240,11 +240,6 @@ let g:loaded_zipPlugin          = 1
 let g:skip_loading_mswin        = 1
 
 "" 見た目
-"" nightfox
-lua << EOF
-require('nightfox').load(nightfox)
-EOF
-
 "" nvim-treesitter
 if !exists('g:vscode')
   lua <<EOF
@@ -726,6 +721,8 @@ set splitright
 set termguicolors
 "" シンタックスハイライトの有効化
 syntax enable
+"" カラーテーマ
+colorscheme duskfox
 
 "" 検索ハイライトの色を変更
 autocmd ColorScheme * hi Search guibg=#a277ff guifg=#15141b
