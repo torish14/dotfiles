@@ -711,8 +711,8 @@ set visualbell
 "" 括弧入力時の対応する括弧を表示
 set showmatch
 set matchtime=1
-"" ステータスラインを常に表示
-set laststatus=2
+"" ステータスライン を 1 つにする
+set laststatus=3
 "" コマンドラインの補完
 set wildmode=list:longest
 "" 新規ファイルを横に開く
