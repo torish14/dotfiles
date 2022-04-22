@@ -1,3 +1,21 @@
+# fish color
+# commandline
+set fish_color_quote bryellow
+set fish_color_redirection brcyan
+set fish_color_error bryellow
+set fish_color_autosuggestion brblack
+set fish_color_cancel brred
+
+# pager
+set fish_pager_color_progress brgreen
+set fish_pager_color_secondary_completion  brblack
+set fish_pager_color_secondary_description brblack
+set fish_pager_color_secondary_prefix      brblack
+set fish_pager_color_selected_background   --background=brblack
+set fish_pager_color_selected_completion   brcyan
+set fish_pager_color_selected_description  brcyan
+set fish_pager_color_selected_prefix       brcyan
+
 # peco であいまい検索
 function peco_select_history_order
     if test (count $argv) = 0
