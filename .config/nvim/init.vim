@@ -88,7 +88,8 @@ call plug#begin()
 
 "" 見た目
 "" テーマ
-Plug 'EdenEast/nightfox.nvim'
+" Plug 'EdenEast/nightfox.nvim'
+Plug 'baliestri/aura-theme', { 'branch': 'feat/neovim-port', 'rtp': 'packages/neovim' }
 "" ハイライト強化
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  
 "" アイコンを表示
@@ -747,7 +748,8 @@ set termguicolors
 "" シンタックスハイライトの有効化
 syntax enable
 "" カラーテーマ
-colorscheme nightfox
+" colorscheme nightfox
+colorscheme aura-soft-dark
 
 "" 検索ハイライトの色を変更
 autocmd ColorScheme * hi Search guibg=#a277ff guifg=#15141b
