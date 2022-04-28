@@ -96,12 +96,18 @@ Plug 'kyazdani42/nvim-web-devicons'
 "" ステータスバーの表示
 Plug 'nvim-lualine/lualine.nvim'
 "" 括弧に色付け
-Plug 'luochen1990/rainbow'
+if !exists('g:vscode')
+  Plug 'luochen1990/rainbow'
+endif
 "" git の差分表示
-Plug 'nvim-lua/plenary.nvim'
-Plug 'lewis6991/gitsigns.nvim'
+if !exists('g:vscode')
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'lewis6991/gitsigns.nvim'
+endif
 "" git下の隠しファイルの表示
-Plug 'rhysd/git-messenger.vim'
+if !exists('g:vscode')
+  Plug 'rhysd/git-messenger.vim'
+endif
 "" markdown のプレビュー
 Plug 'shime/vim-livedown', { 'on': [] }
 "" カーソル下の単語を移動するたびにハイライト
@@ -109,18 +115,26 @@ Plug 'osyo-manga/vim-brightest', { 'on': [] }
 
 "" 言語
 "" html
-Plug 'norcalli/nvim-colorizer.lua'
+if !exists('g:vscode')
+  Plug 'norcalli/nvim-colorizer.lua'
+endif
 Plug 'mattn/emmet-vim', { 'on': [] }
 
 "" 補完機能
 "" 強力な補完機能
 Plug 'neoclide/coc.nvim', { 'on': [], 'branch': 'release' }
 "" 自動で閉じタグを補完
-Plug 'alvan/vim-closetag'
+if !exists('g:vscode')
+  Plug 'alvan/vim-closetag'
+endif
 "" 括弧を自動的に閉じる
-Plug 'windwp/nvim-autopairs'
+if !exists('g:vscode')
+  Plug 'windwp/nvim-autopairs'
+endif
 "" github copilot
-Plug 'github/copilot.vim'
+if !exists('g:vscode')
+  Plug 'github/copilot.vim'
+endif
 
 "" モーション移動
 "" 高速なカーソル移動
@@ -176,7 +190,9 @@ Plug 'matze/vim-move'
 
 "" その他
 "" エラー検知
-Plug 'w0rp/ale', { 'on': [] }
+if !exists('g:vscode')
+  Plug 'w0rp/ale', { 'on': [] }
+endif
 "" vim-doc を日本語化
 Plug 'vim-jp/vimdoc-ja'
 "" nvim 起動時に管理画面を表示
@@ -261,11 +277,13 @@ EOF
 endif
 
 "" nvim-web-devicons
+if !exists('g:vscode')
 lua << EOF
 require 'nvim-web-devicons'.setup {
   default = true
   }
 EOF
+endif
 
 "" lualine
 lua << END
@@ -462,12 +480,15 @@ lualine.setup(config)
 END
 
 "" rainbow
-let g:rainbow_active = 1
+if !exists('g:vscode')
+  let g:rainbow_active = 1
+endif
 
 "" vim-livedown
-let g:livedown_autorun = 0
-let g:livedown_port = 0803
-
+if !exists('g:vscode')
+  let g:livedown_autorun = 0
+  let g:livedown_port = 0803
+endif
 "" 言語
 "" nvim-colorizer
 lua << EOF
@@ -505,7 +526,9 @@ autocmd FileType html imap <buffer><expr><tab>
 
 "" 補完機能
 "" vim-closetag
-let g:closetag_filenames = '*.html, *.xhtml, *.phthml, *.vue'
+if !exists('g:vscode')
+  let g:closetag_filenames = '*.html, *.xhtml, *.phthml, *.vue'
+endif
 
 "" モーション移動
 "" vim-easymotion
@@ -568,6 +591,7 @@ let g:move_key_modifier = 'C'
 
 "" その他
 " 保存時のみ ale を実行する
+if !exists('g:vscode')
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_sign_column_always = 1
@@ -578,6 +602,7 @@ let g:ale_sign_warning = ''
 let g:ale_echo_msg_format = '[%linter%]%code: %%s'
 highlight link ALEWarningSign StorageClass
 highlight link ALEErrorSign Tag
+endif
 
 "" dashboard-nvim
 let g:dashboard_default_executive ='fzf'
@@ -914,9 +939,11 @@ if exists('g:vscode')
 endif
 
 "" gitsigns.nvim
+if !exists('g:vscode')
 lua << EOF
 require('gitsigns').setup()
 EOF
+endif
 
 "" coc.nvim
 if !exists('g:vscode')
@@ -984,9 +1011,11 @@ if !exists('g:vscode')
 endif
 
 "" nvim-autopairs
+if !exists('g:vscode')
 lua << EOF
 require('nvim-autopairs').setup{}
 EOF
+endif
 
 "" vim-easymotion
 nmap <Leader>m <Plug>(easymotion-overwin-f)
