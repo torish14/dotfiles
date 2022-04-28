@@ -89,9 +89,11 @@ set -U FZF_FIND_FILE_OPTS "--preview 'bat  --color=always --style=header,grid --
 # alt + C
 set -U FZF_CD_COMMAND "fd --type d . \$dir"
 set -U FZF_CD_OPTS "--preview 'tree -C {} | head -200'"
+
 # default editor
 set -gx EDITOR nvim
 set -gx VISUAL nvim
+
 # python
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PYENV_ROOT/bin $PATH
