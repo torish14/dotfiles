@@ -148,6 +148,10 @@ abbr gcm 'git commit -m'
 # 直前の commit の修正
 abbr gca 'git commit --amend'
 abbr gcam 'git commit --amend -m ""'
+# 作業ディレクトリの追跡対象外ファイルを確認する
+abbr gcln 'git clean -dn'
+# 作業カレントディレクトリの追跡対象外ディレクトリとファイルを削除する
+abbr gclf 'git clean -df'
 abbr gg 'git grep'
 # 直前の add を取り消し
 abbr grsh 'git reset HEAD'
