@@ -143,6 +143,8 @@ abbr gco 'git checkout'
 # branch を作成 & 切り替え
 abbr gcob 'git checkout -b'
 abbr gcom 'git checkout main'
+# さっきいた branch に戻る
+abbr gco- 'git checkout -'
 abbr gc 'git commit'
 abbr gcm 'git commit -m'
 # 直前の commit の修正
