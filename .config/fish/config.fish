@@ -184,6 +184,8 @@ abbr gpa 'git push --all'
 abbr gpf 'git push --force-with-lease'
 abbr gpo 'git push origin'
 abbr gpom 'git push origin main'
+# 今いるブランチでの変更履歴をリモートに push
+abbr gpoh 'git push origin HEAD'
 abbr gpl 'git pull'
 
 # git flow
