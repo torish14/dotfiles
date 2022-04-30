@@ -55,11 +55,11 @@ bind status  `      @bash -c "echo -n '%(file)' | pbcopy"
 bind tree    `      @bash -c "echo -n '%(file)' | pbcopy"
 bind blob    `      @bash -c "echo -n '%(file)' | pbcopy"
 bind refs    D      ?git branch -d %(branch)
-bind status  D      ?git clean -d -f -- %(file)
+bind status  D      ?git clean -df -- %(file)
 bind stash   D      ?git stash drop %(stash)
 bind tree    D      ?git rm %(file)
-bind main    x      ?git clean -d -f
-bind status  x      ?git clean -d -f
+bind main    x      ?git clean -df
+bind status  x      ?git clean -df
 bind refs    x      ?sh -c "git branch --merged | grep -vE '^\\*|master$|develop$' | xargs -I % git branch -d %"
 bind main    ;      @hub browse -- commit/%(commit)
 bind blame   ;      @hub browse -- commit/%(commit)
