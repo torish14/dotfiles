@@ -95,7 +95,7 @@ bind pager   <Esc>p :?^diff --(git|cc)
 bind log     n      :/^commit
 bind log     p      :?^commit
 bind generic V      view-pager
-bind generic <Ctrl-s> find-next # 要 stty stop undef
+bind generic <Ctrl-s> find-next
 bind generic <Ctrl-r> find-prev
 bind generic <Ctrl-v> move-page-down
 bind generic <Esc>v move-page-up
