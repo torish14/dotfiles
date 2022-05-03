@@ -83,6 +83,13 @@ augroup LuaHighlight
   autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
 augroup END
 
+"" 空白文字を可視化
+augroup HighlightTrailingSpaces
+  autocmd!
+  autocmd VimEnter,WInEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
+  autocmd VImEnter,WinEnter * match TrailingSpaces /\s\+$/
+augroup END
+
 " プラグイン
 call plug#begin()
 
@@ -91,7 +98,7 @@ call plug#begin()
 " Plug 'EdenEast/nightfox.nvim'
 Plug 'baliestri/aura-theme', { 'branch': 'feat/neovim-port', 'rtp': 'packages/neovim' }
 "" ハイライト強化
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "" アイコンを表示
 Plug 'kyazdani42/nvim-web-devicons'
 "" ステータスバーの表示
@@ -534,7 +541,7 @@ endif
 "" モーション移動
 "" vim-easymotion
 "" Disable default mappings
-let g:EasyMotion_do_mapping = 0 
+let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
 
 " wilder.nvim
