@@ -230,6 +230,7 @@ abbr ll 'exa -laF --icons'
 abbr mk 'mkdir -pv'
 
 abbr n '~/nnn/nnn -deH'
+abbr nim 'nim c -r'
 abbr ni 'npm install'
 abbr nig 'npm install -g'
 abbr nrd 'npm run dev'
