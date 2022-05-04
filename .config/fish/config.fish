@@ -82,8 +82,17 @@ function reload
     exec fish
 end
 
+# mkdir && touch
+function mkto
+    mkdir -p "$(dirname "$argv")" && touch "$argv"
+end
+
+function fish_greeting
+  echo "👑 I'v been waiting for Master."
+end
+
 # デフォルトのキーバインドを無効
-set -U FZF_LEGACY_KEYBINDINGS 0 
+set -U FZF_LEGACY_KEYBINDINGS 0
 set -U FZF_REVERSE_ISEARCH_OPTS "--reverse --height=100%"
 # ctrl + O
 set -U FZF_FIND_FILE_COMMAND "rg --files --hidden --follow --glob '!.git/*'"
@@ -130,7 +139,7 @@ abbr du dust
 abbr e emacs
 
 abbr f fd
-abbr ff 'fd -t f' 
+abbr ff 'fd -t f'
 
 # git
 abbr g git
