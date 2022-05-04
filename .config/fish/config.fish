@@ -56,6 +56,8 @@ function ghcr
     gh repo create --public $argv
     ghq get github.com/torish14/{$argv[1]}.git
     code -r /Users/user/ghq/github.com/torish14/{$argv[1]}
+    cd /Users/user/ghq/github.com/torish14/{$argv[1]}
+    gh browse
 end
 
 # fish キーバインド
