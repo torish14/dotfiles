@@ -95,7 +95,6 @@ call plug#begin()
 
 "" 見た目
 "" テーマ
-" Plug 'EdenEast/nightfox.nvim'
 Plug 'baliestri/aura-theme', { 'branch': 'feat/neovim-port', 'rtp': 'packages/neovim' }
 "" ハイライト強化
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
