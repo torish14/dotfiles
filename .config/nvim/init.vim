@@ -86,7 +86,7 @@ augroup END
 "" 空白文字を可視化
 augroup HighlightTrailingSpaces
   autocmd!
-  autocmd VimEnter,WInEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
+  autocmd VimEnter,WInEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=#ff6767
   autocmd VImEnter,WinEnter * match TrailingSpaces /\s\+$/
 augroup END
 
