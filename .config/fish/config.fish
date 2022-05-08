@@ -113,6 +113,9 @@ set -x PATH $PYENV_ROOT/bin $PATH
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 
+# nim
+set -ga fish_user_paths /Users/user/.nimble/bin
+
 # 日本語の使用
 set -x LANG ja_JP.UTF-8
 set -x LC_CTYPE ja_JP.UTF-8
