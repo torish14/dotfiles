@@ -115,6 +115,7 @@ set -gx PATH "$VOLTA_HOME/bin" $PATH
 
 # nim
 set -ga fish_user_paths /Users/user/.nimble/bin
+set -ga fish_user_paths $HOME/.nimble/pkgs/inim-0.6.1/bin
 
 # 日本語の使用
 set -x LANG ja_JP.UTF-8
