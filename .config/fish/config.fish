@@ -117,6 +117,9 @@ set -gx PATH "$VOLTA_HOME/bin" $PATH
 set -ga fish_user_paths /Users/user/.nimble/bin
 set -ga fish_user_paths $HOME/.nimble/pkgs/inim-0.6.1/bin
 
+# rust
+set -gx PATH "$HOME/.cargo/bin" $PATH
+
 # 日本語の使用
 set -x LANG ja_JP.UTF-8
 set -x LC_CTYPE ja_JP.UTF-8
