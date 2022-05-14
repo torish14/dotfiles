@@ -13,14 +13,19 @@ $username\
     $dart\
     $deno\
     $kotlin\
+    $nim\
     $nodejs\
     $python\
+    $ruby\
+    $rust\
     $swift\
+    $lua\
+    $zig\
     $vagrant\
     $memory_usage\
+    $docker_context\
     $aws\
     $gcloud\
-    $docker_context\
     $custom\
     $time\
     $cmd_duration\
