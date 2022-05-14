@@ -65,43 +65,7 @@ format = "[$path]($style)[$read_only]($read_only_style) "
 truncation_length = 100
 truncate_to_repo = false
 
-# コマンド実行時間
-[cmd_duration]
-style = "#ffca85"
-format = "[$duration]($style) "
-min_time = 1 # millisecond
-
-# 現在時刻
-[time]
-disabled = false
-style = "#ffca85"
-format = '[$time]($style) '
-time_format = "%T"
-
-# パッケージ
-[package]
-disabled = true
-format = "[🎁$version](208) "
-
-# nodejs
-[nodejs]
-disabled = true
-style = "#a277ff"
-format = "[$symbol($version)]($style) "
-symbol = "🤖"
-
-# python
-[python]
-disabled = true
-style = "yellow"
-format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\) )]($style) '
-symbol = "👾"
-pyenv_version_name = true
-
-# ruby
-[ruby]
-disabled = true
-
+# git
 # git_branch
 [git_branch]
 style = "#bdbdbd"
@@ -126,18 +90,76 @@ staged = '[++\($count\)](#61ffca)'
 renamed = "»"
 deleted = "✘"
 
-# google_cloud
-[gcloud]
-disabled = true
+# コマンド実行時間
+[cmd_duration]
+style = "#ffca85"
+format = "[$duration]($style) "
+min_time = 1 # millisecond
+
+# 現在時刻
+[time]
+disabled = false
+style = "#ffca85"
+format = '[$time]($style) '
+time_format = "%T"
+
+# パッケージ
+[package]
+disabled = false
+format = "[$symbol($version)](208) "
+symbol = "📦"
+
+# nim
+[nim]
+disabled = false
+
+# nodejs
+[nodejs]
+disabled = false
+style = "#a277ff"
+format = "[$symbol($version)]($style) "
+symbol = "🤖"
+
+# python
+[python]
+disabled = false
+style = "yellow"
+format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\) )]($style) '
+symbol = "👾"
+pyenv_version_name = true
+
+# ruby
+[ruby]
+disabled = false
+
+# rust
+[rust]
+disabled = false
+
+# swift
+[swift]
+disabled = false
+
+# lua
+[lua]
+disabled = false
+
+# zig
+[zig]
+disabled = false
 
 # docker
 [docker_context]
-disabled = true
+disabled = false
 symbol = "🐋"
+
+# google_cloud
+[gcloud]
+disabled = false
 
 # aws
 [aws]
-disabled = true
+disabled = false
 
 # vagrant
 [vagrant]
