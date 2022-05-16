@@ -317,7 +317,7 @@ abbr vh 'nvim ~/.hammerspoon/init.lua'
 abbr vn 'nvim ~/dotfiles/.config/nvim/init.vim'
 abbr vr 'nvim ~/.vimrc'
 abbr vk 'nvim ~/.config/karabiner/assets/complex_modifications/2021121011111.json'
-abbr vs 'nvim ~/dotfiles/.config/startship/starship.toml'
+abbr vs 'nvim ~/dotfiles/.config/starship/starship.toml'
 abbr vt 'nvim ~/dotfiles/.config/kitty/kitty.conf'
 
 abbr y yarn
