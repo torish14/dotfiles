@@ -117,6 +117,11 @@ set -gx PATH "$VOLTA_HOME/bin" $PATH
 set -ga fish_user_paths /Users/user/.nimble/bin
 set -ga fish_user_paths $HOME/.nimble/pkgs/inim-0.6.1/bin
 
+# binutils
+set -gx fish_user_paths /usr/local/opt/binutils/bin
+set -gx LDFLAGS -L/usr/local/opt/binutils/lib
+set -gx CPPFLAGS -I/usr/local/opt/binutils/include
+
 # rust
 set -gx PATH "$HOME/.cargo/bin" $PATH
 
