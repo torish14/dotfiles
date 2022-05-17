@@ -8,22 +8,25 @@ $username\
     $git_state\
     $git_metrics\
     $git_status\
+    $docker_context\
     $package\
+    $c\
     $cmake\
     $dart\
     $deno\
+    $julia\
     $kotlin\
+    $lua\
     $nim\
     $nodejs\
     $python\
     $ruby\
     $rust\
     $swift\
-    $lua\
-    $zig\
     $vagrant\
+    $zig\
+    $conda\
     $memory_usage\
-    $docker_context\
     $aws\
     $gcloud\
     $custom\
