@@ -53,35 +53,28 @@ disabled = false
 # ホストネームを ssh 接続のときのみ表示
 [hostname]
 ssh_only = true
-format =  "[$hostname](#a277ff) "
 disabled = false
-
-# 成功時とエラー時のシンボルを設定
-[character]
-success_symbol = "[❯](#61ffca)"
-error_symbol = "[❯](#ff6767)"
-vicmd_symbol = "[V](green)"
+format =  "[$hostname](#a277ff) "
 
 # ディレクトリの設定
 [directory]
 style = "#a277ff"
-format = "[$path]($style)[$read_only]($read_only_style) "
 truncation_length = 100
 truncate_to_repo = false
+format = "[$path]($style)[$read_only]($read_only_style) "
 
 # git
 # git_branch
 [git_branch]
 style = "#bdbdbd"
-format = "[$symbol$branch]($style)"
-symbol = ""
+symbol = "🌱 "
 truncation_length = 100
 truncation_symbol = ""
+format = "[$symbol$branch]($style)"
 
 # git_status
 [git_status]
 style = "#bdbdbd"
-format = "[$all_status$ahead_behind]($style) "
 conflicted = "="
 ahead = "[⇡${count}](#61ffca)"
 behind = "[⇣${count}](#61ffca)"
@@ -93,84 +86,177 @@ modified = "*"
 staged = '[++\($count\)](#61ffca)'
 renamed = "»"
 deleted = "✘"
-
-# コマンド実行時間
-[cmd_duration]
-style = "#ffca85"
-format = "[$duration]($style) "
-min_time = 1 # millisecond
-
-# 現在時刻
-[time]
-disabled = false
-style = "#ffca85"
-format = '[$time]($style) '
-time_format = "%T"
-
-# パッケージ
-[package]
-disabled = false
-format = "[$symbol($version)](208) "
-symbol = "📦"
-
-# nim
-[nim]
-disabled = false
-
-# nodejs
-[nodejs]
-disabled = false
-style = "#a277ff"
-format = "[$symbol($version)]($style) "
-symbol = "🤖"
-
-# python
-[python]
-disabled = false
-style = "yellow"
-format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\) )]($style) '
-symbol = "👾"
-pyenv_version_name = true
-
-# ruby
-[ruby]
-disabled = false
-
-# rust
-[rust]
-disabled = false
-
-# swift
-[swift]
-disabled = false
-
-# lua
-[lua]
-disabled = false
-
-# zig
-[zig]
-disabled = false
+format = "[$all_status$ahead_behind]($style) "
 
 # docker
 [docker_context]
 disabled = false
-symbol = "🐋"
+style = "#82e2ff"
+symbol = "🐋 "
+format = "[$symbol($context)]($style) "
 
-# google_cloud
-[gcloud]
+# パッケージ
+[package]
 disabled = false
+style = "208"
+symbol = "📦 "
+format = "[$symbol($version)]($style) "
+
+# c
+[c]
+disabled = false
+style = "#bdbdbd"
+symbol = "⚙️ "
+format = "[$symbol($version(-$name))]($style) "
+
+# cmake
+[cmake]
+disabled = false
+style = "#bdbdbd"
+symbol = "🔼 "
+format = "[$symbol($version)]($style) "
+
+# dart
+[dart]
+disabled = false
+style = "#82e2ff"
+symbol = "🔰 "
+format = "[$symbol($version)]($style) "
+
+# deno
+[deno]
+disabled = false
+style = "#edecee"
+symbol = "🦕 "
+format = "[$symbol($version)]($style) "
+
+# julia
+[julia]
+disabled = false
+style = "#a277ff"
+symbol = "🔵 "
+format = "[$symbol($version)]($style) "
+
+# kotlin
+[kotlin]
+disabled = false
+style = "#ffca85"
+symbol = "🔷 "
+format = "[$symbol($version)]($style) "
+
+# lua
+[lua]
+disabled = false
+style = "#a277ff"
+symbol = "🌕 "
+format = "[$symbol($version)]($style) "
+
+# nim
+[nim]
+disabled = false
+style = "#ffca85"
+symbol = "👑 "
+format = "[$symbol($version)]($style) "
+
+# nodejs
+[nodejs]
+disabled = false
+style = "#61ffca"
+symbol = "🤖 "
+format = "[$symbol($version)]($style) "
+
+# python
+[python]
+disabled = false
+style = "#ffca85"
+symbol = "👾 "
+pyenv_version_name = true
+format = '[${symbol}${pyenv_prefix}(${version})(\($virtualenv\) )]($style) '
+
+# ruby
+[ruby]
+disabled = false
+style = "#ff6767"
+symbol = "🔻 "
+format = "[$symbol($version)]($style) "
+
+# rust
+[rust]
+disabled = false
+style = "#ff6767"
+symbol = "🦀 "
+format = "[$symbol($version)]($style) "
+
+# swift
+[swift]
+disabled = false
+style = "#ff6767"
+symbol = "🕊️ "
+format = "[$symbol($version)]($style) "
+
+# vagrant
+[vagrant]
+disabled = false
+style = "#edecee"
+symbol = "⍱ "
+format = "[$symbol($version)]($style) "
+
+# zig
+[zig]
+disabled = false
+style = "#ffca85"
+symbol = "⚡ "
+format = "[$symbol($version)]($style) "
+
+# conda
+[conda]
+disabled = false
+style = "#61ffca"
+symbol = "🐍 "
+format = "[$symbol($version)]($style) "
+
+# memory_usage
+[memory_usage]
+disabled = true
+style = "#bdbdbd"
+symbol = "🏢 "
+format = "[$symbol($version)]($style) "
 
 # aws
 [aws]
 disabled = false
+style = "#ffca85"
+symbol = "🅰️ "
+# format = "[$symbol($profile)(\($region\))]($style) "
 
-# vagrant
-[vagrant]
-format = "[⍱ $version](white) "
+# google cloud
+[gcloud]
+disabled = false
+style = "#ffca85"
+symbol = "☁️ "
+# format = "[$symbol($account)(@$domain)(\($region\))]($style) "
+
+# 現在時刻
+[time]
+disabled = true
+style = "#ffca85"
+time_format = "%T"
+format = '[$time]($style) '
+
+# コマンド実行時間
+[cmd_duration]
+style = "#ffca85"
+min_time = 1 # millisecond
+format = "[$duration]($style) "
 
 # バッテリー
 [battery]
-full_symbol = "🔋"
-charging_symbol = "⚡️"
-discharging_symbol = "💀"
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+
+# 成功時とエラー時のシンボルを設定
+[character]
+success_symbol = "[➜](#61ffca)"
+error_symbol = "[✗](#ff6767)"
+vicmd_symbol = "[V](#61ffca)"
