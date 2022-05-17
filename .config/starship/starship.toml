@@ -1,6 +1,7 @@
 # ターミナルに表示する文字列の並び替え
 format = """
 $username\
+    $username\
     $hostname\
     $directory\
     $git_branch\
@@ -39,8 +40,8 @@ $username\
     $shell\
     $character"""
 
-# コマンドを実行したあとに改行を入れない
-add_newline = false
+# コマンドを実行したあとに改行を入れる
+add_newline = true
 
 # ファイルをスキャンするタイムアウト時間
 scan_timeout = 10
