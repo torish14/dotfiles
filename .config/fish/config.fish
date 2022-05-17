@@ -125,6 +125,9 @@ set -gx CPPFLAGS -I/usr/local/opt/binutils/include
 # rust
 set -gx PATH "$HOME/.cargo/bin" $PATH
 
+# brew
+eval "$(/usr/local/bin/brew shellenv)"
+
 # 日本語の使用
 set -x LANG ja_JP.UTF-8
 set -x LC_CTYPE ja_JP.UTF-8
