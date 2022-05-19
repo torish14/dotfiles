@@ -156,6 +156,7 @@ abbr e emacs
 abbr f fd
 abbr ff 'fd -t f'
 
+abbr fh 'fd --no-ignore --hidden'
 # git
 abbr g git
 abbr gs 'git status'
