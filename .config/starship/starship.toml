@@ -255,6 +255,9 @@ full_symbol = "🔋 "
 charging_symbol = "⚡️ "
 discharging_symbol = "💀 "
 
+[[battery.display]]
+threshold = 30
+
 # 成功時とエラー時のシンボルを設定
 [character]
 success_symbol = "[➜](#61ffca)"
