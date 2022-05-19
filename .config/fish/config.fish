@@ -288,6 +288,7 @@ abbr ql 'qlmanage -p'
 
 abbr r rg
 abbr rf "rg -g '*.js' --files"
+abbr rh 'rg --no-ignore --hidden'
 abbr rm 'rm -rv'
 abbr rmf 'rm -rfv'
 
