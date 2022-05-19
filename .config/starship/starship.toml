@@ -98,7 +98,7 @@ format = "[$symbol($context)]($style) "
 # パッケージ
 [package]
 disabled = false
-style = "208"
+style = "#f694ff"
 symbol = "📦 "
 format = "[$symbol($version)]($style) "
 
