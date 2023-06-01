@@ -1,0 +1,672 @@
+{
+  "title": "Super ctrl + cmd!",
+  "rules": [
+    {
+      "description": "ctrl + S を option + ← に変換",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": ["option"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.apple.Terminal",
+                "com.googlecode.iterm2",
+                "net.kovidgoyal.kitty",
+                "com.github.wez.wezterm"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "ctrl + G を option + → に変換",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "g",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": ["option"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.apple.Terminal",
+                "com.googlecode.iterm2",
+                "net.kovidgoyal.kitty",
+                "com.github.wez.wezterm"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "ctrl + W を option + Delete に変換",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": ["option"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.apple.Terminal",
+                "com.googlecode.iterm2",
+                "net.kovidgoyal.kitty",
+                "com.github.wez.wezterm"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "ctrl + X を fn + option + Delete に変換",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "x",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": ["option", "fn"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.apple.Terminal",
+                "com.googlecode.iterm2",
+                "net.kovidgoyal.kitty",
+                "com.github.wez.wezterm"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "ctrl + U を cmd + Delete に変換",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": ["command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.apple.Terminal",
+                "com.googlecode.iterm2",
+                "net.kovidgoyal.kitty",
+                "com.github.wez.wezterm"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "ctrl + H を Delete に変換",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.figma.Desktop"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "ctrl + D を fn + Delete に変換",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": ["fn"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.figma.Desktop"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "ctrl + I を pageup に変換",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_up"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.apple.Terminal",
+                "com.googlecode.iterm2",
+                "net.kovidgoyal.kitty",
+                "com.github.wez.wezterm"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "ctrl + , を pagedown に変換",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "comma",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [
+            {
+              "key_code": "page_down"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.apple.Terminal",
+                "com.googlecode.iterm2",
+                "net.kovidgoyal.kitty",
+                "com.github.wez.wezterm"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "ctrl + P を up_arrow に変換",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "p",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.apple.Terminal",
+                "com.googlecode.iterm2",
+                "net.kovidgoyal.kitty",
+                "com.github.wez.wezterm"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "ctrl + N を down_arrow に変換",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [
+            {
+              "key_code": "down_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.apple.Terminal",
+                "com.googlecode.iterm2",
+                "net.kovidgoyal.kitty",
+                "com.github.wez.wezterm"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "ctrl + J を return_or_enter に変換",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": { "mandatory": ["control"] }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "com.apple.Terminal",
+                "com.googlecode.iterm2",
+                "net.kovidgoyal.kitty",
+                "com.github.wez.wezterm"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "right_command + B で Bear を起動",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+              "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Bear.app"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "right_command + C で Chrome を起動",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a 'Google Chrome.app'"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "right_command + D で DeepL を起動",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a DeepL.app"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "right_command + F で Figma を起動",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+              "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Figma.app"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "right_cmd + E で Eagle を起動",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Eagle.app"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "right_command + G で Kap を起動",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "g",
+            "modifiers": {
+              "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Kap.app"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "right_command + K で Karabiner-Elements を起動",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Karabiner-Elements.app"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "right_command + L で LINE を起動",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a LINE.app"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "right_command + N で Notion を起動",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Notion.app"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "left_ctrl を 2 回連打したら Raycast を起動する",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "left_control" },
+          "to": [{ "shell_command": "open -a Raycast.app" }],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "left_control_key",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "left_control_key",
+                "value": 1
+              }
+            },
+            { "key_code": "left_control" }
+          ],
+          "to_delayed_action": {
+            "to_if_invoked": [
+              {
+                "set_variable": {
+                  "name": "left_control_key",
+                  "value": 0
+                }
+              }
+            ],
+            "to_if_canceled": [
+              {
+                "set_variable": {
+                  "name": "left_control_key",
+                  "value": 0
+                }
+              }
+            ]
+          },
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "left_control_key",
+              "value": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "right_cmd + S で Slack を起動",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Slack.app"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "right_cmd + T で Typeface を起動",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "t",
+            "modifiers": {
+              "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Typeface.app"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "right_cmd + V で Vivaldi を起動",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "v",
+            "modifiers": {
+              "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a Vivaldi.app"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "right_cmd + W で WezTerm を起動",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "mandatory": ["right_command"]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a WezTerm.app"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
